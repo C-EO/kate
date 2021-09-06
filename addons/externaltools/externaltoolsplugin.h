@@ -10,6 +10,8 @@
 #include <KTextEditor/Plugin>
 #include <QVector>
 
+#include <KSharedConfig>
+
 namespace KTextEditor
 {
 class View;
@@ -28,6 +30,14 @@ class KateExternalToolsPlugin : public KTextEditor::Plugin
 public:
     explicit KateExternalToolsPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     virtual ~KateExternalToolsPlugin();
+
+    /**
+     * Returns the current KConfig object.
+     */
+    KSharedConfigPtr config()
+    {
+        return m_config;
+    }
 
     /**
      * Reimplemented to return the number of config pages, in this case 1.
@@ -50,7 +60,7 @@ public:
     void clearTools();
 
     /**
-     * Reloads the external tools from disk.
+     * Reloads the external tools configuration from disk.
      */
     void reload();
 
@@ -107,6 +117,7 @@ public:
     KateExternalToolsPluginView *viewForMainWindow(KTextEditor::MainWindow *mainWindow) const;
 
 private:
+    KSharedConfigPtr m_config;
     QVector<KateExternalTool> m_defaultTools;
     QVector<KateExternalToolsPluginView *> m_views;
     QVector<KateExternalTool *> m_tools;

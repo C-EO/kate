@@ -264,8 +264,6 @@ KateExternalToolsConfigWidget::KateExternalToolsConfigWidget(QWidget *parent, Ka
     });
     connect(lbTools, &QTreeView::doubleClicked, this, &KateExternalToolsConfigWidget::slotEdit);
 
-    m_config = new KConfig(QStringLiteral("externaltools"), KConfig::NoGlobals, QStandardPaths::ApplicationsLocation);
-
     // reset triggers a reload of the existing tools
     reset();
     slotSelectionChanged();
@@ -279,8 +277,6 @@ KateExternalToolsConfigWidget::KateExternalToolsConfigWidget(QWidget *parent, Ka
 KateExternalToolsConfigWidget::~KateExternalToolsConfigWidget()
 {
     clearTools();
-
-    delete m_config;
 }
 
 QString KateExternalToolsConfigWidget::name() const
@@ -339,16 +335,17 @@ void KateExternalToolsConfigWidget::apply()
         }
     }
 
+    KSharedConfigPtr config = m_plugin->config();
     // write tool configuration to disk
-    m_config->group("Global").writeEntry("firststart", false);
-    m_config->group("Global").writeEntry("tools", static_cast<int>(tools.size()));
+    config->group("Global").writeEntry("firststart", false);
+    config->group("Global").writeEntry("tools", static_cast<int>(tools.size()));
     for (size_t i = 0; i < tools.size(); i++) {
         const QString section = QStringLiteral("Tool ") + QString::number(i);
-        KConfigGroup cg(m_config, section);
+        KConfigGroup cg(config, section);
         tools[i]->save(cg);
     }
 
-    m_config->sync();
+    config->sync();
     m_plugin->reload();
 }
 
@@ -366,9 +363,10 @@ void KateExternalToolsConfigWidget::slotSelectionChanged()
 bool KateExternalToolsConfigWidget::editTool(KateExternalTool *tool)
 {
     bool changed = false;
+    KSharedConfigPtr config = m_plugin->config();
 
     KateExternalToolServiceEditor editor(tool, m_plugin, this);
-    editor.resize(m_config->group("Editor").readEntry("Size", QSize()));
+    editor.resize(config->group("Editor").readEntry("Size", QSize()));
     if (editor.exec() == QDialog::Accepted) {
         tool->name = editor.ui.edtName->text().trimmed();
         tool->icon = editor.ui.btnIcon->icon();
@@ -398,8 +396,8 @@ bool KateExternalToolsConfigWidget::editTool(KateExternalTool *tool)
         changed = true;
     }
 
-    m_config->group("Editor").writeEntry("Size", editor.size());
-    m_config->sync();
+    config->group("Editor").writeEntry("Size", editor.size());
+    config->sync();
 
     return changed;
 }

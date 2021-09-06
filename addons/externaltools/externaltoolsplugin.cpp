@@ -50,6 +50,7 @@ K_PLUGIN_FACTORY_WITH_JSON(KateExternalToolsFactory, "externaltoolsplugin.json",
 
 KateExternalToolsPlugin::KateExternalToolsPlugin(QObject *parent, const QList<QVariant> &)
     : KTextEditor::Plugin(parent)
+    , m_config(KSharedConfig::openConfig(QStringLiteral("kateexternaltoolsrc"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation))
 {
     // read built-in external tools from compiled-in resource file
     m_defaultTools = readDefaultTools();
@@ -83,18 +84,17 @@ void KateExternalToolsPlugin::reload()
 {
     clearTools();
 
-    KConfig _config(QStringLiteral("externaltools"), KConfig::NoGlobals, QStandardPaths::ApplicationsLocation);
-    KConfigGroup config(&_config, "Global");
-    const int toolCount = config.readEntry("tools", 0);
-    const bool firstStart = config.readEntry("firststart", true);
+    KConfigGroup group(m_config, "Global");
+    const int toolCount = group.readEntry("tools", 0);
+    const bool firstStart = group.readEntry("firststart", true);
 
     if (!firstStart || toolCount > 0) {
         // read user config
         for (int i = 0; i < toolCount; ++i) {
-            config = KConfigGroup(&_config, QStringLiteral("Tool %1").arg(i));
+            group = KConfigGroup(m_config, QStringLiteral("Tool %1").arg(i));
 
             auto t = new KateExternalTool();
-            t->load(config);
+            t->load(group);
             m_tools.push_back(t);
         }
     } else {
