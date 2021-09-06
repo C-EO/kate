@@ -362,6 +362,12 @@ void KateExternalToolsConfigWidget::slotSelectionChanged()
 
 bool KateExternalToolsConfigWidget::editTool(KateExternalTool *tool)
 {
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+    const auto SkipEmpty = QString::SkipEmptyParts;
+#else
+    const auto SkipEmpty = Qt::SkipEmptyParts;
+#endif
+
     bool changed = false;
     KSharedConfigPtr config = m_plugin->config();
 
@@ -374,11 +380,7 @@ bool KateExternalToolsConfigWidget::editTool(KateExternalTool *tool)
         tool->arguments = editor.ui.edtArgs->text();
         tool->input = editor.ui.edtInput->toPlainText();
         tool->workingDir = editor.ui.edtWorkingDir->text();
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-        tool->mimetypes = editor.ui.edtMimeType->text().split(QRegularExpression(QStringLiteral("\\s*;\\s*")), QString::SkipEmptyParts);
-#else
-        tool->mimetypes = editor.ui.edtMimeType->text().split(QRegularExpression(QStringLiteral("\\s*;\\s*")), Qt::SkipEmptyParts);
-#endif
+        tool->mimetypes = editor.ui.edtMimeType->text().split(QRegularExpression(QStringLiteral("\\s*;\\s*")), SkipEmpty);
         tool->saveMode = static_cast<KateExternalTool::SaveMode>(editor.ui.cmbSave->currentIndex());
         tool->reload = editor.ui.chkReload->isChecked();
         tool->outputMode = static_cast<KateExternalTool::OutputMode>(editor.ui.cmbOutput->currentIndex());
