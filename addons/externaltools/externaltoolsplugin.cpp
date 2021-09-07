@@ -48,10 +48,24 @@ static QVector<KateExternalTool> readDefaultTools()
 
 K_PLUGIN_FACTORY_WITH_JSON(KateExternalToolsFactory, "externaltoolsplugin.json", registerPlugin<KateExternalToolsPlugin>();)
 
+static void migrateConfig()
+{
+    using qsp = QStandardPaths;
+
+    const QString newConfig = qsp::writableLocation(qsp::GenericConfigLocation) + QLatin1String("/kateexternaltoolsrc");
+    const QString oldConfig = qsp::locate(qsp::ApplicationsLocation, QStringLiteral("externaltools"));
+
+    if (!QFileInfo(newConfig).exists() && !oldConfig.isEmpty()) {
+        QFile(oldConfig).rename(newConfig);
+    }
+}
+
 KateExternalToolsPlugin::KateExternalToolsPlugin(QObject *parent, const QList<QVariant> &)
     : KTextEditor::Plugin(parent)
-    , m_config(KSharedConfig::openConfig(QStringLiteral("kateexternaltoolsrc"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation))
 {
+    migrateConfig();
+    m_config = KSharedConfig::openConfig(QStringLiteral("kateexternaltoolsrc"), KConfig::NoGlobals, QStandardPaths::GenericConfigLocation);
+
     // read built-in external tools from compiled-in resource file
     m_defaultTools = readDefaultTools();
 
