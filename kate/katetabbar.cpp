@@ -74,7 +74,9 @@ void KateTabBar::readConfig()
     if (m_tabCountLimit > 0 && (count() > m_tabCountLimit)) {
         // just purge last X tabs, this isn't that clever but happens only on config changes!
         while (count() > m_tabCountLimit) {
-            removeTab(count() - 1);
+            if (!tabData(count() - 1).value<QWidget *>()) {
+                removeTab(count() - 1);
+            }
         }
         setCurrentIndex(0);
     }
@@ -336,7 +338,15 @@ QVector<KTextEditor::Document *> KateTabBar::documentList() const
         if (!data.isValid()) {
             continue;
         }
-        result.append(data.value<KateTabButtonData>().doc);
+        if (data.value<KateTabButtonData>().doc)
+            result.append(data.value<KateTabButtonData>().doc);
     }
     return result;
+}
+
+void KateTabBar::setCurrentWidget(QWidget *widget)
+{
+    int idx = insertTab(-1, widget->windowTitle());
+    setTabData(idx, QVariant::fromValue(widget));
+    setCurrentIndex(idx);
 }

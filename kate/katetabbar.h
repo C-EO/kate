@@ -87,6 +87,11 @@ public:
      */
     QVector<KTextEditor::Document *> documentList() const;
 
+    /**
+     * Add an "extra" widget to the tab bar which is not a "KTE::View"
+     */
+    void setCurrentWidget(QWidget *widget);
+
 Q_SIGNALS:
     /**
      * This signal is emitted whenever the context menu is requested for

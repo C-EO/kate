@@ -275,6 +275,13 @@ void KateViewManager::slotDocumentClose()
         return;
     }
 
+    if (auto vs = activeViewSpace()) {
+        if (auto w = vs->currentWidget()) {
+            vs->closeTabWithWidget(w);
+            return;
+        }
+    }
+
     slotDocumentClose(view->document());
 }
 

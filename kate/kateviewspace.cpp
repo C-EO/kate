@@ -304,12 +304,20 @@ void KateViewSpace::changeView(int idx)
         return;
     }
 
-    KTextEditor::Document *doc = m_tabBar->tabDocument(idx);
-    Q_ASSERT(doc);
-
     // make sure we open the view in this view space
     if (!isActiveSpace()) {
         m_viewManager->setActiveSpace(this);
+    }
+
+    KTextEditor::Document *doc = m_tabBar->tabDocument(idx);
+    if (!doc) {
+        auto w = m_tabBar->tabData(idx).value<QWidget *>();
+        if (!w) {
+            Q_ASSERT(false);
+            return;
+        }
+        stack->setCurrentWidget(w);
+        return;
     }
 
     // tell the view manager to show the view
@@ -319,7 +327,7 @@ void KateViewSpace::changeView(int idx)
 KTextEditor::View *KateViewSpace::currentView()
 {
     // might be 0 if the stack contains no view
-    return static_cast<KTextEditor::View *>(stack->currentWidget());
+    return qobject_cast<KTextEditor::View *>(stack->currentWidget());
 }
 
 bool KateViewSpace::isActiveSpace()
@@ -449,7 +457,17 @@ void KateViewSpace::updateDocumentState(KTextEditor::Document *doc)
 void KateViewSpace::closeTabRequest(int idx)
 {
     auto *doc = m_tabBar->tabDocument(idx);
-    Q_ASSERT(doc);
+    if (!doc) {
+        auto widget = m_tabBar->tabData(idx).value<QWidget *>();
+        if (!widget) {
+            Q_ASSERT(false);
+            return;
+        }
+        stack->removeWidget(widget);
+        m_tabBar->removeTab(idx);
+        return;
+    }
+
     m_viewManager->slotDocumentClose(doc);
 }
 
@@ -480,6 +498,35 @@ void KateViewSpace::focusNextTab()
     const int id = m_tabBar->nextTab();
     if (id >= 0) {
         changeView(id);
+    }
+}
+
+void KateViewSpace::addWidgetAsTab(QWidget *widget)
+{
+    stack->addWidget(widget);
+    m_tabBar->setCurrentWidget(widget);
+    stack->setCurrentWidget(widget);
+}
+
+QWidget *KateViewSpace::currentWidget()
+{
+    if (auto w = stack->currentWidget()) {
+        return qobject_cast<KTextEditor::View *>(w) ? nullptr : w;
+    }
+    return nullptr;
+}
+
+void KateViewSpace::closeTabWithWidget(QWidget *widget)
+{
+    if (!widget) {
+        return;
+    }
+
+    for (int i = 0; i < m_tabBar->count(); ++i) {
+        if (m_tabBar->tabData(i).value<QWidget *>() == widget) {
+            closeTabRequest(i);
+            break;
+        }
     }
 }
 
