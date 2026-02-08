@@ -8,6 +8,8 @@
 #include <QString>
 #include <QVariant>
 
+#include <optional>
+
 namespace Ui
 {
 class ImportCategory;

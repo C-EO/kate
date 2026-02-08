@@ -59,7 +59,7 @@ ImportCategory::ImportCategory(QWidget *parent)
     ui->u_catTreeView->setCurrentIndex(m_categoryModel.index(0));
 
     // only allow valid path parts
-    static const QRegularExpression rx(u"^[\\w\\-\\. ]+$"_s);
+    static const QRegularExpression rx(u"^[\\w\\-\\. ]+$"_s, QRegularExpression::UseUnicodePropertiesOption);
     QValidator *catValidator = new QRegularExpressionValidator(rx, this);
     QValidator *nameValidator = new QRegularExpressionValidator(rx, this);
     ui->u_categoryEdit->setValidator(catValidator);
@@ -129,12 +129,15 @@ void ImportCategory::categoryIndexChanged(const QModelIndex &newIndex)
         bool hasCategory = m_categoryModel.rowCount(newIndex) == 0;
         m_importButton->setEnabled(hasName && hasCategory);
     }
+    categoryEditChanged(); // update the add category button states
 }
 
 void ImportCategory::categoryEditChanged()
 {
-    ui->u_addCatButton->setDisabled(ui->u_categoryEdit->text().isEmpty());
-    ui->u_addSubCatButton->setDisabled(ui->u_categoryEdit->text().isEmpty());
+    bool hasSelectedIndex = ui->u_catTreeView->currentIndex().isValid();
+    bool hasCategoryText = !ui->u_categoryEdit->text().isEmpty();
+    ui->u_addCatButton->setEnabled(hasCategoryText && hasSelectedIndex);
+    ui->u_addSubCatButton->setEnabled(hasCategoryText && hasSelectedIndex);
 }
 
 void ImportCategory::templateNameChanged()
