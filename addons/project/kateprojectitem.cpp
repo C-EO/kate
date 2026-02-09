@@ -119,7 +119,7 @@ QIcon *KateProjectItem::icon() const
 
     case File: {
         // ensure we have no empty icons, that breaks layout in tree views
-        QIcon icon = QIcon::fromTheme(QMimeDatabase().mimeTypeForUrl(QUrl::fromLocalFile(data(Qt::UserRole).toString())).iconName());
+        QIcon icon = QIcon::fromTheme(QMimeDatabase().mimeTypeForFile(m_path, QMimeDatabase::MatchExtension).iconName());
         if (icon.isNull()) {
             icon = QIcon::fromTheme(QStringLiteral("unknown"));
         }
