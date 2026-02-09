@@ -103,6 +103,7 @@ public:
 private:
     std::vector<ModelEntry> m_modelEntries;
     std::vector<QString> m_strings;
+    mutable QHash<QString, QIcon> m_icons;
     QString m_projectBase;
     List m_listMode{};
 };

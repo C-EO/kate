@@ -64,8 +64,14 @@ QVariant KateQuickOpenModel::data(const QModelIndex &idx, int role) const
         }
         return {};
     }
-    case Qt::DecorationRole:
-        return QIcon::fromTheme(QMimeDatabase().mimeTypeForFile(entry.filePath, QMimeDatabase::MatchExtension).iconName());
+    case Qt::DecorationRole: {
+        if (auto it = m_icons.constFind(entry.filePath); it != m_icons.cend()) {
+            return it.value();
+        }
+        auto &icon = m_icons[entry.filePath];
+        icon = QIcon::fromTheme(QMimeDatabase().mimeTypeForFile(entry.filePath, QMimeDatabase::MatchExtension).iconName());
+        return icon;
+    }
     case Qt::UserRole:
         return !entry.document ? QUrl::fromLocalFile(entry.filePath) : entry.document->url();
     case Role::Score:
