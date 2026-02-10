@@ -90,8 +90,9 @@ private:
     void addEntries(const QFileInfo &info, const QModelIndex &parent);
 
     typedef QMap<QByteArray, QByteArray> ReplaceMap;
-    bool copyFile(const QString &src, const QString &trgt, const ReplaceMap &fileReplaceMap, const ReplaceMap &replaceMap);
-    bool copyFolder(const QString &src, const QString &trgt, const ReplaceMap &fileReplaceMap, const ReplaceMap &replaceMap, const QStringList &fileSkipList);
+    QString copyFile(const QString &src, const QString &trgt, const ReplaceMap &fileReplaceMap, const ReplaceMap &replaceMap);
+    QString
+    copyFolder(const QString &src, const QString &trgt, const ReplaceMap &fileReplaceMap, const ReplaceMap &replaceMap, const QStringList &fileSkipList);
     QStringList fileNames(const QString &src);
     void createFromTemplate();
 

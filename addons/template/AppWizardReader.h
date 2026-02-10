@@ -42,7 +42,7 @@ public:
     QList<Replacement> replacements() const;
 
     /**
-     * @return true if the archive was extracted successfully
+     * @return empty string if the archive was extracted successfully or an error message on failure
      */
-    bool extractTemplateTo(const QString &packageFile, const QString &dest) const;
+    QString extractTemplateTo(const QString &packageFile, const QString &dest) const;
 };

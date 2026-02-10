@@ -116,7 +116,7 @@ QList<AppWizardReader::Replacement> AppWizardReader::replacements() const
     return reps;
 }
 
-bool AppWizardReader::extractTemplateTo(const QString &packageFile, const QString &dest) const
+QString AppWizardReader::extractTemplateTo(const QString &packageFile, const QString &dest) const
 {
     std::unique_ptr<KArchive> arch = nullptr;
     if (packageFile.endsWith(u".zip"_s)) {
@@ -126,19 +126,17 @@ bool AppWizardReader::extractTemplateTo(const QString &packageFile, const QStrin
     }
 
     if (!arch->open(QIODevice::ReadOnly)) {
-        qWarning("Failed to open template archive");
-        return false;
+        return i18n("Failed to open template archive");
     }
 
     const KArchiveDirectory *root = arch->directory();
     bool ok = root->copyTo(dest, true);
     if (!ok) {
-        qWarning("Failed to extract the template directory");
-        return false;
+        return i18n("Failed to extract the template to directory: %1", dest);
     }
     arch->close();
 
-    return true;
+    return QString();
 }
 
 #include "moc_AppWizardReader.cpp"

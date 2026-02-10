@@ -59,7 +59,7 @@ ImportCategory::ImportCategory(QWidget *parent)
     ui->u_catTreeView->setCurrentIndex(m_categoryModel.index(0));
 
     // only allow valid path parts
-    static const QRegularExpression rx(u"^[\\w\\-\\. ]+$"_s, QRegularExpression::UseUnicodePropertiesOption);
+    static const QRegularExpression rx(u"^[\\w\\-\\. \\+=\\!@#¤\\$€%&\\{\\}\\[\\]\\(\\)]+$"_s, QRegularExpression::UseUnicodePropertiesOption);
     QValidator *catValidator = new QRegularExpressionValidator(rx, this);
     QValidator *nameValidator = new QRegularExpressionValidator(rx, this);
     ui->u_categoryEdit->setValidator(catValidator);

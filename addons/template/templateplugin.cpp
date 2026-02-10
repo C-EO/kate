@@ -63,8 +63,11 @@ void TemplatePluginView::crateNewFromTemplate()
     }
 
     if (!m_template) {
-        m_template = new Template(view);
+        m_template = new Template(m_mainWindow->window());
         connect(m_template, &Template::templateCopied, this, &TemplatePluginView::templateCrated);
+        connect(m_template, &Template::destroyed, this, [this]() {
+            m_template = nullptr;
+        });
     }
     m_template->setOutputFolder(currentFolder);
     m_template->exec();

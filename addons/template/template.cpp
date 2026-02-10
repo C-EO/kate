@@ -286,12 +286,11 @@ QStringList Template::fileNames(const QString &src)
     return files;
 }
 
-bool Template::copyFile(const QString &src, const QString &trgt, const ReplaceMap &fileReplaceMap, const ReplaceMap &replaceMap)
+QString Template::copyFile(const QString &src, const QString &trgt, const ReplaceMap &fileReplaceMap, const ReplaceMap &replaceMap)
 {
     QFile in(src);
     if (!in.open(QFile::ReadOnly)) {
-        qWarning("Failed to open: %ls", qUtf16Printable(src));
-        return false;
+        return i18n("Failed to open file to copy: %1", src);
     }
 
     QByteArray fileContent = in.readAll();
@@ -311,26 +310,28 @@ bool Template::copyFile(const QString &src, const QString &trgt, const ReplaceMa
     }
 
     if (QFileInfo::exists(QString::fromLocal8Bit(newName))) {
-        qWarning("File already exists: %s", newName.constData());
-        return false;
+        return i18n("File already exists: %1", QString::fromUtf8(newName));
     }
 
     QFile out(QString::fromLocal8Bit(newName));
     if (!out.open(QFile::WriteOnly)) {
-        qWarning("Failed to create: %s", newName.constData());
-        return false;
+        return i18n("Failed to create: %1", QString::fromUtf8(newName));
     }
 
     out.write(fileContent);
-    return true;
+    return QString();
 }
 
-bool Template::copyFolder(const QString &src,
-                          const QString &trgt,
-                          const ReplaceMap &fileReplaceMap,
-                          const ReplaceMap &replaceMap,
-                          const QStringList &fileSkipList)
+QString
+Template::copyFolder(const QString &src, const QString &trgt, const ReplaceMap &fileReplaceMap, const ReplaceMap &replaceMap, const QStringList &fileSkipList)
 {
+    // Check that the target directory is empty before copying files there
+    QDir targetDir(trgt);
+    const auto existing = targetDir.entryList(QDir::Files | QDir::Hidden | QDir::Dirs | QDir::NoDotAndDotDot);
+    if (!existing.isEmpty()) {
+        return i18n("Target directory %1 is not empty. Aborting.", trgt);
+    }
+
     QDir dir(src);
 
     // Copy files
@@ -348,8 +349,9 @@ bool Template::copyFolder(const QString &src,
             m_hasKateproject = true;
         }
 #endif
-        if (!copyFile(src + '/'_L1 + entry, trgt + '/'_L1 + entry, fileReplaceMap, replaceMap)) {
-            return false;
+        const QString copyError = copyFile(src + '/'_L1 + entry, trgt + '/'_L1 + entry, fileReplaceMap, replaceMap);
+        if (!copyError.isEmpty()) {
+            return copyError;
         }
     }
 
@@ -357,12 +359,13 @@ bool Template::copyFolder(const QString &src,
     const auto dirEntries = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
     for (const auto &entry : dirEntries) {
         QDir().mkpath(trgt + '/'_L1 + entry);
-        if (!copyFolder(src + '/'_L1 + entry, trgt + '/'_L1 + entry, fileReplaceMap, replaceMap, fileSkipList)) {
-            return false;
+        const QString copyError = copyFolder(src + '/'_L1 + entry, trgt + '/'_L1 + entry, fileReplaceMap, replaceMap, fileSkipList);
+        if (!copyError.isEmpty()) {
+            return copyError;
         }
     }
 
-    return true;
+    return QString();
 }
 
 void Template::createFromTemplate()
@@ -419,14 +422,14 @@ void Template::createFromTemplate()
 
     QStringList fileSkipList({u"template.json"_s});
 
-    bool ok = copyFolder(srcPath, trgtPath, fileReplaceMap, replaceMap, fileSkipList);
+    QString errorStr = copyFolder(srcPath, trgtPath, fileReplaceMap, replaceMap, fileSkipList);
 
-    if (!ok) {
-        fileToOpen.clear();
+    if (errorStr.isEmpty()) {
+        Q_EMIT templateCopied(fileToOpen);
+        accept();
+    } else {
+        KMessageBox::error(this, errorStr);
     }
-
-    Q_EMIT templateCopied(fileToOpen);
-    accept();
 }
 
 void Template::cancel()
@@ -653,22 +656,25 @@ void Template::createFromAppWizardTemplate(const QString &category)
     m_hasCMakeLists = false;
     m_hasKateproject = false;
 
-    bool ok = AppWizardReader().extractTemplateTo(templ.packagePath, tempDir.path());
-    if (!ok) {
+    QString errorStr = AppWizardReader().extractTemplateTo(templ.packagePath, tempDir.path());
+    if (!errorStr.isEmpty()) {
         fileToOpen.clear();
+        KMessageBox::error(this, errorStr);
+        return;
     } else {
-        ok = copyFolder(tempDir.path(), trgtPath, {}, replaceMap, fileSkipList);
+        errorStr = copyFolder(tempDir.path(), trgtPath, {}, replaceMap, fileSkipList);
 
-        if (m_hasCMakeLists && !m_hasKateproject && ok) {
-            copyFile(u":/templates/kateproject.in"_s, trgtPath + u"/.kateproject"_s, {}, replaceMap);
+        if (m_hasCMakeLists && !m_hasKateproject && errorStr.isEmpty()) {
+            errorStr = copyFile(u":/templates/kateproject.in"_s, trgtPath + u"/.kateproject"_s, {}, replaceMap);
         }
     }
 
-    if (!ok) {
-        fileToOpen.clear();
+    if (errorStr.isEmpty()) {
+        Q_EMIT templateCopied(fileToOpen);
+        accept();
+    } else {
+        KMessageBox::error(this, errorStr);
     }
-    Q_EMIT templateCopied(fileToOpen);
-    accept();
 }
 #endif
 
@@ -699,12 +705,12 @@ void Template::exportTemplate()
     }
 
     QDir().mkpath(finalDest);
-    bool success = copyFolder(sourcePath, finalDest, ReplaceMap(), ReplaceMap(), QStringList());
+    const QString errorStr = copyFolder(sourcePath, finalDest, ReplaceMap(), ReplaceMap(), QStringList());
 
-    if (success) {
+    if (errorStr.isEmpty()) {
         KMessageBox::information(this, i18n("Template exported successfully to:\n%1", finalDest));
     } else {
-        KMessageBox::error(this, i18n("Failed to export template to:\n%1", finalDest));
+        KMessageBox::error(this, errorStr);
     }
 }
 
@@ -839,9 +845,9 @@ void Template::importTemplate()
     }
 
     QDir().mkpath(destPath);
-    bool success = copyFolder(srcDir, destPath, ReplaceMap(), ReplaceMap(), QStringList());
+    const QString errorStr = copyFolder(srcDir, destPath, ReplaceMap(), ReplaceMap(), QStringList());
 
-    if (success) {
+    if (errorStr.isEmpty()) {
         const QModelIndex idx = addUserTemplateEntry(QFileInfo(destPath));
         if (idx != ui->u_templateTree->currentIndex()) {
             ui->u_templateTree->expand(idx);
