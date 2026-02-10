@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-03 00:50+0000\n"
+"POT-Creation-Date: 2026-02-10 00:47+0000\n"
 "PO-Revision-Date: 2011-08-04 10:19+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -2793,7 +2793,7 @@ msgstr ""
 msgid "Wildcard Filtering"
 msgstr ""
 
-#: lib/quickopen/katequickopenmodel.cpp:168
+#: lib/quickopen/katequickopenmodel.cpp:174
 #, fuzzy, kde-format
 #| msgid "Projects"
 msgid "Project: %1"

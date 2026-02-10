@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-03 00:50+0000\n"
+"POT-Creation-Date: 2026-02-10 00:47+0000\n"
 "PO-Revision-Date: 2006-01-10 20:18+0100\n"
 "Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
 "Language-Team: Northern Sami <l10n-no@lister.huftis.org>\n"
@@ -2609,7 +2609,7 @@ msgstr ""
 msgid "Wildcard Filtering"
 msgstr ""
 
-#: lib/quickopen/katequickopenmodel.cpp:168
+#: lib/quickopen/katequickopenmodel.cpp:174
 #, kde-format
 msgid "Project: %1"
 msgstr ""
