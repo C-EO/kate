@@ -406,7 +406,7 @@ void KateGitBlamePluginView::showFinished(int exitCode, QProcess::ExitStatus exi
         qWarning("Bad git show command, did not find 'show' argument. %ls", qUtf16Printable(args.join(QLatin1String(" "))));
         Q_UNREACHABLE();
     }
-    const QString commitHashArg = args[showIndex + 1];
+    const QString &commitHashArg = args[showIndex + 1];
 
     int titleStart = 0;
     for (int i = 0; i < 4; ++i) {
