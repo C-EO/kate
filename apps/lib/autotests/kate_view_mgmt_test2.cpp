@@ -46,6 +46,7 @@ private Q_SLOTS:
     void testTabsKeepOrderOnRestore3();
     void testShowMessageWorks();
     void testPinnedDocs();
+    void testNonActivatedViewCursorPositionIsRestored();
 
 private:
     std::unique_ptr<QTemporaryDir> m_tempdir;
@@ -474,6 +475,114 @@ void KateViewManagementTest2::testPinnedDocs()
     {
         app->sessionManager()->sessionNew();
         QCOMPARE(app->activeKateMainWindow()->views().size(), 0);
+    }
+}
+
+void KateViewManagementTest2::testNonActivatedViewCursorPositionIsRestored()
+{
+    // Open App with 2 docs, set a cursor position
+    const QString sessionName = QStringLiteral("testNonActivatedViewCursorPositionIsRestored");
+
+    {
+        app->sessionManager()->activateSession(sessionName, false, true);
+        KateMainWindow *mw = app->activeKateMainWindow();
+
+        QDir thisDir(QStringLiteral(QT_TESTCASE_SOURCEDIR));
+
+        // open files aka tabs in order
+        auto tab1 = mw->openUrl(QUrl::fromLocalFile(QStringLiteral(":/kxmlgui5/kate/kateui.rc")));
+        auto tab2 = mw->openUrl(QUrl::fromLocalFile(QStringLiteral(":/kxmlgui5/kwrite/kateui.rc")));
+        auto tab3 = mw->openUrl(QUrl::fromLocalFile(thisDir.absoluteFilePath(QStringLiteral("CMakeLists.txt"))));
+
+        auto view1 = mw->activateView(tab1->document());
+        auto view2 = mw->activateView(tab2->document());
+        auto view3 = mw->activateView(tab3->document());
+        QVERIFY(view1 && view2 && view3);
+
+        view1->setCursorPosition({3, 5});
+        view2->setCursorPosition({7, 2});
+        view3->setCursorPosition({2, 2});
+        QCOMPARE(view1->cursorPosition(), KTextEditor::Cursor(3, 5));
+        QCOMPARE(view2->cursorPosition(), KTextEditor::Cursor(7, 2));
+        QCOMPARE(view3->cursorPosition(), KTextEditor::Cursor(2, 2));
+
+        // save the session
+        app->sessionManager()->saveActiveSession();
+    }
+
+    // Close app
+    app->activeKateMainWindow()->close();
+    app.reset();
+
+    // Open app again, activate only 1 doc
+    {
+        // cmd line parser that is passed to KateApp ctor
+        QCommandLineParser parser;
+        const QCommandLineOption startSessionOption(QStringList{QStringLiteral("s"), QStringLiteral("start")},
+                                                    i18n("Start Kate with a given session."),
+                                                    i18n("session"));
+        parser.addOption(startSessionOption);
+        parser.process({qApp->applicationFilePath(), QStringLiteral("--start=%1").arg(sessionName)});
+        app = std::make_unique<KateApp>(parser, KateApp::ApplicationKate, m_tempdir->path());
+        QVERIFY(app->init());
+
+        KateMainWindow *mw = app->activeKateMainWindow();
+
+        // Expect 2 docs
+        const auto docs = app->documents();
+        QCOMPARE(docs.size(), 3);
+        QCOMPARE(mw->viewManager()->activeViewSpace()->numberOfRegisteredDocuments(), 3);
+
+        auto tabbar = mw->viewManager()->activeViewSpace()->m_tabBar;
+        QCOMPARE(tabbar->count(), 3);
+        QCOMPARE(tabbar->currentIndex(), 2);
+
+        tabbar->setCurrentIndex(1);
+
+        auto views = mw->viewManager()->views();
+        QCOMPARE(mw->viewManager()->views().size(), 2);
+        // Expect correct position
+        QCOMPARE(views[0]->cursorPosition(), KTextEditor::Cursor(7, 2));
+        QCOMPARE(views[1]->cursorPosition(), KTextEditor::Cursor(2, 2));
+    }
+
+    // Close app again
+    app->activeKateMainWindow()->close();
+    app.reset();
+
+    // Open app again, activate both docs, expect correct cursor positions
+    {
+        // cmd line parser that is passed to KateApp ctor
+        QCommandLineParser parser;
+        const QCommandLineOption startSessionOption(QStringList{QStringLiteral("s"), QStringLiteral("start")},
+                                                    i18n("Start Kate with a given session."),
+                                                    i18n("session"));
+        parser.addOption(startSessionOption);
+        parser.process({qApp->applicationFilePath(), QStringLiteral("--start=%1").arg(sessionName)});
+        app = std::make_unique<KateApp>(parser, KateApp::ApplicationKate, m_tempdir->path());
+        QVERIFY(app->init());
+
+        KateMainWindow *mw = app->activeKateMainWindow();
+
+        // Expect 2 docs
+        const auto docs = app->documents();
+        QCOMPARE(docs.size(), 3);
+        QCOMPARE(mw->viewManager()->activeViewSpace()->numberOfRegisteredDocuments(), 3);
+
+        auto tabbar = mw->viewManager()->activeViewSpace()->m_tabBar;
+        QCOMPARE(tabbar->count(), 3);
+        QCOMPARE(tabbar->currentIndex(), 1);
+
+        tabbar->setCurrentIndex(2);
+        tabbar->setCurrentIndex(1);
+        tabbar->setCurrentIndex(0);
+
+        auto views = mw->viewManager()->views();
+        QCOMPARE(mw->viewManager()->views().size(), 3);
+        // Expect correct position
+        QCOMPARE(views[0]->cursorPosition(), KTextEditor::Cursor(3, 5));
+        QCOMPARE(views[1]->cursorPosition(), KTextEditor::Cursor(7, 2));
+        QCOMPARE(views[2]->cursorPosition(), KTextEditor::Cursor(2, 2));
     }
 }
 
