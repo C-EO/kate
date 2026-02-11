@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kategdbplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-17 00:47+0000\n"
-"PO-Revision-Date: 2026-01-03 18:10+0100\n"
+"PO-Revision-Date: 2026-02-07 17:21+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: backend.cpp:48 dapbackend.cpp:175
 #, kde-format
@@ -28,10 +28,9 @@ msgstr ""
 "corrente."
 
 #: breakpointview.cpp:354
-#, fuzzy, kde-format
-#| msgid "Breakpoint"
+#, kde-format
 msgid "Line Breakpoints"
-msgstr "Punto di interruzione"
+msgstr "Punti di interruzione di riga"
 
 #: breakpointview.cpp:356
 #, kde-format
@@ -39,10 +38,9 @@ msgid "Function Breakpoints"
 msgstr "Punti di interruzione nella funzione"
 
 #: breakpointview.cpp:358
-#, fuzzy, kde-format
-#| msgid "function breakpoints"
+#, kde-format
 msgid "Exception Breakpoints"
-msgstr "punti di interruzione nella funzione"
+msgstr "Punti di interruzione sulle eccezioni"
 
 #: breakpointview.cpp:417
 #, kde-format
@@ -112,7 +110,7 @@ msgstr "Elimina obiettivo"
 #: configview.cpp:104
 #, kde-format
 msgid "Reload launch.json targets"
-msgstr ""
+msgstr "Ricarica gli obiettivi di launch.json"
 
 #: configview.cpp:109
 #, kde-format
@@ -369,10 +367,9 @@ msgid "terminate debuggee"
 msgstr "termina il debug"
 
 #: dapbackend.cpp:665
-#, fuzzy, kde-format
-#| msgid "function breakpoints"
+#, kde-format
 msgid "exception breakpoint filters"
-msgstr "punti di interruzione nella funzione"
+msgstr "filtri dei punti di interruzione sulle eccezioni"
 
 #: dapbackend.cpp:812
 #, kde-format

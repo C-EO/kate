@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: kate-replicode-plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:55+0000\n"
-"PO-Revision-Date: 2026-01-29 22:00+0000\n"
+"PO-Revision-Date: 2026-02-10 23:47+0000\n"
 "Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
 "Language-Team: pt\n"
 "Language: pt\n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-POFile-SpellExtra: Descompilar replicode Replicode\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-IgnoreConsistency: Debug\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #. i18n: ectx: attribute (title), widget (QWidget, run)
 #: config.ui:18
@@ -38,7 +38,7 @@ msgstr "Nível de sonda:"
 #: config.ui:58
 #, kde-format
 msgid "User operations layout module:"
-msgstr "Módulo de disposição de operações de utilizador:"
+msgstr "Módulo de esquema de operações de utilizador:"
 
 #. i18n: ectx: property (text), widget (QLabel, userClassLabel)
 #: config.ui:71
