@@ -325,13 +325,6 @@ QString Template::copyFile(const QString &src, const QString &trgt, const Replac
 QString
 Template::copyFolder(const QString &src, const QString &trgt, const ReplaceMap &fileReplaceMap, const ReplaceMap &replaceMap, const QStringList &fileSkipList)
 {
-    // Check that the target directory is empty before copying files there
-    QDir targetDir(trgt);
-    const auto existing = targetDir.entryList(QDir::Files | QDir::Hidden | QDir::Dirs | QDir::NoDotAndDotDot);
-    if (!existing.isEmpty()) {
-        return i18n("Target directory %1 is not empty. Aborting.", trgt);
-    }
-
     QDir dir(src);
 
     // Copy files
