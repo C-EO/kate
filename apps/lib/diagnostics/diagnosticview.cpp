@@ -1448,7 +1448,7 @@ void DiagnosticsView::onContextMenuRequested(const QPoint &pos)
     QModelIndex currentSourceIndex = m_proxy->mapToSource(m_diagnosticsTree->currentIndex());
     if (QStandardItem *currentItem = m_model.itemFromIndex(currentSourceIndex)) {
         auto diagText = currentSourceIndex.data().toString();
-        menu->addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("Copy to Clipboard"), [diagText]() {
+        menu->addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("Copy to Clipboard"), qGuiApp, [diagText]() {
             QClipboard *clipboard = QGuiApplication::clipboard();
             clipboard->setText(diagText);
         });
