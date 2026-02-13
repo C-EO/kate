@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:47+0000\n"
+"POT-Creation-Date: 2026-02-13 00:47+0000\n"
 "PO-Revision-Date: 2026-01-04 15:30+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -49,12 +49,16 @@ msgstr "கேட் - மேம்பட்ட உரைத்திருத�
 msgid "(c) 2000-2024 The Kate Authors"
 msgstr "(c) 2000-2024 கேட் நிரலாளர்கள்"
 
-#: kate/main.cpp:169 lib/autotests/kate_view_mgmt_test2.cpp:219
+#: kate/main.cpp:169 lib/autotests/kate_view_mgmt_test2.cpp:220
+#: lib/autotests/kate_view_mgmt_test2.cpp:522
+#: lib/autotests/kate_view_mgmt_test2.cpp:558
 #, kde-format
 msgid "Start Kate with a given session."
 msgstr "குறிப்பிட்ட அமர்வுடன் கேட்டை துவக்கு."
 
-#: kate/main.cpp:170 lib/autotests/kate_view_mgmt_test2.cpp:220
+#: kate/main.cpp:170 lib/autotests/kate_view_mgmt_test2.cpp:221
+#: lib/autotests/kate_view_mgmt_test2.cpp:523
+#: lib/autotests/kate_view_mgmt_test2.cpp:559
 #, kde-format
 msgid "session"
 msgstr "அமர்வு"

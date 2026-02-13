@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:47+0000\n"
+"POT-Creation-Date: 2026-02-13 00:47+0000\n"
 "PO-Revision-Date: 2025-12-01 13:33+0000\n"
 "Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -43,12 +43,16 @@ msgstr "Kate - Ard-eagarthóir"
 msgid "(c) 2000-2024 The Kate Authors"
 msgstr "(c) 2000-2024 Údair Kate"
 
-#: kate/main.cpp:169 lib/autotests/kate_view_mgmt_test2.cpp:219
+#: kate/main.cpp:169 lib/autotests/kate_view_mgmt_test2.cpp:220
+#: lib/autotests/kate_view_mgmt_test2.cpp:522
+#: lib/autotests/kate_view_mgmt_test2.cpp:558
 #, kde-format
 msgid "Start Kate with a given session."
 msgstr "Tosaigh Kate le seisiún ar leith."
 
-#: kate/main.cpp:170 lib/autotests/kate_view_mgmt_test2.cpp:220
+#: kate/main.cpp:170 lib/autotests/kate_view_mgmt_test2.cpp:221
+#: lib/autotests/kate_view_mgmt_test2.cpp:523
+#: lib/autotests/kate_view_mgmt_test2.cpp:559
 #, kde-format
 msgid "session"
 msgstr "seisiún"
