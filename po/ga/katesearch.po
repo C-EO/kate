@@ -1,22 +1,19 @@
-# Irish translation of katesearch
-# Copyright (C) 2011 This_file_is_part_of_KDE
-# This file is distributed under the same license as the katesearch package.
-# Kevin Scannell <kscanne@gmail.com>, 2011.
-# Aindriú Mac Giolla Eoin <aindriu80@gmail.com>, 2025.
+# SPDX-FileCopyrightText: 2026 Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: katesearch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-12 00:46+0000\n"
-"PO-Revision-Date: 2025-12-01 12:16+0000\n"
-"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@gmail.com>\n"
+"PO-Revision-Date: 2026-02-13 13:11+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"3 : 4;\n"
+"X-Generator: Poedit 3.8\n"
 
 #: KateSearchCommand.cpp:88
 #, kde-format
@@ -59,6 +56,8 @@ msgid ""
 "Export pattern: \\0 for full match, \\1,\\2,.. for regular expression "
 "captures"
 msgstr ""
+"Patrún easpórtála: \\0 le haghaidh meaitseáil iomlán, \\1,\\2,.. le haghaidh "
+"gabhálacha léirithe rialta"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: MatchExportDialog.ui:35
@@ -750,6 +749,10 @@ msgid ""
 "the whole matches, use \\0. To export regular expression captures, use \\1,"
 "\\2,... The other text in the pattern is returned in the export results."
 msgstr ""
+"Claochlaigh agus easpórtáil meaitseálacha cuardaigh ag baint úsáide as "
+"patrún athsholáthair. Chun na meaitseálacha iomlána a easpórtáil, bain úsáid "
+"as \\0. Chun gabhálacha léirithe rialta a easpórtáil, bain úsáid as \\1, "
+"\\2,... Cuirtear an téacs eile sa phatrún ar ais sna torthaí easpórtála."
 
 #: SearchPlugin.cpp:2288
 #, kde-format
