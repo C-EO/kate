@@ -44,7 +44,7 @@ TabSwitcherPluginView::TabSwitcherPluginView(TabSwitcherPlugin *plugin, KTextEdi
 
     m_documentsCreatedTimer.setInterval(100);
     m_documentsCreatedTimer.setSingleShot(true);
-    m_documentsCreatedTimer.callOnTimeout([this] {
+    m_documentsCreatedTimer.callOnTimeout(this, [this] {
         auto docs = std::move(m_documentsPendingAdd);
         m_documentsPendingAdd = {};
         registerDocuments(docs);

@@ -67,33 +67,35 @@ static void onDeleteFile(const QModelIndex &index, const QString &path, KateProj
     const QPersistentModelIndex idx = index;
 
     auto handler = new KIO::WidgetsAskUserActionHandler();
-    auto cb = [idx, path, parent, handler, url, fileInfo](bool allow, const QList<QUrl> &) {
-        if (allow) {
-            if (!idx.isValid())
-                return;
-            const QList<KTextEditor::Document *> openDocuments = KTextEditor::Editor::instance()->application()->documents();
 
-            // if is open, close
-            for (auto doc : openDocuments) {
-                if (fileInfo.isDir()) {
-                    if (url.isParentOf(doc->url())) {
-                        KTextEditor::Editor::instance()->application()->closeDocument(doc);
-                    }
-                } else {
-                    if (doc->url().adjusted(QUrl::RemoveScheme) == url.adjusted(QUrl::RemoveScheme)) {
-                        KTextEditor::Editor::instance()->application()->closeDocument(doc);
-                        break;
-                    }
-                }
-            }
-            parent->removePath(idx, path);
-        }
-        if (handler) {
-            handler->deleteLater();
-        }
-    };
+    QObject::connect(handler,
+                     &KIO::WidgetsAskUserActionHandler::askUserDeleteResult,
+                     parent,
+                     [idx, path, parent, handler, url, fileInfo](bool allow, const QList<QUrl> &) {
+                         if (allow) {
+                             if (!idx.isValid())
+                                 return;
+                             const QList<KTextEditor::Document *> openDocuments = KTextEditor::Editor::instance()->application()->documents();
 
-    QObject::connect(handler, &KIO::WidgetsAskUserActionHandler::askUserDeleteResult, cb);
+                             // if is open, close
+                             for (auto doc : openDocuments) {
+                                 if (fileInfo.isDir()) {
+                                     if (url.isParentOf(doc->url())) {
+                                         KTextEditor::Editor::instance()->application()->closeDocument(doc);
+                                     }
+                                 } else {
+                                     if (doc->url().adjusted(QUrl::RemoveScheme) == url.adjusted(QUrl::RemoveScheme)) {
+                                         KTextEditor::Editor::instance()->application()->closeDocument(doc);
+                                         break;
+                                     }
+                                 }
+                             }
+                             parent->removePath(idx, path);
+                         }
+                         if (handler) {
+                             handler->deleteLater();
+                         }
+                     });
 
     handler->askUserDelete({url}, KIO::AskUserActionInterface::Delete, KIO::AskUserActionInterface::ForceConfirmation, parent);
 }

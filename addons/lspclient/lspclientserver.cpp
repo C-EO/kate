@@ -1412,9 +1412,15 @@ public:
         , m_config(std::move(config))
     {
         // setup async reading
-        QObject::connect(&m_sproc, &QProcess::readyReadStandardOutput, utils::mem_fun(&self_type::readStandardOutput, this));
-        QObject::connect(&m_sproc, &QProcess::readyReadStandardError, utils::mem_fun(&self_type::readStandardError, this));
-        QObject::connect(&m_sproc, &QProcess::stateChanged, utils::mem_fun(&self_type::onStateChanged, this));
+        QObject::connect(&m_sproc, &QProcess::readyReadStandardOutput, _q, [this]() {
+            readStandardOutput();
+        });
+        QObject::connect(&m_sproc, &QProcess::readyReadStandardError, _q, [this]() {
+            readStandardError();
+        });
+        QObject::connect(&m_sproc, &QProcess::stateChanged, _q, [this](auto s) {
+            onStateChanged(s);
+        });
     }
 
     ~LSPClientServerPrivate()

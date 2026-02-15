@@ -24,21 +24,19 @@ int main(int argc, char **argv)
     QCoreApplication app(argc, argv);
     QEventLoop q;
 
-    auto state_h = [&lsp, &q]() {
+    auto conn = QObject::connect(&lsp, &LSPClientServer::stateChanged, &lsp, [&lsp, &q]() {
         if (lsp.state() == LSPClientServer::State::Running) {
             q.quit();
         }
-    };
-    auto conn = QObject::connect(&lsp, &LSPClientServer::stateChanged, state_h);
+    });
+
     lsp.start(true);
     q.exec();
     QObject::disconnect(conn);
 
-    auto diagnostics_h = [](const LSPPublishDiagnosticsParams &diag) {
+    QObject::connect(&lsp, &LSPClientServer::publishDiagnostics, &lsp, [](const LSPPublishDiagnosticsParams &diag) {
         std::cout << "diagnostics  " << diag.uri.toLocalFile().toUtf8().toStdString() << " count: " << diag.diagnostics.length();
-    };
-
-    QObject::connect(&lsp, &LSPClientServer::publishDiagnostics, diagnostics_h);
+    });
 
     auto document = QUrl(QString::fromLatin1(argv[3]));
 

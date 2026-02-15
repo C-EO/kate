@@ -769,7 +769,7 @@ void DiagnosticsView::showFixesInMenu(const QList<DiagnosticFix> &fixes)
         auto pos = av->cursorPositionCoordinates();
         QMenu menu(this);
         for (const auto &fix : fixes) {
-            menu.addAction(fix.fixTitle, fix.fixCallback);
+            menu.addAction(fix.fixTitle, av, fix.fixCallback);
         }
         menu.exec(av->mapToGlobal(pos));
     }

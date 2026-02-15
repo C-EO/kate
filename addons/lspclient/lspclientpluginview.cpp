@@ -867,10 +867,9 @@ public:
         auto menu = new QMenu(treeView);
         menu->addAction(i18n("Expand All"), treeView, &QTreeView::expandAll);
         menu->addAction(i18n("Collapse All"), treeView, &QTreeView::collapseAll);
-        auto h = [treeView, menu](const QPoint &p) {
+        connect(treeView, &QTreeView::customContextMenuRequested, menu, [treeView, menu](const QPoint &p) {
             menu->popup(treeView->viewport()->mapToGlobal(p));
-        };
-        connect(treeView, &QTreeView::customContextMenuRequested, h);
+        });
     }
 
     void displayOptionChanged()

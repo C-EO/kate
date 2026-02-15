@@ -81,7 +81,8 @@ ecm_set_disabled_deprecation_versions(
     KF 6.16.0
 )
 
-#add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
+# be more strict with some Qt constructs
+add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 
 option(ENABLE_PCH "Enable PCH support" ON)
 if (ENABLE_PCH)
