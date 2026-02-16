@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-20 00:45+0000\n"
+"POT-Creation-Date: 2026-02-16 00:50+0000\n"
 "PO-Revision-Date: 2021-05-15 17:03+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -69,7 +69,7 @@ msgstr ""
 msgid "Last Commit"
 msgstr "Comite"
 
-#: branchdeletedialog.cpp:137 kateprojecttreeviewcontextmenu.cpp:131
+#: branchdeletedialog.cpp:137 kateprojecttreeviewcontextmenu.cpp:133
 #, kde-format
 msgid "Delete"
 msgstr ""
@@ -995,67 +995,67 @@ msgstr "Alegeți un dosar"
 msgid "Enter name:"
 msgstr "Introduceți denumirea:"
 
-#: kateprojecttreeviewcontextmenu.cpp:111
+#: kateprojecttreeviewcontextmenu.cpp:113
 #, fuzzy, kde-format
 #| msgid "No Action"
 msgid "Copy Location"
 msgstr "Nicio acțiune"
 
-#: kateprojecttreeviewcontextmenu.cpp:118
+#: kateprojecttreeviewcontextmenu.cpp:120
 #, fuzzy, kde-format
 #| msgid "Open With"
 msgid "New File…"
 msgstr "Deschide cu"
 
-#: kateprojecttreeviewcontextmenu.cpp:119
+#: kateprojecttreeviewcontextmenu.cpp:121
 #, fuzzy, kde-format
 #| msgid "Add Folder"
 msgid "New Folder…"
 msgstr "Adaugă dosar"
 
-#: kateprojecttreeviewcontextmenu.cpp:126
+#: kateprojecttreeviewcontextmenu.cpp:128
 #, kde-format
 msgid "&Rename"
 msgstr "&Redenumește"
 
-#: kateprojecttreeviewcontextmenu.cpp:137
+#: kateprojecttreeviewcontextmenu.cpp:139
 #, kde-format
 msgid "Properties"
 msgstr "Proprietăți"
 
-#: kateprojecttreeviewcontextmenu.cpp:141
+#: kateprojecttreeviewcontextmenu.cpp:143
 #, kde-format
 msgid "Open With"
 msgstr "Deschide cu"
 
-#: kateprojecttreeviewcontextmenu.cpp:149
+#: kateprojecttreeviewcontextmenu.cpp:151
 #, kde-format
 msgid "Open Internal Terminal Here"
 msgstr ""
 
-#: kateprojecttreeviewcontextmenu.cpp:161
+#: kateprojecttreeviewcontextmenu.cpp:163
 #, kde-format
 msgid "Open External Terminal Here"
 msgstr ""
 
-#: kateprojecttreeviewcontextmenu.cpp:167
+#: kateprojecttreeviewcontextmenu.cpp:169
 #, kde-format
 msgid "&Open Containing Folder"
 msgstr "Deschide d&osarul conținător"
 
-#: kateprojecttreeviewcontextmenu.cpp:176
+#: kateprojecttreeviewcontextmenu.cpp:178
 #, fuzzy, kde-format
 #| msgid "Show File History"
 msgid "Show Git History"
 msgstr "Arată istoricul fișierului"
 
-#: kateprojecttreeviewcontextmenu.cpp:240
+#: kateprojecttreeviewcontextmenu.cpp:242
 #, fuzzy, kde-format
 #| msgid "Open With"
 msgid "New File"
 msgstr "Deschide cu"
 
-#: kateprojecttreeviewcontextmenu.cpp:245
+#: kateprojecttreeviewcontextmenu.cpp:247
 #, fuzzy, kde-format
 #| msgid "Add Folder"
 msgid "New Folder"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kateproject\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-20 00:45+0000\n"
+"POT-Creation-Date: 2026-02-16 00:50+0000\n"
 "PO-Revision-Date: 2025-11-09 07:22-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -74,7 +74,7 @@ msgstr "Última atividade"
 msgid "Last Commit"
 msgstr "Último commit"
 
-#: branchdeletedialog.cpp:137 kateprojecttreeviewcontextmenu.cpp:131
+#: branchdeletedialog.cpp:137 kateprojecttreeviewcontextmenu.cpp:133
 #, kde-format
 msgid "Delete"
 msgstr "Excluir"
@@ -965,62 +965,62 @@ msgstr "Escolha uma pasta"
 msgid "Enter name:"
 msgstr "Insira o nome:"
 
-#: kateprojecttreeviewcontextmenu.cpp:111
+#: kateprojecttreeviewcontextmenu.cpp:113
 #, kde-format
 msgid "Copy Location"
 msgstr "Copiar localização"
 
-#: kateprojecttreeviewcontextmenu.cpp:118
+#: kateprojecttreeviewcontextmenu.cpp:120
 #, kde-format
 msgid "New File…"
 msgstr "Novo arquivo…"
 
-#: kateprojecttreeviewcontextmenu.cpp:119
+#: kateprojecttreeviewcontextmenu.cpp:121
 #, kde-format
 msgid "New Folder…"
 msgstr "Nova pasta…"
 
-#: kateprojecttreeviewcontextmenu.cpp:126
+#: kateprojecttreeviewcontextmenu.cpp:128
 #, kde-format
 msgid "&Rename"
 msgstr "&Renomear"
 
-#: kateprojecttreeviewcontextmenu.cpp:137
+#: kateprojecttreeviewcontextmenu.cpp:139
 #, kde-format
 msgid "Properties"
 msgstr "Propriedades"
 
-#: kateprojecttreeviewcontextmenu.cpp:141
+#: kateprojecttreeviewcontextmenu.cpp:143
 #, kde-format
 msgid "Open With"
 msgstr "Abrir com"
 
-#: kateprojecttreeviewcontextmenu.cpp:149
+#: kateprojecttreeviewcontextmenu.cpp:151
 #, kde-format
 msgid "Open Internal Terminal Here"
 msgstr "Abrir terminal interno aqui"
 
-#: kateprojecttreeviewcontextmenu.cpp:161
+#: kateprojecttreeviewcontextmenu.cpp:163
 #, kde-format
 msgid "Open External Terminal Here"
 msgstr "Abrir terminal externo aqui"
 
-#: kateprojecttreeviewcontextmenu.cpp:167
+#: kateprojecttreeviewcontextmenu.cpp:169
 #, kde-format
 msgid "&Open Containing Folder"
 msgstr "Abrir pasta que co&ntém"
 
-#: kateprojecttreeviewcontextmenu.cpp:176
+#: kateprojecttreeviewcontextmenu.cpp:178
 #, kde-format
 msgid "Show Git History"
 msgstr "Mostrar histórico do GIT"
 
-#: kateprojecttreeviewcontextmenu.cpp:240
+#: kateprojecttreeviewcontextmenu.cpp:242
 #, kde-format
 msgid "New File"
 msgstr "Novo arquivo"
 
-#: kateprojecttreeviewcontextmenu.cpp:245
+#: kateprojecttreeviewcontextmenu.cpp:247
 #, kde-format
 msgid "New Folder"
 msgstr "Nova pasta"

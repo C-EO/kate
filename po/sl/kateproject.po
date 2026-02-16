@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-20 00:45+0000\n"
+"POT-Creation-Date: 2026-02-16 00:50+0000\n"
 "PO-Revision-Date: 2025-11-09 07:14+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -73,7 +73,7 @@ msgstr "Zadnja dejavnost"
 msgid "Last Commit"
 msgstr "Zadnja potrditev"
 
-#: branchdeletedialog.cpp:137 kateprojecttreeviewcontextmenu.cpp:131
+#: branchdeletedialog.cpp:137 kateprojecttreeviewcontextmenu.cpp:133
 #, kde-format
 msgid "Delete"
 msgstr "Zbriši"
@@ -966,62 +966,62 @@ msgstr "Izberi imenik"
 msgid "Enter name:"
 msgstr "Vnesite ime:"
 
-#: kateprojecttreeviewcontextmenu.cpp:111
+#: kateprojecttreeviewcontextmenu.cpp:113
 #, kde-format
 msgid "Copy Location"
 msgstr "Kopiraj mesto"
 
-#: kateprojecttreeviewcontextmenu.cpp:118
+#: kateprojecttreeviewcontextmenu.cpp:120
 #, kde-format
 msgid "New File…"
 msgstr "Nova datoteka…"
 
-#: kateprojecttreeviewcontextmenu.cpp:119
+#: kateprojecttreeviewcontextmenu.cpp:121
 #, kde-format
 msgid "New Folder…"
 msgstr "Nova mapa…"
 
-#: kateprojecttreeviewcontextmenu.cpp:126
+#: kateprojecttreeviewcontextmenu.cpp:128
 #, kde-format
 msgid "&Rename"
 msgstr "Preimenuj"
 
-#: kateprojecttreeviewcontextmenu.cpp:137
+#: kateprojecttreeviewcontextmenu.cpp:139
 #, kde-format
 msgid "Properties"
 msgstr "Lastnosti"
 
-#: kateprojecttreeviewcontextmenu.cpp:141
+#: kateprojecttreeviewcontextmenu.cpp:143
 #, kde-format
 msgid "Open With"
 msgstr "Odpri z"
 
-#: kateprojecttreeviewcontextmenu.cpp:149
+#: kateprojecttreeviewcontextmenu.cpp:151
 #, kde-format
 msgid "Open Internal Terminal Here"
 msgstr "Tukaj odpri notranji terminal"
 
-#: kateprojecttreeviewcontextmenu.cpp:161
+#: kateprojecttreeviewcontextmenu.cpp:163
 #, kde-format
 msgid "Open External Terminal Here"
 msgstr "Tukaj odpri zunanji terminal"
 
-#: kateprojecttreeviewcontextmenu.cpp:167
+#: kateprojecttreeviewcontextmenu.cpp:169
 #, kde-format
 msgid "&Open Containing Folder"
 msgstr "&Odpri vsebovano mapo"
 
-#: kateprojecttreeviewcontextmenu.cpp:176
+#: kateprojecttreeviewcontextmenu.cpp:178
 #, kde-format
 msgid "Show Git History"
 msgstr "Prikaži Git zgodovino"
 
-#: kateprojecttreeviewcontextmenu.cpp:240
+#: kateprojecttreeviewcontextmenu.cpp:242
 #, kde-format
 msgid "New File"
 msgstr "Nova datoteka"
 
-#: kateprojecttreeviewcontextmenu.cpp:245
+#: kateprojecttreeviewcontextmenu.cpp:247
 #, kde-format
 msgid "New Folder"
 msgstr "Nova mapa"

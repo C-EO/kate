@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kateproject\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-20 00:45+0000\n"
+"POT-Creation-Date: 2026-02-16 00:50+0000\n"
 "PO-Revision-Date: 2023-01-31 18:13+0100\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -70,7 +70,7 @@ msgstr ""
 msgid "Last Commit"
 msgstr "Posledné začlenenie"
 
-#: branchdeletedialog.cpp:137 kateprojecttreeviewcontextmenu.cpp:131
+#: branchdeletedialog.cpp:137 kateprojecttreeviewcontextmenu.cpp:133
 #, kde-format
 msgid "Delete"
 msgstr "Vymazať"
@@ -979,65 +979,65 @@ msgstr "Vyberať adresár"
 msgid "Enter name:"
 msgstr "Zadajte meno:"
 
-#: kateprojecttreeviewcontextmenu.cpp:111
+#: kateprojecttreeviewcontextmenu.cpp:113
 #, kde-format
 msgid "Copy Location"
 msgstr "Kopírovať umiestnenie"
 
-#: kateprojecttreeviewcontextmenu.cpp:118
+#: kateprojecttreeviewcontextmenu.cpp:120
 #, fuzzy, kde-format
 #| msgid "Open File"
 msgid "New File…"
 msgstr "Otvoriť súbor"
 
-#: kateprojecttreeviewcontextmenu.cpp:119
+#: kateprojecttreeviewcontextmenu.cpp:121
 #, fuzzy, kde-format
 #| msgid "Add Folder"
 msgid "New Folder…"
 msgstr "Pridať priečinok"
 
-#: kateprojecttreeviewcontextmenu.cpp:126
+#: kateprojecttreeviewcontextmenu.cpp:128
 #, kde-format
 msgid "&Rename"
 msgstr "Premenovať"
 
-#: kateprojecttreeviewcontextmenu.cpp:137
+#: kateprojecttreeviewcontextmenu.cpp:139
 #, kde-format
 msgid "Properties"
 msgstr "Vlastnosti"
 
-#: kateprojecttreeviewcontextmenu.cpp:141
+#: kateprojecttreeviewcontextmenu.cpp:143
 #, kde-format
 msgid "Open With"
 msgstr "Otvoriť s"
 
-#: kateprojecttreeviewcontextmenu.cpp:149
+#: kateprojecttreeviewcontextmenu.cpp:151
 #, kde-format
 msgid "Open Internal Terminal Here"
 msgstr "Otvoriť vnútorný terminál tu"
 
-#: kateprojecttreeviewcontextmenu.cpp:161
+#: kateprojecttreeviewcontextmenu.cpp:163
 #, kde-format
 msgid "Open External Terminal Here"
 msgstr "Otvoriť externý terminál tu"
 
-#: kateprojecttreeviewcontextmenu.cpp:167
+#: kateprojecttreeviewcontextmenu.cpp:169
 #, kde-format
 msgid "&Open Containing Folder"
 msgstr "&Otvoriť priečinok s obsahom"
 
-#: kateprojecttreeviewcontextmenu.cpp:176
+#: kateprojecttreeviewcontextmenu.cpp:178
 #, kde-format
 msgid "Show Git History"
 msgstr "Zobraziť git históriu"
 
-#: kateprojecttreeviewcontextmenu.cpp:240
+#: kateprojecttreeviewcontextmenu.cpp:242
 #, fuzzy, kde-format
 #| msgid "Open File"
 msgid "New File"
 msgstr "Otvoriť súbor"
 
-#: kateprojecttreeviewcontextmenu.cpp:245
+#: kateprojecttreeviewcontextmenu.cpp:247
 #, fuzzy, kde-format
 #| msgid "Add Folder"
 msgid "New Folder"

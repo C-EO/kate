@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-20 00:45+0000\n"
+"POT-Creation-Date: 2026-02-16 00:50+0000\n"
 "PO-Revision-Date: 2025-11-12 18:49+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -70,7 +70,7 @@ msgstr "أخر نشاط"
 msgid "Last Commit"
 msgstr "آخر إيداع"
 
-#: branchdeletedialog.cpp:137 kateprojecttreeviewcontextmenu.cpp:131
+#: branchdeletedialog.cpp:137 kateprojecttreeviewcontextmenu.cpp:133
 #, kde-format
 msgid "Delete"
 msgstr "احذف"
@@ -960,62 +960,62 @@ msgstr "اختر مجلدًا"
 msgid "Enter name:"
 msgstr "أدخل الاسم:"
 
-#: kateprojecttreeviewcontextmenu.cpp:111
+#: kateprojecttreeviewcontextmenu.cpp:113
 #, kde-format
 msgid "Copy Location"
 msgstr "انسخ المكان"
 
-#: kateprojecttreeviewcontextmenu.cpp:118
+#: kateprojecttreeviewcontextmenu.cpp:120
 #, kde-format
 msgid "New File…"
 msgstr "ملفّ جديد…"
 
-#: kateprojecttreeviewcontextmenu.cpp:119
+#: kateprojecttreeviewcontextmenu.cpp:121
 #, kde-format
 msgid "New Folder…"
 msgstr "مجلّد جديد…"
 
-#: kateprojecttreeviewcontextmenu.cpp:126
+#: kateprojecttreeviewcontextmenu.cpp:128
 #, kde-format
 msgid "&Rename"
 msgstr "غيّر الاسم"
 
-#: kateprojecttreeviewcontextmenu.cpp:137
+#: kateprojecttreeviewcontextmenu.cpp:139
 #, kde-format
 msgid "Properties"
 msgstr "الخصائص"
 
-#: kateprojecttreeviewcontextmenu.cpp:141
+#: kateprojecttreeviewcontextmenu.cpp:143
 #, kde-format
 msgid "Open With"
 msgstr "افتح ب‍"
 
-#: kateprojecttreeviewcontextmenu.cpp:149
+#: kateprojecttreeviewcontextmenu.cpp:151
 #, kde-format
 msgid "Open Internal Terminal Here"
 msgstr "افتح طرفية داخلية هنا"
 
-#: kateprojecttreeviewcontextmenu.cpp:161
+#: kateprojecttreeviewcontextmenu.cpp:163
 #, kde-format
 msgid "Open External Terminal Here"
 msgstr "افتح طرفية خارجية هنا"
 
-#: kateprojecttreeviewcontextmenu.cpp:167
+#: kateprojecttreeviewcontextmenu.cpp:169
 #, kde-format
 msgid "&Open Containing Folder"
 msgstr "ا&فتح المجلّد الحاوي"
 
-#: kateprojecttreeviewcontextmenu.cpp:176
+#: kateprojecttreeviewcontextmenu.cpp:178
 #, kde-format
 msgid "Show Git History"
 msgstr "أظهر تاريخ غت"
 
-#: kateprojecttreeviewcontextmenu.cpp:240
+#: kateprojecttreeviewcontextmenu.cpp:242
 #, kde-format
 msgid "New File"
 msgstr "ملفّ جديد"
 
-#: kateprojecttreeviewcontextmenu.cpp:245
+#: kateprojecttreeviewcontextmenu.cpp:247
 #, kde-format
 msgid "New Folder"
 msgstr "مجلّد جديد"

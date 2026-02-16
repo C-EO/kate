@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-04 00:47+0000\n"
+"POT-Creation-Date: 2026-02-16 00:50+0000\n"
 "PO-Revision-Date: 2023-01-08 08:44+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -273,110 +273,110 @@ msgstr "Mở rộng tất cả"
 msgid "Collapse All"
 msgstr "Thu gọn tất cả"
 
-#: lspclientpluginview.cpp:1076
+#: lspclientpluginview.cpp:1075
 #, kde-format
 msgid "RangeHighLight"
 msgstr "Tô sáng đoạn"
 
-#: lspclientpluginview.cpp:1358
+#: lspclientpluginview.cpp:1357
 #, kde-format
 msgid "Line: %1: "
 msgstr "Dòng: %1: "
 
-#: lspclientpluginview.cpp:1510 lspclientpluginview.cpp:1859
-#: lspclientpluginview.cpp:1979
+#: lspclientpluginview.cpp:1509 lspclientpluginview.cpp:1858
+#: lspclientpluginview.cpp:1978
 #, kde-format
 msgid "No results"
 msgstr "Không có kết quả"
 
-#: lspclientpluginview.cpp:1569
+#: lspclientpluginview.cpp:1568
 #, kde-format
 msgctxt "@title:tab"
 msgid "Definition: %1"
 msgstr "Định nghĩa: %1"
 
-#: lspclientpluginview.cpp:1575
+#: lspclientpluginview.cpp:1574
 #, kde-format
 msgctxt "@title:tab"
 msgid "Declaration: %1"
 msgstr "Khai báo: %1"
 
-#: lspclientpluginview.cpp:1581
+#: lspclientpluginview.cpp:1580
 #, kde-format
 msgctxt "@title:tab"
 msgid "Type Definition: %1"
 msgstr "Định nghĩa kiểu: %1"
 
-#: lspclientpluginview.cpp:1587
+#: lspclientpluginview.cpp:1586
 #, kde-format
 msgctxt "@title:tab"
 msgid "References: %1"
 msgstr "Tham chiếu: %1"
 
-#: lspclientpluginview.cpp:1599
+#: lspclientpluginview.cpp:1598
 #, kde-format
 msgctxt "@title:tab"
 msgid "Implementation: %1"
 msgstr "Phần thi hành: %1"
 
-#: lspclientpluginview.cpp:1612
+#: lspclientpluginview.cpp:1611
 #, kde-format
 msgctxt "@title:tab"
 msgid "Highlight: %1"
 msgstr "Tô sáng: %1"
 
-#: lspclientpluginview.cpp:1636 lspclientpluginview.cpp:1647
-#: lspclientpluginview.cpp:1660
+#: lspclientpluginview.cpp:1635 lspclientpluginview.cpp:1646
+#: lspclientpluginview.cpp:1659
 #, kde-format
 msgid "No Actions"
 msgstr "Không có hành động nào"
 
-#: lspclientpluginview.cpp:1651
+#: lspclientpluginview.cpp:1650
 #, kde-format
 msgid "Loading..."
 msgstr "Đang tải..."
 
-#: lspclientpluginview.cpp:1743
+#: lspclientpluginview.cpp:1742
 #, kde-format
 msgid "No edits"
 msgstr "Không có lần chỉnh sửa nào"
 
-#: lspclientpluginview.cpp:1818
+#: lspclientpluginview.cpp:1817
 #, kde-format
 msgctxt "@title:window"
 msgid "Rename"
 msgstr "Đổi tên"
 
-#: lspclientpluginview.cpp:1819
+#: lspclientpluginview.cpp:1818
 #, kde-format
 msgctxt "@label:textbox"
 msgid "New name (caution: not all references may be replaced)"
 msgstr ""
 "Tên mới (chú ý: không phải tất cả các tham chiếu đều có thể được thay thế)"
 
-#: lspclientpluginview.cpp:1865
+#: lspclientpluginview.cpp:1864
 #, kde-format
 msgid "Not enough results"
 msgstr "Không đủ kết quả"
 
-#: lspclientpluginview.cpp:1934
+#: lspclientpluginview.cpp:1933
 #, kde-format
 msgid "Corresponding Header/Source not found"
 msgstr "Không tìm thấy đầu tải / nguồn tương ứng"
 
-#: lspclientpluginview.cpp:2132 lspclientpluginview.cpp:2175
+#: lspclientpluginview.cpp:2131 lspclientpluginview.cpp:2174
 #, kde-format
 msgctxt "@info"
 msgid "LSP Server"
 msgstr "Trình chủ LSP"
 
-#: lspclientpluginview.cpp:2198
+#: lspclientpluginview.cpp:2197
 #, kde-format
 msgctxt "@info"
 msgid "LSP Client"
 msgstr "Trình khách LSP"
 
-#: lspclientpluginview.cpp:2448
+#: lspclientpluginview.cpp:2447
 #, fuzzy, kde-format
 #| msgid "Restart LSP Server"
 msgid "Question from LSP server"
