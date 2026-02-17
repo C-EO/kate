@@ -252,7 +252,7 @@ void OpenLinkPluginView::onTextInserted(KTextEditor::Document *doc, KTextEditor:
 {
     if (doc == m_activeView->document()) {
         KTextEditor::Range range(pos, pos);
-        int newlines = text.count(QLatin1Char('\n'));
+        int newlines = text.count(u'\n');
         pos.setLine(pos.line() + newlines);
         range.setEnd(pos);
         highlightLinks(range);

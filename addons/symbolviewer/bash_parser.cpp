@@ -47,7 +47,7 @@ void KatePluginSymbolViewerView::parseBashSymbols(void)
     for (int i = 0; i < kDoc->lines(); i++) {
         QString currline = kDoc->line(i).trimmed().simplified();
 
-        if (currline.isEmpty() || currline.at(0) == QLatin1Char('#')) {
+        if (currline.isEmpty() || currline.at(0) == u'#') {
             continue;
         }
 

@@ -396,7 +396,7 @@ void KateConsole::cd(const QString &path)
         if (t->foregroundProcessName() == QLatin1String("irb")) {
             command = QLatin1String("Dir.chdir(\"") + path + QLatin1String("\") \n");
         } else if (t->foregroundProcessName() == QLatin1String("ghc")) {
-            command = QLatin1String(":cd ") + path + QLatin1Char('\n');
+            command = QLatin1String(":cd ") + path + u'\n';
         } else if (!t->foregroundProcessName().isEmpty()) {
             // If something is running, dont try to cd anywhere
             return;
@@ -526,7 +526,7 @@ void KateConsole::slotRun()
     const QLatin1String shebang("#!");
     if (first_line.startsWith(shebang)) {
         // If there's a shebang, respect it
-        output_str += first_line.remove(0, shebang.size()).append(QLatin1Char(' '));
+        output_str += first_line.remove(0, shebang.size()).append(u' ');
     } else {
         output_str += cg.readEntry("RunPrefix", "");
     }
@@ -535,7 +535,7 @@ void KateConsole::slotRun()
     QFileInfo fileInfo(url.toLocalFile());
     const bool removeExt = cg.readEntry("RemoveExtension", false);
     // append filename without extension (i.e. keep only the basename)
-    const QString path = fileInfo.absolutePath() + QLatin1Char('/') + (removeExt ? fileInfo.baseName() : fileInfo.fileName());
+    const QString path = fileInfo.absolutePath() + u'/' + (removeExt ? fileInfo.baseName() : fileInfo.fileName());
     output_str += KShell::quoteArg(path);
 
     const QString msg = i18n(
@@ -813,7 +813,7 @@ void KateKonsoleConfigPage::apply()
     config.writeEntry("RunPrefix", lePrefix->text());
     config.writeEntry("SetEditor", cbSetEditor->isChecked());
     config.writeEntry("KonsoleEscKeyBehaviour", cbSetEscHideKonsole->isChecked());
-    config.writeEntry("KonsoleEscKeyExceptions", leEscExceptions->text().split(QLatin1Char(',')));
+    config.writeEntry("KonsoleEscKeyExceptions", leEscExceptions->text().split(u','));
     config.sync();
     mPlugin->readConfig();
 }
@@ -826,7 +826,7 @@ void KateKonsoleConfigPage::reset()
     lePrefix->setText(config.readEntry("RunPrefix", ""));
     cbSetEditor->setChecked(config.readEntry("SetEditor", false));
     cbSetEscHideKonsole->setChecked(config.readEntry("KonsoleEscKeyBehaviour", true));
-    leEscExceptions->setText(config.readEntry("KonsoleEscKeyExceptions", defaultEscapeExceptions()).join(QLatin1Char(',')));
+    leEscExceptions->setText(config.readEntry("KonsoleEscKeyExceptions", defaultEscapeExceptions()).join(u','));
 }
 
 #include "kateconsole.moc"

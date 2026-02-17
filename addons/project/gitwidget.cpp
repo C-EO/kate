@@ -88,7 +88,7 @@ public:
 
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override
     {
-        const auto strs = index.data().toString().split(QLatin1Char(' '));
+        const auto strs = index.data().toString().split(u' ');
         if (strs.count() < 3) {
             QStyledItemDelegate::paint(painter, option, index);
             return;
@@ -325,7 +325,7 @@ void GitWidget::init()
             disconnect(m_cancelHandle, &QProcess::errorOccurred, nullptr, nullptr);
             const auto args = m_cancelHandle->arguments();
             m_cancelHandle->kill();
-            sendMessage(QStringLiteral("git ") + args.join(QLatin1Char(' ')) + i18n(" canceled."), false);
+            sendMessage(QStringLiteral("git ") + args.join(u' ') + i18n(" canceled."), false);
             hideCancel();
         }
     });
@@ -479,10 +479,10 @@ void GitWidget::setSubmodulesPaths()
             QString s = QString::fromUtf8(git->readAllStandardOutput());
             static const QRegularExpression lineEndings(QStringLiteral("\r\n?"));
             s.replace(lineEndings, QStringLiteral("\n"));
-            m_submodulePaths = s.split(QLatin1Char('\n'), Qt::SkipEmptyParts);
+            m_submodulePaths = s.split(u'\n', Qt::SkipEmptyParts);
             for (auto &p : m_submodulePaths) {
-                if (!p.endsWith(QLatin1Char('/'))) {
-                    p.append(QLatin1Char('/'));
+                if (!p.endsWith(u'/')) {
+                    p.append(u'/');
                 }
             }
             // Sort by size so that we can early out on matching paths later.

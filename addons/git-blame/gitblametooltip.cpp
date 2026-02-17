@@ -36,14 +36,14 @@ static QString toHtmlRgbaString(const QColor &color)
 
     QString rgba = QStringLiteral("rgba(");
     rgba.append(QString::number(color.red()));
-    rgba.append(QLatin1Char(','));
+    rgba.append(u',');
     rgba.append(QString::number(color.green()));
-    rgba.append(QLatin1Char(','));
+    rgba.append(u',');
     rgba.append(QString::number(color.blue()));
-    rgba.append(QLatin1Char(','));
+    rgba.append(u',');
     // this must be alphaF
     rgba.append(QString::number(color.alphaF()));
-    rgba.append(QLatin1Char(')'));
+    rgba.append(u')');
     return rgba;
 }
 

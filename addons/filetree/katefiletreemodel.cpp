@@ -209,7 +209,7 @@ void ProxyItem::updateDisplay()
             m_display.replace(0, QDir::homePath().length(), QStringLiteral("~"));
         }
     } else {
-        m_display = m_path.section(QLatin1Char('/'), -1, -1);
+        m_display = m_path.section(u'/', -1, -1);
         if (flag(ProxyItem::Host) && (!m_parent || (m_parent && !m_parent->m_parent))) {
             const QString hostPrefix = QStringLiteral("[%1]").arg(host());
             if (hostPrefix != m_display) {
@@ -1171,7 +1171,7 @@ ProxyItemDir *KateFileTreeModel::findRootNode(const QString &name, const int r) 
         // and return /foo/x rather than /foo/xy
         // this seems a bit hackish, but is the simplest way to solve the
         // current issue.
-        QString path = item->path().section(QLatin1Char('/'), 0, -r) + QLatin1Char('/');
+        QString path = item->path().section(u'/', 0, -r) + u'/';
 
         if (name.startsWith(path)) {
             return static_cast<ProxyItemDir *>(item);
@@ -1210,7 +1210,7 @@ void KateFileTreeModel::insertItemInto(ProxyItemDir *root, ProxyItem *item, bool
 
     QString tail = item->path();
     tail.remove(0, root->path().length());
-    QStringList parts = tail.split(QLatin1Char('/'), Qt::SkipEmptyParts);
+    QStringList parts = tail.split(u'/', Qt::SkipEmptyParts);
     ProxyItemDir *ptr = root;
     QStringList current_parts;
     current_parts.append(root->path());
@@ -1231,7 +1231,7 @@ void KateFileTreeModel::insertItemInto(ProxyItemDir *root, ProxyItem *item, bool
             // if only a.c is opened, then we only show dir2,
             // but if you open b.c, we now need to create a new root i.e., "folder"
             // and since a.c lives in a child dir, we create "dir" as well.
-            const QString new_name = current_parts.join(QLatin1Char('/'));
+            const QString new_name = current_parts.join(u'/');
             const QModelIndex parent_index = (ptr == m_root) ? QModelIndex() : createIndex(ptr->row(), 0, ptr);
             beginInsertRows(parent_index, ptr->childCount(), ptr->childCount());
             ptr = new ProxyItemDir(new_name, ptr);
@@ -1271,7 +1271,7 @@ void KateFileTreeModel::handleInsert(ProxyItem *item)
     }
 
     // trim off trailing file and dir
-    QString base = item->path().section(QLatin1Char('/'), 0, -2);
+    QString base = item->path().section(u'/', 0, -2);
 
     // create new root
     auto *new_root = new ProxyItemDir(base);
@@ -1283,7 +1283,7 @@ void KateFileTreeModel::handleInsert(ProxyItem *item)
     endInsertRows();
 
     // same fix as in findRootNode, try to match a full dir, instead of a partial path
-    base += QLatin1Char('/');
+    base += u'/';
 
     // try and merge existing roots with the new root node (new_root.path < root.path)
     // Iterate over a copy as the list is updated
@@ -1347,7 +1347,7 @@ void KateFileTreeModel::handleDuplicitRootDisplay(ProxyItemDir *init)
                 bool changed = false;
                 bool check_root_removed = false;
 
-                const QString rdir = root->path().section(QLatin1Char('/'), 0, -2);
+                const QString rdir = root->path().section(u'/', 0, -2);
                 if (!rdir.isEmpty()) {
                     beginRemoveRows(QModelIndex(), root->row(), root->row());
                     m_root->removeChild(root);
@@ -1367,7 +1367,7 @@ void KateFileTreeModel::handleDuplicitRootDisplay(ProxyItemDir *init)
                             continue;
                         }
 
-                        const QString xy = rdir + QLatin1Char('/');
+                        const QString xy = rdir + u'/';
                         if (node->path().startsWith(xy)) {
                             beginRemoveRows(QModelIndex(), node->row(), node->row());
                             // check_root_removed must be sticky
@@ -1383,7 +1383,7 @@ void KateFileTreeModel::handleDuplicitRootDisplay(ProxyItemDir *init)
                 }
 
                 if (!check_root_removed) {
-                    const QString nrdir = check_root->path().section(QLatin1Char('/'), 0, -2);
+                    const QString nrdir = check_root->path().section(u'/', 0, -2);
                     if (!nrdir.isEmpty()) {
                         beginRemoveRows(QModelIndex(), check_root->row(), check_root->row());
                         m_root->removeChild(check_root);

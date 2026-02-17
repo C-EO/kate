@@ -117,7 +117,7 @@ void KatePluginSymbolViewerView::parsePhpSymbols(void)
         // kdDebug(13000) << debugBuffer.arg(i, 4).arg("-comments", 10).arg(line);
 
         // trying to find comments and to remove commented parts
-        if (const int pos = line.indexOf(QLatin1Char('#')); pos >= 0) {
+        if (const int pos = line.indexOf(u'#'); pos >= 0) {
             line.truncate(pos);
         }
         if (const int pos = line.indexOf(QLatin1String("//")); pos >= 0) {
@@ -189,12 +189,11 @@ void KatePluginSymbolViewerView::parsePhpSymbols(void)
                 if (m_typesOn->isChecked()) {
                     nameWithTypes = matchClass.captured(3);
                     if (!matchClass.captured(1).trimmed().isEmpty() && !matchClass.captured(4).trimmed().isEmpty()) {
-                        nameWithTypes +=
-                            QLatin1String(" [") + matchClass.captured(1).trimmed() + QLatin1Char(',') + matchClass.captured(4).trimmed() + QLatin1Char(']');
+                        nameWithTypes += QLatin1String(" [") + matchClass.captured(1).trimmed() + u',' + matchClass.captured(4).trimmed() + u']';
                     } else if (!matchClass.captured(1).trimmed().isEmpty()) {
-                        nameWithTypes += QLatin1String(" [") + matchClass.captured(1).trimmed() + QLatin1Char(']');
+                        nameWithTypes += QLatin1String(" [") + matchClass.captured(1).trimmed() + u']';
                     } else if (!matchClass.captured(4).trimmed().isEmpty()) {
-                        nameWithTypes += QLatin1String(" [") + matchClass.captured(4).trimmed() + QLatin1Char(']');
+                        nameWithTypes += QLatin1String(" [") + matchClass.captured(4).trimmed() + u']';
                     }
                     node->setText(0, nameWithTypes);
                 } else {
@@ -272,7 +271,7 @@ void KatePluginSymbolViewerView::parsePhpSymbols(void)
                 functionArgsList.append(matchFunctionArg.captured(0));
             }
 
-            nameWithTypes = match.captured(5) + QLatin1Char('(') + functionArgsList.join(QLatin1String(", ")) + QLatin1Char(')');
+            nameWithTypes = match.captured(5) + u'(' + functionArgsList.join(QLatin1String(", ")) + u')';
             if (m_typesOn->isChecked()) {
                 node->setText(0, nameWithTypes);
             } else {

@@ -64,7 +64,7 @@ void KateSessionManagerTest::activateNewNamedSession()
     QCOMPARE(s->name(), sessionName);
     QCOMPARE(s->isAnonymous(), false);
 
-    const QString sessionFile = m_tempdir->path() + QLatin1Char('/') + sessionName + QLatin1String(".katesession");
+    const QString sessionFile = m_tempdir->path() + u'/' + sessionName + QLatin1String(".katesession");
     QCOMPARE(s->config()->name(), sessionFile);
 
     // cleanup again for next test

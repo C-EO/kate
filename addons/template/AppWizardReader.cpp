@@ -84,7 +84,7 @@ QMap<QString, AppWizardReader::TemplateData> AppWizardReader::appWizardTemplates
                 QTemporaryDir tempDir;
                 templateFile->copyTo(tempDir.path());
                 QFile::remove(destinationPath);
-                QFile::rename(tempDir.path() + QLatin1Char('/') + templateFile->name(), destinationPath);
+                QFile::rename(tempDir.path() + u'/' + templateFile->name(), destinationPath);
             }
 
             KConfig templateConfig(destinationPath);

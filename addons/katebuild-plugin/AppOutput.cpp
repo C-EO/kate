@@ -149,7 +149,7 @@ void AppOutput::runCommand(const QString &cmd)
 {
     TerminalInterface *t = qobject_cast<TerminalInterface *>(d->part);
     if (t) {
-        t->sendInput(cmd + QLatin1Char('\n'));
+        t->sendInput(cmd + u'\n');
         d->terminalProcess = cmd;
     } else {
         d->outputArea->clear();

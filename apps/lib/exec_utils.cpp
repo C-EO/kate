@@ -81,7 +81,7 @@ void updateMapping(PathMapping &mapping, const QJsonValue &json, KTextEditor::Vi
                 add_entry(local, remote);
             }
         } else if (e.isString()) {
-            auto parts = e.toString().split(QLatin1Char(':'));
+            auto parts = e.toString().split(u':');
             if (parts.size() == 2) {
                 mapping.insert({make_url(parts[0]), make_url(parts[1])});
             }
@@ -118,7 +118,7 @@ bool updateMapping(PathMapping &mapping, const QByteArray &data)
 
 QUrl mapPath(const PathMapping &mapping, const QUrl &p, bool fromLocal)
 {
-    const auto SEP = QLatin1Char('/');
+    const auto SEP = u'/';
     const PathMap *entry = nullptr;
     QString suffix;
     QUrl result;
@@ -218,7 +218,7 @@ ExecConfig ExecConfig::load(const QJsonObject &localConfig, const QJsonObject &p
     // normalize string prefix to array
     constexpr auto PREFIX = QLatin1String("prefix");
     if (auto sprefix = execConfig.value(PREFIX).toString(); !sprefix.isEmpty()) {
-        execConfig[PREFIX] = QJsonArray::fromStringList(sprefix.split(QLatin1Char(' ')));
+        execConfig[PREFIX] = QJsonArray::fromStringList(sprefix.split(u' '));
     }
 
     result.config = execConfig;

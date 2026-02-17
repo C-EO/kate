@@ -82,7 +82,7 @@ Tags::TagList Tags::getPartialMatchesNoi8n(const QString &tagFile, const QString
 {
     setTagsFile(tagFile);
     auto getExtension = [](const QString &fileUrl) -> QStringView {
-        int dotPos = fileUrl.lastIndexOf(QLatin1Char('.'));
+        int dotPos = fileUrl.lastIndexOf(u'.');
         if (dotPos > -1) {
             return QStringView(fileUrl).mid(dotPos + 1);
         }
@@ -133,7 +133,7 @@ Tags::TagList Tags::getMatches(const QString &tagpart, bool partial, const QStri
     if (ctags::tagsFind(tagsFilePtr, &entry, tagpartBArray.data(), TAG_OBSERVECASE | (partial ? TAG_PARTIALMATCH : TAG_FULLMATCH)) == ctags::TagSuccess) {
         do {
             QString file = QString::fromLocal8Bit(entry.file);
-            QString type(CTagsKinds::findKind(entry.kind, file.section(QLatin1Char('.'), -1)));
+            QString type(CTagsKinds::findKind(entry.kind, file.section(u'.', -1)));
 
             if (type.isEmpty() && file.endsWith(QLatin1String("Makefile"))) {
                 type = QStringLiteral("macro");

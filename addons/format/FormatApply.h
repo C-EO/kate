@@ -59,7 +59,7 @@ struct DiffRange {
 
 [[maybe_unused]] static DiffRange parseRange(const QString &range)
 {
-    int commaPos = range.indexOf(QLatin1Char(','));
+    int commaPos = range.indexOf(u',');
     if (commaPos > -1) {
         return {QStringView(range).sliced(0, commaPos).toUInt(), QStringView(range).sliced(commaPos + 1).toUInt()};
     }
@@ -88,10 +88,10 @@ struct DiffRange {
         // qDebug() << "NEW HUNK: " << l << "------------" << srcline << tgtline;
         for (int j = i + 1; j < d.size(); ++j) {
             const QString &hl = d.at(j);
-            if (hl.startsWith(QLatin1Char(' '))) {
+            if (hl.startsWith(u' ')) {
                 srcline++;
                 tgtline++;
-            } else if (hl.startsWith(QLatin1Char('+'))) {
+            } else if (hl.startsWith(u'+')) {
                 PatchLine p;
                 p.type = PatchLine::Add;
                 p.text = hl.mid(1);
@@ -100,7 +100,7 @@ struct DiffRange {
                 lines.push_back(p);
                 // qDebug() << "insert line" << tgtline << p.text << p.inPos.line();
                 tgtline++;
-            } else if (hl.startsWith(QLatin1Char('-'))) {
+            } else if (hl.startsWith(u'-')) {
                 PatchLine p;
                 p.type = PatchLine::Remove;
                 p.pos = doc->newMovingCursor(KTextEditor::Cursor(srcline, 0));

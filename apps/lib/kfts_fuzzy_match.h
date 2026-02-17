@@ -250,7 +250,7 @@ static bool fuzzy_internal::fuzzy_match_recursive(QStringView::const_iterator pa
         } else {
             const QChar neighbor = *(strBegin + matches[i] - 1);
             const QChar curr = *(strBegin + matches[i]);
-            const bool neighborSeparator = neighbor == QLatin1Char('_') || neighbor == QLatin1Char(' ');
+            const bool neighborSeparator = neighbor == u'_' || neighbor == u' ';
             if (neighborSeparator || (neighbor.isLower() && curr.isUpper())) {
                 // the first letter that got matched was a special char .e., camel or at a separator
                 outScore += firstLetterSepMatchBonus + separatorBonus;
@@ -304,7 +304,7 @@ static bool fuzzy_internal::fuzzy_match_recursive(QStringView::const_iterator pa
             const QChar curr = *(strBegin + currIdx);
             // if camel case bonus, then not snake / separator.
             // This prevents double bonuses
-            const bool neighborSeparator = neighbor == QLatin1Char('_') || neighbor == QLatin1Char(' ');
+            const bool neighborSeparator = neighbor == u'_' || neighbor == u' ';
             if (neighborSeparator || (neighbor.isLower() && curr.isUpper())) {
                 outScore += separatorBonus;
                 dbg("separatorBonus at %d, letter: %c, outScore: %d", matches[i], (strBegin + currIdx)->toLatin1(), outScore);

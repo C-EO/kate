@@ -78,7 +78,7 @@ QDir SnippetRepository::dataPath()
 SnippetRepository *SnippetRepository::createRepoFromName(const QString &name)
 {
     QString cleanName = name;
-    cleanName.replace(QLatin1Char('/'), QLatin1Char('-'));
+    cleanName.replace(u'/', u'-');
 
     const auto &dir = dataPath();
     const auto &path = dir.absoluteFilePath(cleanName + QLatin1String(".xml"));
@@ -196,7 +196,7 @@ void SnippetRepository::save()
 
     QDomElement root = doc.createElement(QStringLiteral("snippets"));
     root.setAttribute(QStringLiteral("name"), text());
-    root.setAttribute(QStringLiteral("filetypes"), m_filetypes.isEmpty() ? QStringLiteral("*") : m_filetypes.join(QLatin1Char(';')));
+    root.setAttribute(QStringLiteral("filetypes"), m_filetypes.isEmpty() ? QStringLiteral("*") : m_filetypes.join(u';'));
     root.setAttribute(QStringLiteral("authors"), m_authors);
     root.setAttribute(QStringLiteral("license"), m_license);
     root.setAttribute(QStringLiteral("namespace"), m_namespace);
@@ -293,7 +293,7 @@ void SnippetRepository::parseFile()
     }
     setLicense(docElement.attribute(QStringLiteral("license")));
     setAuthors(docElement.attribute(QStringLiteral("authors")));
-    setFileTypes(docElement.attribute(QStringLiteral("filetypes")).split(QLatin1Char(';'), Qt::SkipEmptyParts));
+    setFileTypes(docElement.attribute(QStringLiteral("filetypes")).split(u';', Qt::SkipEmptyParts));
     setText(docElement.attribute(QStringLiteral("name")));
     setCompletionNamespace(docElement.attribute(QStringLiteral("namespace")));
 

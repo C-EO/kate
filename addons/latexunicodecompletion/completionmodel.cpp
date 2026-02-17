@@ -37,7 +37,7 @@ void LatexCompletionModel::completionInvoked(KTextEditor::View *view,
     auto word = view->document()->text(range).toStdU16String();
     const Completion *beginit = (Completion *)&completiontable;
     const Completion *endit = beginit + n_completions;
-    if (!word.empty() && word[0] == QLatin1Char('\\')) {
+    if (!word.empty() && word[0] == u'\\') {
         auto prefixrangestart = std::lower_bound(beginit, endit, word, [](const Completion &a, const std::u16string &b) -> bool {
             return startsWith(a, b) ? false : a.completion < b;
         });

@@ -94,7 +94,7 @@ void GotoSymbolModel::refresh(const QString &filePath)
         SymbolItem item;
         item.name = QLatin1String(items.at(0));
         // this happens in markdown names for some reason
-        if (item.name.endsWith(QLatin1Char('-'))) {
+        if (item.name.endsWith(u'-')) {
             item.name.chop(1);
         }
 

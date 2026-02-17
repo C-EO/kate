@@ -242,7 +242,7 @@ public:
         options.widget->style()->drawControl(QStyle::CE_ItemViewItem, &options, painter, options.widget);
 
         QList<QTextLayout::FormatRange> formats;
-        int lastSlash = text.lastIndexOf(QLatin1Char('/'));
+        int lastSlash = text.lastIndexOf(u'/');
         if (lastSlash != -1) {
             QTextCharFormat fmt;
             fmt.setFontWeight(QFont::Bold);
@@ -928,7 +928,7 @@ void DiagnosticsView::onDiagnosticsAdded(const FileDiagnostics &diagnostics)
         item->setData(diagnosticsIcon(diag.severity), Qt::DecorationRole);
         // rendering of lines with embedded newlines does not work so well
         // so ... split message by lines
-        auto lines = diag.message.split(QLatin1Char('\n'), Qt::SkipEmptyParts);
+        auto lines = diag.message.split(u'\n', Qt::SkipEmptyParts);
         item->setText(source + (!lines.empty() ? lines[0] : QString()));
         fillItemRoles(item, diagnostics.uri, diag.range, diag.severity);
         item->setData(QVariant::fromValue(provider), DiagnosticModelRole::ProviderRole);

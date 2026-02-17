@@ -410,14 +410,14 @@ void KateGitBlamePluginView::showFinished(int exitCode, QProcess::ExitStatus exi
 
     int titleStart = 0;
     for (int i = 0; i < 4; ++i) {
-        titleStart = stdOut.indexOf(QLatin1Char('\n'), titleStart + 1);
+        titleStart = stdOut.indexOf(u'\n', titleStart + 1);
         if (titleStart < 0 || titleStart >= stdOut.size() - 1) {
             qWarning("This is not a known git show format");
             return;
         }
     }
 
-    int titleEnd = stdOut.indexOf(QLatin1Char('\n'), titleStart + 1);
+    int titleEnd = stdOut.indexOf(u'\n', titleStart + 1);
     if (titleEnd < 0 || titleEnd >= stdOut.size() - 1) {
         qWarning("This is not a known git show format");
         return;
@@ -426,7 +426,7 @@ void KateGitBlamePluginView::showFinished(int exitCode, QProcess::ExitStatus exi
     // Find 'Date:'
     int dateIdx = stdOut.indexOf(QStringLiteral("Date:"));
     if (dateIdx != -1) {
-        int newLine = stdOut.indexOf(QLatin1Char('\n'), dateIdx);
+        int newLine = stdOut.indexOf(u'\n', dateIdx);
         if (newLine != -1) {
             QString btn = QLatin1String("\n<a href=\"%1\">Click To Show Commit In Tree View</a>\n").arg(commitHashArg);
             stdOut.insert(newLine + 1, btn);
@@ -500,7 +500,7 @@ void KateGitBlamePluginView::onErrorOccurred(QProcess::ProcessError e)
 {
     auto process = qobject_cast<QProcess *>(sender());
     if (process) {
-        sendMessage(QStringLiteral("%1 with args %2, error occurred: %3.").arg(process->program(), process->arguments().join(QLatin1Char(' '))).arg(e), false);
+        sendMessage(QStringLiteral("%1 with args %2, error occurred: %3.").arg(process->program(), process->arguments().join(u' ')).arg(e), false);
     }
 }
 

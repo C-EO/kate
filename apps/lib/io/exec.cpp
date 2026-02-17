@@ -101,7 +101,7 @@ public:
         if (!(flags & KIO::Overwrite))
             convs.push_back(QStringLiteral("excl"));
         if (convs.size())
-            args.push_back(QStringLiteral("conv=%1").arg(convs.join(QLatin1Char(','))));
+            args.push_back(QStringLiteral("conv=%1").arg(convs.join(u',')));
         args.push_back(QStringLiteral("of=%1").arg(destfile));
 
         process.setStandardInputFile(srcfile);

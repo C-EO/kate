@@ -228,7 +228,7 @@ void KateBtBrowserWidget::itemActivated(QTreeWidgetItem *item, int column)
             static const QRegularExpression rx1(QStringLiteral("/([^/]+)/([^/]+)$"));
             QRegularExpressionMatch match = rx1.match(file);
             if (match.hasMatch()) {
-                file = match.captured(1) + QLatin1Char('/') + match.captured(2);
+                file = match.captured(1) + u'/' + match.captured(2);
             } else {
                 static const QRegularExpression rx2(QStringLiteral("([^/]+)/([^/]+)$"));
                 if (rx2.match(file).hasMatch()) {
@@ -308,8 +308,8 @@ void KateBtConfigWidget::apply()
         cg.writeEntry("search-folders", sl);
 
         QString filter = edtExtensions->text();
-        filter.replace(QLatin1Char(','), QLatin1Char(' ')).replace(QLatin1Char(';'), QLatin1Char(' '));
-        cg.writeEntry("file-extensions", filter.split(QLatin1Char(' '), Qt::SkipEmptyParts));
+        filter.replace(u',', u' ').replace(u';', u' ');
+        cg.writeEntry("file-extensions", filter.split(u' ', Qt::SkipEmptyParts));
 
         KateBtBrowserPlugin::self().startIndexer();
         m_changed = false;
@@ -321,13 +321,13 @@ void KateBtConfigWidget::reset()
     KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("backtracebrowser"));
     lstFolders->clear();
     lstFolders->addItems(cg.readEntry("search-folders", QStringList()));
-    edtExtensions->setText(cg.readEntry("file-extensions", fileExtensions()).join(QLatin1Char(' ')));
+    edtExtensions->setText(cg.readEntry("file-extensions", fileExtensions()).join(u' '));
 }
 
 void KateBtConfigWidget::defaults()
 {
     lstFolders->clear();
-    edtExtensions->setText(fileExtensions().join(QLatin1Char(' ')));
+    edtExtensions->setText(fileExtensions().join(u' '));
 
     m_changed = true;
 }

@@ -21,7 +21,7 @@ QString FileUtil::commonParent(const QString &path1, const QString &path2)
         return ret;
     }
 
-    while (!ret.endsWith(QLatin1Char('/'))) {
+    while (!ret.endsWith(u'/')) {
         ret.chop(1);
     }
 

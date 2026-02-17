@@ -129,7 +129,7 @@ bool KateProjectCompletion::shouldStartCompletion(KTextEditor::View *view, const
     }
     for (int i = start - 1; i >= end; i--) {
         QChar c = text.at(i);
-        if (!(c.isLetter() || (c.isNumber()) || c == QLatin1Char('_'))) {
+        if (!(c.isLetter() || (c.isNumber()) || c == u'_')) {
             return false;
         }
     }
@@ -212,7 +212,7 @@ KTextEditor::Range KateProjectCompletion::completionRange(KTextEditor::View *vie
     KTextEditor::Document *doc = view->document();
     while (col > 0) {
         QChar c = (doc->characterAt(KTextEditor::Cursor(line, col - 1)));
-        if (c.isLetterOrNumber() || c.isMark() || c == QLatin1Char('_')) {
+        if (c.isLetterOrNumber() || c.isMark() || c == u'_') {
             col--;
             continue;
         }

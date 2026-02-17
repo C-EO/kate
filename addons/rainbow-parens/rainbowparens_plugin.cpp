@@ -161,8 +161,7 @@ void RainbowParenPluginView::viewChanged(KTextEditor::View *view)
 static void onTextChanged(RainbowParenPluginView *p, const QString &text)
 {
     auto isBracket = [](QChar c) {
-        return c == QLatin1Char('{') || c == QLatin1Char('(') || c == QLatin1Char(')') || c == QLatin1Char('}') || c == QLatin1Char('[')
-            || c == QLatin1Char(']');
+        return c == u'{' || c == u'(' || c == u')' || c == u'}' || c == u'[' || c == u']';
     };
     if (text.size() > 100) {
         p->requestRehighlight();

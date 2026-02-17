@@ -1666,7 +1666,7 @@ private:
 
         // now, cut out all full lines
         LSPShowMessageParams msg;
-        if (const int lastNewLineIndex = m_currentStderrOutput.lastIndexOf(QLatin1Char('\n')); lastNewLineIndex >= 0) {
+        if (const int lastNewLineIndex = m_currentStderrOutput.lastIndexOf(u'\n'); lastNewLineIndex >= 0) {
             msg.message = m_currentStderrOutput.left(lastNewLineIndex);
             m_currentStderrOutput.remove(0, lastNewLineIndex + 1);
         }

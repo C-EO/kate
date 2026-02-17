@@ -606,9 +606,9 @@ QVariant TargetModel::data(const QModelIndex &index, int role) const
             }
             return targetSet.commands[0].name;
         case WorkDirRole:
-            return targetSet.workDir.isEmpty() ? QString() : targetSet.workDir.split(QLatin1Char(';')).first();
+            return targetSet.workDir.isEmpty() ? QString() : targetSet.workDir.split(u';').first();
         case SearchPathsRole:
-            return targetSet.workDir.split(QLatin1Char(';'));
+            return targetSet.workDir.split(u';');
         case TargetSetNameRole:
             return targetSet.name;
         case RowTypeRole:
@@ -649,9 +649,9 @@ QVariant TargetModel::data(const QModelIndex &index, int role) const
         case CommandNameRole:
             return command.name;
         case WorkDirRole:
-            return targetSet.workDir.isEmpty() ? QString() : targetSet.workDir.split(QLatin1Char(';')).first();
+            return targetSet.workDir.isEmpty() ? QString() : targetSet.workDir.split(u';').first();
         case SearchPathsRole:
-            return targetSet.workDir.split(QLatin1Char(';'));
+            return targetSet.workDir.split(u';');
         case TargetSetNameRole:
             return targetSet.name;
         case RowTypeRole:

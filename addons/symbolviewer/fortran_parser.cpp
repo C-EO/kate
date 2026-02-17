@@ -71,7 +71,7 @@ void KatePluginSymbolViewerView::parseFortranSymbols(void)
         if (currline.isEmpty()) {
             continue;
         }
-        if (currline.at(0) == QLatin1Char('!') || currline.at(0) == QLatin1Char('c')) {
+        if (currline.at(0) == u'!' || currline.at(0) == u'c') {
             comment = true;
         }
         // block=0;
@@ -110,27 +110,27 @@ void KatePluginSymbolViewerView::parseFortranSymbols(void)
                 {
                     stripped += QStringView(currline).right(currline.length());
                     stripped = stripped.simplified();
-                    stripped.remove(QLatin1Char('*'));
-                    stripped.remove(QLatin1Char('+'));
-                    stripped.remove(QLatin1Char('$'));
+                    stripped.remove(u'*');
+                    stripped.remove(u'+');
+                    stripped.remove(u'$');
                     if (blockend == 0) {
-                        fnd = stripped.indexOf(QLatin1Char(' '));
+                        fnd = stripped.indexOf(u' ');
                         stripped = currline.right(currline.length() - fnd - 1);
                     }
-                    stripped.remove(QLatin1Char(' '));
-                    fnd = stripped.indexOf(QLatin1Char('!'));
+                    stripped.remove(u' ');
+                    fnd = stripped.indexOf(u'!');
                     if (fnd > 0) {
                         stripped.truncate(fnd);
                     }
-                    paro += currline.count(QLatin1Char(')'), Qt::CaseSensitive);
-                    parc += currline.count(QLatin1Char('('), Qt::CaseSensitive);
+                    paro += currline.count(u')', Qt::CaseSensitive);
+                    parc += currline.count(u'(', Qt::CaseSensitive);
 
-                    if ((paro == parc || mainprog) && stripped.endsWith(QLatin1Char('&'), Qt::CaseInsensitive) == false) {
-                        stripped.remove(QLatin1Char('&'));
-                        if (mainprog && stripped.indexOf(QLatin1Char('(')) < 0 && stripped.indexOf(QLatin1Char(')')) < 0) {
+                    if ((paro == parc || mainprog) && stripped.endsWith(u'&', Qt::CaseInsensitive) == false) {
+                        stripped.remove(u'&');
+                        if (mainprog && stripped.indexOf(u'(') < 0 && stripped.indexOf(u')') < 0) {
                             stripped.prepend(QLatin1String("Main: "));
                         }
-                        if (stripped.indexOf(QLatin1Char('=')) == -1) {
+                        if (stripped.indexOf(u'=') == -1) {
                             if (m_treeOn->isChecked()) {
                                 node = new QTreeWidgetItem(subrNode, lastSubrNode);
                                 lastSubrNode = node;
@@ -158,13 +158,13 @@ void KatePluginSymbolViewerView::parseFortranSymbols(void)
                 {
                     stripped = currline.right(currline.length());
                     stripped = stripped.simplified();
-                    fnd = stripped.indexOf(QLatin1Char(' '));
+                    fnd = stripped.indexOf(u' ');
                     stripped = currline.right(currline.length() - fnd - 1);
-                    fnd = stripped.indexOf(QLatin1Char('!'));
+                    fnd = stripped.indexOf(u'!');
                     if (fnd > 0) {
                         stripped.truncate(fnd);
                     }
-                    if (stripped.indexOf(QLatin1Char('=')) == -1) {
+                    if (stripped.indexOf(u'=') == -1) {
                         if (m_treeOn->isChecked()) {
                             node = new QTreeWidgetItem(modNode, lastModNode);
                             lastModNode = node;
@@ -187,20 +187,20 @@ void KatePluginSymbolViewerView::parseFortranSymbols(void)
                     stripped += QStringView(currline).right(currline.length());
                     stripped = stripped.trimmed();
                     stripped.remove(QLatin1String("function"));
-                    stripped.remove(QLatin1Char('*'));
-                    stripped.remove(QLatin1Char('+'));
-                    stripped.remove(QLatin1Char('$'));
+                    stripped.remove(u'*');
+                    stripped.remove(u'+');
+                    stripped.remove(u'$');
                     stripped = stripped.simplified();
-                    fnd = stripped.indexOf(QLatin1Char('!'));
+                    fnd = stripped.indexOf(u'!');
                     if (fnd > 0) {
                         stripped.truncate(fnd);
                     }
                     stripped = stripped.trimmed();
-                    paro += currline.count(QLatin1Char(')'), Qt::CaseSensitive);
-                    parc += currline.count(QLatin1Char('('), Qt::CaseSensitive);
+                    paro += currline.count(u')', Qt::CaseSensitive);
+                    parc += currline.count(u'(', Qt::CaseSensitive);
 
-                    if (paro == parc && stripped.endsWith(QLatin1Char('&')) == false) {
-                        stripped.remove(QLatin1Char('&'));
+                    if (paro == parc && stripped.endsWith(u'&') == false) {
+                        stripped.remove(u'&');
                         if (m_treeOn->isChecked()) {
                             node = new QTreeWidgetItem(funcNode, lastFuncNode);
                             lastFuncNode = node;

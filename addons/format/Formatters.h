@@ -142,7 +142,7 @@ public:
         bool spaces = ciface->configValue(QStringLiteral("replace-tabs")).toBool();
         QString indent;
         if (spaces) {
-            indent = QString(width, QLatin1Char(' '));
+            indent = QString(width, u' ');
         } else {
             indent = QStringLiteral("\t");
         }

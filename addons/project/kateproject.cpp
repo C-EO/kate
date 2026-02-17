@@ -675,7 +675,7 @@ void KateProject::registerDocument(KTextEditor::Document *document)
     if (!item && path.startsWith(m_baseDir)) {
         path = path.remove(m_baseDir);
         // remove filename
-        int lastSlash = path.lastIndexOf(QLatin1Char('/'));
+        int lastSlash = path.lastIndexOf(u'/');
         if (lastSlash != -1) {
             path = path.remove(lastSlash, path.size() - lastSlash);
             // find the item for parent directory of this file

@@ -172,7 +172,7 @@ void ReplicodeView::stopReplicode()
 void ReplicodeView::outputClicked(QListWidgetItem *item)
 {
     QString output = item->text();
-    QStringList pieces = output.split(QLatin1Char(':'));
+    QStringList pieces = output.split(u':');
 
     if (pieces.length() < 2) {
         return;

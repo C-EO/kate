@@ -30,13 +30,13 @@ public:
         : cursor(KTextEditor::Cursor::invalid())
     {
         QString currentDirPath = QDir::current().absolutePath();
-        if (!currentDirPath.endsWith(QLatin1Char('/'))) {
-            currentDirPath += QLatin1Char('/');
+        if (!currentDirPath.endsWith(u'/')) {
+            currentDirPath += u'/';
         }
 
         // QDir::isAbsolutePath()/absoluteFilePath() treat paths starting with ':' as Qt
         // Resource (qrc) paths, and consider them absolute
-        if (!path.startsWith(QLatin1Char(':')) && QDir::isAbsolutePath(path)) {
+        if (!path.startsWith(u':') && QDir::isAbsolutePath(path)) {
             if (QFile::exists(path)) { // Existing absolute path, no cursor can be detected
                 url = QUrl::fromLocalFile(path);
                 return;
@@ -134,7 +134,7 @@ public:
     {
         // check for +... ...
         // we need at least one more file given, just kate '+123' makes no sense
-        if (args.size() < 2 || !args[0].startsWith(QLatin1Char('+'))) {
+        if (args.size() < 2 || !args[0].startsWith(u'+')) {
             return KTextEditor::Cursor::invalid();
         }
 

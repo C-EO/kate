@@ -77,7 +77,7 @@ QList<KateSearchMatch> SearchDiskFiles::searchSingleLineRegExp(QFile &file)
     while (stream.readLineInto(&line)) {
         // check if not binary data....
         // bad, but stuff better than asking QMimeDatabase which is a performance & threading disaster...
-        if (!m_includeBinaryFiles && line.contains(QLatin1Char('\0'))) {
+        if (!m_includeBinaryFiles && line.contains(u'\0')) {
             // kill all seen matches and be done
             matches.clear();
             return matches;
@@ -142,23 +142,23 @@ QList<KateSearchMatch> SearchDiskFiles::searchMultiLineRegExp(QFile &file)
 
     // check if not binary data....
     // bad, but stuff better than asking QMimeDatabase which is a performance & threading disaster...
-    if (!m_includeBinaryFiles && fullDoc.contains(QLatin1Char('\0'))) {
+    if (!m_includeBinaryFiles && fullDoc.contains(u'\0')) {
         // kill all seen matches and be done
         matches.clear();
         return matches;
     }
 
-    fullDoc.remove(QLatin1Char('\r'));
+    fullDoc.remove(u'\r');
 
     lineStart.clear();
     lineStart << 0;
     for (int i = 0; i < fullDoc.size() - 1; i++) {
-        if (fullDoc[i] == QLatin1Char('\n')) {
+        if (fullDoc[i] == u'\n') {
             lineStart << i + 1;
         }
     }
-    if (tmpRegExp.pattern().endsWith(QLatin1Char('$'))) {
-        fullDoc += QLatin1Char('\n');
+    if (tmpRegExp.pattern().endsWith(u'$')) {
+        fullDoc += u'\n';
         QString newPatern = tmpRegExp.pattern();
         newPatern.replace(QStringLiteral("$"), QStringLiteral("(?=\\n)"));
         tmpRegExp.setPattern(newPatern);
@@ -184,8 +184,8 @@ QList<KateSearchMatch> SearchDiskFiles::searchMultiLineRegExp(QFile &file)
             break;
         }
         int startColumn = (column - lineStart[line]);
-        int endLine = line + match.captured().count(QLatin1Char('\n'));
-        int lastNL = match.captured().lastIndexOf(QLatin1Char('\n'));
+        int endLine = line + match.captured().count(u'\n');
+        int lastNL = match.captured().lastIndexOf(u'\n');
         int endColumn = lastNL == -1 ? startColumn + match.captured().length() : match.captured().length() - lastNL - 1;
 
         int preContextStart = qMax(lineStart[line], column - MatchModel::PreContextLen);

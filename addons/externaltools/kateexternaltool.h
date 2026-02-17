@@ -154,10 +154,10 @@ public:
      */
     static QString configFileNameOldStyleOnlyForRemove(QString name)
     {
-        name.replace(QLatin1Char(' '), QLatin1Char('_'));
+        name.replace(u' ', u'_');
         // '(' and ')' are problematic as file names in the .qrc file
-        name.replace(QLatin1Char('('), QLatin1Char('_'));
-        name.replace(QLatin1Char(')'), QLatin1Char('_'));
+        name.replace(u'(', u'_');
+        name.replace(u')', u'_');
         return name.toLower();
     }
 };

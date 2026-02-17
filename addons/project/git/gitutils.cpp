@@ -102,7 +102,7 @@ static GitUtils::Branch parseLocalBranch(QLatin1String raw)
 static GitUtils::Branch parseRemoteBranch(QLatin1String raw)
 {
     static const int len = sizeof("refs/remotes/") - 1;
-    int indexofRemote = raw.indexOf(QLatin1Char('/'), len);
+    int indexofRemote = raw.indexOf(u'/', len);
     return GitUtils::Branch{.name = raw.mid(len), .remote = raw.mid(len, indexofRemote - len), .refType = GitUtils::Remote, .lastCommit = QString()};
 }
 
@@ -136,7 +136,7 @@ QList<GitUtils::Branch> GitUtils::getAllBranchesAndTags(const QString &repo, Ref
         const QByteArray gitout = git.readAllStandardOutput();
         const auto stringview = QLatin1String(gitout);
 
-        QStringTokenizer tokens(stringview, QLatin1Char('\n'));
+        QStringTokenizer tokens(stringview, u'\n');
         QList<QLatin1String> splitted;
         for (QLatin1String o : tokens) {
             QStringTokenizer tokenizer(o, QLatin1String("[--]"));

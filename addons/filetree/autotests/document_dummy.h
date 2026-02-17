@@ -23,7 +23,7 @@ public:
         , m_views()
     {
         setUrl(url);
-        m_name = url.section(QLatin1Char('/'), -1); // some nice default to mimic the KateDocument
+        m_name = url.section(u'/', -1); // some nice default to mimic the KateDocument
     }
     explicit DummyDocument(const char *url)
         : DummyDocument(QString::fromLatin1(url))

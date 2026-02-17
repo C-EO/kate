@@ -54,7 +54,7 @@ void KatePluginSymbolViewerView::parsePerlSymbols(void)
         QString cl = kv->line(i);
         // qDebug()<< "Line " << i << " : "<< cl;
 
-        if (cl.isEmpty() || cl.at(0) == QLatin1Char('#')) {
+        if (cl.isEmpty() || cl.at(0) == u'#') {
             continue;
         }
         static const auto commentRe = QRegularExpression(QStringLiteral("^=[a-zA-Z]"));
@@ -79,7 +79,7 @@ void KatePluginSymbolViewerView::parsePerlSymbols(void)
         if (cl.indexOf(re1) == 0 && m_macro->isChecked()) {
             QString stripped = cl.remove(usePlusAtBeginningRe);
             // stripped=stripped.replace( QRegularExpression(QLatin1String(";$")), "" ); // Doesn't work ??
-            stripped = stripped.left(stripped.indexOf(QLatin1Char(';')));
+            stripped = stripped.left(stripped.indexOf(u';'));
             if (m_treeOn->isChecked()) {
                 node = new QTreeWidgetItem(mcrNode, lastMcrNode);
                 lastMcrNode = node;
@@ -123,7 +123,7 @@ void KatePluginSymbolViewerView::parsePerlSymbols(void)
             }
             node->setText(0, stripped);
 
-            if (!stripped.isEmpty() && stripped.at(0) == QLatin1Char('_')) {
+            if (!stripped.isEmpty() && stripped.at(0) == u'_') {
                 node->setIcon(0, m_icon_function);
             } else {
                 node->setIcon(0, m_icon_class);

@@ -102,12 +102,12 @@ public:
 /******************************************************************/
 static QString caseFixed(const QString &path)
 {
-    QStringList paths = path.split(QLatin1Char('/'));
+    QStringList paths = path.split(u'/');
     if (paths.isEmpty()) {
         return path;
     }
 
-    QString result = paths[0].toUpper() + QLatin1Char('/');
+    QString result = paths[0].toUpper() + u'/';
     for (int i = 1; i < paths.count(); ++i) {
         QDir curDir(result);
         const QStringList items = curDir.entryList();
@@ -116,7 +116,7 @@ static QString caseFixed(const QString &path)
             if (items[j].compare(paths[i], Qt::CaseInsensitive) == 0) {
                 result += items[j];
                 if (i < paths.count() - 1) {
-                    result += QLatin1Char('/');
+                    result += u'/';
                 }
                 break;
             }
@@ -1520,7 +1520,7 @@ void KateBuildView::slotProcExited(int exitCode, QProcess::ExitStatus)
         if (m_numNotes) {
             msgs << i18np("Found one note.", "Found %1 notes.", m_numNotes);
         }
-        displayBuildResult(msgs.join(QLatin1Char('\n')), m_numErrors ? KTextEditor::Message::Error : KTextEditor::Message::Warning);
+        displayBuildResult(msgs.join(u'\n'), m_numErrors ? KTextEditor::Message::Error : KTextEditor::Message::Warning);
     } else if (m_buildCancelled) {
         displayBuildResult(i18n("Build canceled."), KTextEditor::Message::Warning);
         buildSuccess = false;
@@ -1719,7 +1719,7 @@ void KateBuildView::slotReadReadyStdOut()
     // read data from procs stdout and add
     // the text to the end of the output
     QString l = QString::fromUtf8(m_proc.readAllStandardOutput());
-    l.remove(QLatin1Char('\r'));
+    l.remove(u'\r');
     m_stdOut += l;
 
     static const QRegularExpression progressReg(u"(?<progress>\\[\\d+/\\d+\\]|\\[\\s*\\d+%\\]).*"_s);
@@ -1797,15 +1797,15 @@ KateBuildView::OutputLine KateBuildView::processOutputLine(const QString &line)
 
     // qDebug("File Name:")<<m_makeDir << filename << " msg:"<< msg;
     // add path to file
-    if (QFile::exists(m_makeDir + QLatin1Char('/') + filename)) {
-        filename = m_makeDir + QLatin1Char('/') + filename;
+    if (QFile::exists(m_makeDir + u'/' + filename)) {
+        filename = m_makeDir + u'/' + filename;
     }
 
     // If we still do not have a file name try the extra search paths
     int i = 1;
     while (!QFile::exists(filename) && i < m_searchPaths.size()) {
-        if (QFile::exists(m_searchPaths[i] + QLatin1Char('/') + filename)) {
-            filename = m_searchPaths[i] + QLatin1Char('/') + filename;
+        if (QFile::exists(m_searchPaths[i] + u'/' + filename)) {
+            filename = m_searchPaths[i] + u'/' + filename;
         }
         i++;
     }

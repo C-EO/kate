@@ -56,7 +56,7 @@ public Q_SLOTS:
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
         beginFilterChange();
 #endif
-        m_filterStrings = text.split(QLatin1Char(' '), Qt::SkipEmptyParts);
+        m_filterStrings = text.split(u' ', Qt::SkipEmptyParts);
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
         endFilterChange(QSortFilterProxyModel::Direction::Rows);
 #else
@@ -130,7 +130,7 @@ public:
 public Q_SLOTS:
     void setFilterStrings(const QString &text)
     {
-        m_filterStrings = text.split(QLatin1Char(' '), Qt::SkipEmptyParts);
+        m_filterStrings = text.split(u' ', Qt::SkipEmptyParts);
     }
 
 private:
@@ -290,8 +290,8 @@ void GotoSymbolWidget::slotReturnPressed()
             fileFound = false;
             QObject *projectView = m_mainWindow->pluginView(QStringLiteral("kateprojectplugin"));
             QString ret = projectView ? projectView->property("projectBaseDir").toString() : QString();
-            if (!ret.isEmpty() && !ret.endsWith(QLatin1Char('/'))) {
-                ret.append(QLatin1Char('/'));
+            if (!ret.isEmpty() && !ret.endsWith(u'/')) {
+                ret.append(u'/');
             }
             url = ret + file;
             fi.setFile(url);

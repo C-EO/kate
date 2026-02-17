@@ -404,7 +404,7 @@ KateProject *KateProjectPlugin::detectCMake(const QDir &dir)
                 }
 
                 // kill trailing newline stuff
-                while (line.back() == QLatin1Char('\n') || line.back() == QLatin1Char('\r')) {
+                while (line.back() == u'\n' || line.back() == u'\r') {
                     line.removeLast();
                 }
 

@@ -218,7 +218,7 @@ static QStandardItem *directoryParent(const QDir &base, QHash<QString, QStandard
     /**
      * else: construct recursively
      */
-    const int slashIndex = path.lastIndexOf(QLatin1Char('/'));
+    const int slashIndex = path.lastIndexOf(u'/');
 
     /**
      * no slash?
@@ -259,7 +259,7 @@ static QStandardItem *directoryParent(const QDir &base, QHash<QString, QStandard
 static void createFileTree(QStandardItem *parent, const QString &basePath, const std::vector<GitFileItem> &files)
 {
     QDir dir(basePath);
-    const QString dirPath = dir.path() + QLatin1Char('/');
+    const QString dirPath = dir.path() + u'/';
     QHash<QString, QStandardItem *> dir2Item;
     dir2Item[QString()] = parent;
     for (const GitFileItem &file : files) {
@@ -268,7 +268,7 @@ static void createFileTree(QStandardItem *parent, const QString &basePath, const
          * cheap file name computation
          * we do this A LOT, QFileInfo is very expensive just for this operation
          */
-        const int slashIndex = filePath.lastIndexOf(QLatin1Char('/'));
+        const int slashIndex = filePath.lastIndexOf(u'/');
         const QString fileName = (slashIndex < 0) ? filePath : filePath.mid(slashIndex + 1);
         const QString filePathName = (slashIndex < 0) ? QString() : filePath.left(slashIndex);
         const QString fullFilePath = dirPath + filePath;

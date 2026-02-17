@@ -158,7 +158,7 @@ void StashDialog::getStashList()
     QStringList stashList;
     if (git->waitForStarted() && git->waitForFinished(-1)) {
         if (git->exitStatus() == QProcess::NormalExit && git->exitCode() == 0) {
-            stashList = QString::fromUtf8(git->readAllStandardOutput()).split(QLatin1Char('\n'));
+            stashList = QString::fromUtf8(git->readAllStandardOutput()).split(u'\n');
             setStringList(stashList);
         } else {
             Q_EMIT message(i18n("Failed to get stash list. Error: ") + QString::fromUtf8(git->readAll()), true);

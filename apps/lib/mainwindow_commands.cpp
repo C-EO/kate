@@ -26,7 +26,7 @@ MainWindowCommands::MainWindowCommands(KateMainWindow *window)
 
 bool MainWindowCommands::exec(KTextEditor::View *, const QString &cmd, QString &, const KTextEditor::Range &)
 {
-    const QStringList args(cmd.split(QLatin1Char(' '), Qt::KeepEmptyParts));
+    const QStringList args(cmd.split(u' ', Qt::KeepEmptyParts));
     if (args.isEmpty()) {
         return false;
     }

@@ -83,7 +83,7 @@ void KateFileActions::renameDocumentFile(QWidget *parent, KTextEditor::Document 
     }
 
     QUrl newFileUrl = oldFileUrl.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash);
-    newFileUrl.setPath(newFileUrl.path() + QLatin1Char('/') + newFileName);
+    newFileUrl.setPath(newFileUrl.path() + u'/' + newFileName);
 
     if (!newFileUrl.isValid()) {
         return;

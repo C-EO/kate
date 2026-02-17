@@ -1189,7 +1189,7 @@ void KateMainWindow::slotListRecursiveEntries(KIO::Job *job, const KIO::UDSEntry
         if (!entry.isDir()) {
             QUrl url(dir);
             url = url.adjusted(QUrl::StripTrailingSlash);
-            url.setPath(url.path() + QLatin1Char('/') + entry.stringValue(KIO::UDSEntry::UDS_NAME));
+            url.setPath(url.path() + u'/' + entry.stringValue(KIO::UDSEntry::UDS_NAME));
             m_viewManager->openUrl(url);
         }
     }

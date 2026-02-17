@@ -127,7 +127,7 @@ static QStringList remotesList(const QString &repo)
     startHostProcess(git, QIODevice::ReadOnly);
     if (git.waitForStarted() && git.waitForFinished(-1)) {
         if (git.exitStatus() == QProcess::NormalExit && git.exitCode() == 0) {
-            return QString::fromUtf8(git.readAllStandardOutput()).split(QLatin1Char('\n'), Qt::SkipEmptyParts);
+            return QString::fromUtf8(git.readAllStandardOutput()).split(u'\n', Qt::SkipEmptyParts);
         }
     }
     return {};
@@ -181,7 +181,7 @@ QStringList PushPullDialog::buildCmdStrings(Mode m)
 void PushPullDialog::slotReturnPressed(const QModelIndex &)
 {
     if (!m_lineEdit.text().isEmpty()) {
-        auto args = m_lineEdit.text().split(QLatin1Char(' '));
+        auto args = m_lineEdit.text().split(u' ');
         if (args.first() == QLatin1String("git")) {
             saveCommand(m_lineEdit.text());
             args.pop_front();

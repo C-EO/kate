@@ -286,7 +286,7 @@ void KateOutputView::readConfig()
     pal.setColor(QPalette::Text, QColor::fromRgba(theme.textColor(KSyntaxHighlighting::Theme::Normal)));
     m_textEdit->setPalette(pal);
     m_textEdit->setFont(Utils::editorFont());
-    m_textEdit->document()->setIndentWidth(m_textEdit->fontMetrics().horizontalAdvance(QLatin1Char(' ')));
+    m_textEdit->document()->setIndentWidth(m_textEdit->fontMetrics().horizontalAdvance(u' '));
 
     auto brighten = [](QColor &c) {
         c = c.toHsv();
@@ -443,7 +443,7 @@ void KateOutputView::slotMessage(const QVariantMap &message)
      * actual message text
      */
     wrapLinksWithHref(text);
-    auto lines = text.split(QLatin1Char('\n'), Qt::SkipEmptyParts);
+    auto lines = text.split(u'\n', Qt::SkipEmptyParts);
     if (lines.isEmpty()) {
         return;
     }

@@ -236,7 +236,7 @@ PluginKateTextFilterCommand::PluginKateTextFilterCommand(PluginKateTextFilter *p
 
 bool PluginKateTextFilterCommand::exec(KTextEditor::View *view, const QString &cmd, QString &msg, const KTextEditor::Range &)
 {
-    QString filter = cmd.section(QLatin1Char(' '), 1).trimmed();
+    QString filter = cmd.section(u' ', 1).trimmed();
 
     if (filter.isEmpty()) {
         msg = i18n("Usage: textfilter COMMAND");

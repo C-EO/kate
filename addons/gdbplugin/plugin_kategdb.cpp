@@ -628,22 +628,20 @@ QString KatePluginGDBView::currentWord()
     int lindex = linestr.length() - 1;
     int endPos = startPos;
     while (startPos >= 0
-           && (linestr[startPos].isLetterOrNumber() || linestr[startPos] == QLatin1Char('_') || linestr[startPos] == QLatin1Char('~')
-               || ((startPos > 1) && (linestr[startPos] == QLatin1Char('.')) && !linestr[startPos - 1].isSpace())
-               || ((startPos > 2) && (linestr[startPos] == QLatin1Char('>')) && (linestr[startPos - 1] == QLatin1Char('-'))
-                   && !linestr[startPos - 2].isSpace()))) {
-        if (linestr[startPos] == QLatin1Char('>')) {
+           && (linestr[startPos].isLetterOrNumber() || linestr[startPos] == u'_' || linestr[startPos] == u'~'
+               || ((startPos > 1) && (linestr[startPos] == u'.') && !linestr[startPos - 1].isSpace())
+               || ((startPos > 2) && (linestr[startPos] == u'>') && (linestr[startPos - 1] == u'-') && !linestr[startPos - 2].isSpace()))) {
+        if (linestr[startPos] == u'>') {
             startPos--;
         }
         startPos--;
     }
-    while (
-        endPos < linestr.length()
-        && (linestr[endPos].isLetterOrNumber() || linestr[endPos] == QLatin1Char('_')
-            || ((endPos < lindex - 1) && (linestr[endPos] == QLatin1Char('.')) && !linestr[endPos + 1].isSpace())
-            || ((endPos < lindex - 2) && (linestr[endPos] == QLatin1Char('-')) && (linestr[endPos + 1] == QLatin1Char('>')) && !linestr[endPos + 2].isSpace())
-            || ((endPos > 1) && (linestr[endPos - 1] == QLatin1Char('-')) && (linestr[endPos] == QLatin1Char('>'))))) {
-        if (linestr[endPos] == QLatin1Char('-')) {
+    while (endPos < linestr.length()
+           && (linestr[endPos].isLetterOrNumber() || linestr[endPos] == u'_'
+               || ((endPos < lindex - 1) && (linestr[endPos] == u'.') && !linestr[endPos + 1].isSpace())
+               || ((endPos < lindex - 2) && (linestr[endPos] == u'-') && (linestr[endPos + 1] == u'>') && !linestr[endPos + 2].isSpace())
+               || ((endPos > 1) && (linestr[endPos - 1] == u'-') && (linestr[endPos] == u'>')))) {
+        if (linestr[endPos] == u'-') {
             endPos++;
         }
         endPos++;

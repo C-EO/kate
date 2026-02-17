@@ -129,7 +129,7 @@ CEWidget::CEWidget(CEPluginView *pluginView, KTextEditor::MainWindow *mainWindow
     QString args = CompileDBReader::filteredArgsForFile(compilecmds, file);
     m_lineEdit->setText(args);
 
-    warnIfBadArgs(args.split(QLatin1Char(' ')));
+    warnIfBadArgs(args.split(u' '));
 
     setFocusPolicy(Qt::StrongFocus);
 }

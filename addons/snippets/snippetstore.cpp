@@ -36,7 +36,7 @@ SnippetStore::SnippetStore()
     for (const QString &dir : dirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList{QStringLiteral("*.xml")});
         for (const QString &file : fileNames) {
-            files.append(dir + QLatin1Char('/') + file);
+            files.append(dir + u'/' + file);
         }
     }
 

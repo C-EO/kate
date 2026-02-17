@@ -96,15 +96,15 @@ void FolderFilesList::generateList(const QString &folder, bool recursive, bool h
 {
     m_cancelSearch = false;
     m_folder = folder;
-    if (!m_folder.endsWith(QLatin1Char('/'))) {
-        m_folder += QLatin1Char('/');
+    if (!m_folder.endsWith(u'/')) {
+        m_folder += u'/';
     }
     m_recursive = recursive;
     m_hidden = hidden;
     m_symlinks = symlinks;
 
     m_types.clear();
-    const auto typesList = types.split(QLatin1Char(','), Qt::SkipEmptyParts);
+    const auto typesList = types.split(u',', Qt::SkipEmptyParts);
     for (const QString &type : typesList) {
         m_types << type.trimmed();
     }
@@ -112,7 +112,7 @@ void FolderFilesList::generateList(const QString &folder, bool recursive, bool h
         m_types << QStringLiteral("*");
     }
 
-    const QStringList tmpExcludes = excludes.split(QLatin1Char(','));
+    const QStringList tmpExcludes = excludes.split(u',');
     m_excludes.clear();
     m_pathExcludes.clear();
     for (const auto &excl : tmpExcludes) {
@@ -174,7 +174,7 @@ void FolderFilesList::checkNextItem(DirectoryWithResults &handleOnFolder) const
     for (const auto &entry : entries) {
         const QString absFilePath = entry.absoluteFilePath();
         bool skip{false};
-        const QStringList pathSplit = absFilePath.split(QLatin1Char('/'), Qt::SkipEmptyParts);
+        const QStringList pathSplit = absFilePath.split(u'/', Qt::SkipEmptyParts);
         for (const auto &regex : m_pathExcludes) {
             QRegularExpressionMatch match = regex.match(absFilePath);
             if (match.hasMatch()) {

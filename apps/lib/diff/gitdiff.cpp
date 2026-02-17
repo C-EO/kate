@@ -138,12 +138,12 @@ static QString formatRange(uint start, uint count)
 {
     if (count == 1)
         return QString().setNum(start);
-    return QString().setNum(start) + QLatin1Char(',') + QString().setNum(count);
+    return QString().setNum(start) + u',' + QString().setNum(count);
 }
 
 DiffRange parseRange(const QString &range)
 {
-    int commaPos = range.indexOf(QLatin1Char(','));
+    int commaPos = range.indexOf(u',');
     if (commaPos > -1) {
         return {QStringView(range).sliced(0, commaPos).toUInt(), QStringView(range).sliced(commaPos + 1).toUInt()};
     }
@@ -243,15 +243,15 @@ static std::vector<DiffHunk> parseHunks(VcsDiff &diff)
     std::vector<DiffHunk> ret;
     int lineNo = -1;
     QString curSrcFileName, curTgtFileName;
-    QStringListIterator lines(diff.diff().split(QLatin1Char('\n')));
+    QStringListIterator lines(diff.diff().split(u'\n'));
     while (lines.hasNext()) {
         lineNo++;
         auto curln = lines.next();
         auto m = DIFF_FILENAME_RE->match(curln);
         if (m.hasMatch()) {
-            if (curln.startsWith(QLatin1Char('-')))
+            if (curln.startsWith(u'-'))
                 curSrcFileName = m.captured(1);
-            else if (curln.startsWith(QLatin1Char('+')))
+            else if (curln.startsWith(u'+'))
                 curTgtFileName = m.captured(1);
             continue;
         }
@@ -297,7 +297,7 @@ static std::vector<DiffHunk> parseHunks(VcsDiff &diff)
 
     // If the diff ends with a newline, for the last hunk, when splitting into lines above
     // we will always get an empty string at the end, which we now remove
-    if (diff.diff().endsWith(QLatin1Char('\n'))) {
+    if (diff.diff().endsWith(u'\n')) {
         if (ret.size() > 0 && ret.back().lines.size() > 0) {
             ret.back().lines.pop_back();
         } else {
@@ -384,7 +384,7 @@ public:
                 if (CONFLICT_RE->match(ln).hasMatch())
                     return -1;
 
-                if (ln.startsWith(QLatin1Char(dest)) || ln.startsWith(QLatin1Char(' ')) || ln.isEmpty() || inConflict) {
+                if (ln.startsWith(QLatin1Char(dest)) || ln.startsWith(u' ') || ln.isEmpty() || inConflict) {
                     if (dest == SRC) {
                         // The -1 accounts for the fact that srcStart is 1-based
                         // but we need to return 0-based line numbers
@@ -544,7 +544,7 @@ VcsDiff VcsDiff::subDiff(const uint startLine, const uint endLine, DiffDirection
         lines += filteredLines;
     }
     if (lines.size() > 2)
-        ret.setDiff(lines.join(QLatin1Char('\n')) + QLatin1Char('\n'));
+        ret.setDiff(lines.join(u'\n') + u'\n');
     return ret;
 }
 

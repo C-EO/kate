@@ -795,7 +795,7 @@ static std::vector<KSyntaxHighlighting::Definition> defsForFileExtensions(const 
 void DiffWidget::parseAndShowDiff(const QByteArray &raw)
 {
     //     printf("show diff:\n%s\n================================", raw.constData());
-    const QStringList text = QString::fromUtf8(raw).replace(QStringLiteral("\r\n"), QStringLiteral("\n")).split(QLatin1Char('\n'), Qt::SkipEmptyParts);
+    const QStringList text = QString::fromUtf8(raw).replace(QStringLiteral("\r\n"), QStringLiteral("\n")).split(u'\n', Qt::SkipEmptyParts);
 
     static const QRegularExpression HUNK_HEADER_RE(QStringLiteral("^@@ -([0-9,]+) \\+([0-9,]+) @@(.*)"));
     static const QRegularExpression DIFF_FILENAME_RE(QStringLiteral("^[-+]{3} [ab]/(.*)"));
@@ -898,7 +898,7 @@ void DiffWidget::parseAndShowDiff(const QByteArray &raw)
 
         for (int j = i + 1; j < text.size(); j++) {
             QString l = text.at(j);
-            if (l.startsWith(QLatin1Char(' '))) {
+            if (l.startsWith(u' ')) {
                 // Insert dummy lines when left/right are unequal
                 balanceHunkLines(left, right, lineA, lineB, lineNumsA, lineNumsB);
                 markInlineDiffs(hunkChangedLinesA, hunkChangedLinesB, leftHlts, rightHlts);
@@ -911,7 +911,7 @@ void DiffWidget::parseAndShowDiff(const QByteArray &raw)
                 lineNumsB.push_back(tgtLine++);
                 lineA++;
                 lineB++;
-            } else if (l.startsWith(QLatin1Char('+'))) {
+            } else if (l.startsWith(u'+')) {
                 // qDebug("- line");
                 l = l.mid(1);
                 LineHighlight h;
@@ -927,7 +927,7 @@ void DiffWidget::parseAndShowDiff(const QByteArray &raw)
 
                 //                 lineNo++;
                 lineB++;
-            } else if (l.startsWith(QLatin1Char('-'))) {
+            } else if (l.startsWith(u'-')) {
                 l = l.mid(1);
                 // qDebug("+ line: %ls", qUtf16Printable(l));
                 LineHighlight h;
@@ -979,8 +979,8 @@ void DiffWidget::parseAndShowDiff(const QByteArray &raw)
 
     balanceHunkLines(left, right, lineA, lineB, lineNumsA, lineNumsB);
 
-    QString leftText = left.join(QLatin1Char('\n'));
-    QString rightText = right.join(QLatin1Char('\n'));
+    QString leftText = left.join(u'\n');
+    QString rightText = right.join(u'\n');
 
     Q_ASSERT(lineA == lineB && left.size() == right.size() && lineNumsA.size() == lineNumsB.size());
 
@@ -1002,7 +1002,7 @@ void DiffWidget::parseAndShowDiff(const QByteArray &raw)
 void DiffWidget::parseAndShowDiffUnified(const QByteArray &raw)
 {
     //     printf("show diff:\n%s\n================================", raw.constData());
-    const QStringList text = QString::fromUtf8(raw).replace(QStringLiteral("\r\n"), QStringLiteral("\n")).split(QLatin1Char('\n'), Qt::SkipEmptyParts);
+    const QStringList text = QString::fromUtf8(raw).replace(QStringLiteral("\r\n"), QStringLiteral("\n")).split(u'\n', Qt::SkipEmptyParts);
 
     static const QRegularExpression HUNK_HEADER_RE(QStringLiteral("^@@ -([0-9,]+) \\+([0-9,]+) @@(.*)"));
     static const QRegularExpression DIFF_FILENAME_RE(QStringLiteral("^[-+]{3} [ab]/(.*)"));
@@ -1097,7 +1097,7 @@ void DiffWidget::parseAndShowDiffUnified(const QByteArray &raw)
 
         for (int j = i + 1; j < text.size(); j++) {
             QString l = text.at(j);
-            if (l.startsWith(QLatin1Char(' '))) {
+            if (l.startsWith(u' ')) {
                 markInlineDiffs(hunkChangedLinesA, hunkChangedLinesB, hlts, hlts);
 
                 l = l.mid(1);
@@ -1106,7 +1106,7 @@ void DiffWidget::parseAndShowDiffUnified(const QByteArray &raw)
                 lineNumsB.push_back(tgtLine++);
                 lineNo++;
                 //                 lineB++;
-            } else if (l.startsWith(QLatin1Char('+'))) {
+            } else if (l.startsWith(u'+')) {
                 // qDebug("- line");
                 l = l.mid(1);
                 LineHighlight h;
@@ -1121,7 +1121,7 @@ void DiffWidget::parseAndShowDiffUnified(const QByteArray &raw)
 
                 hunkChangedLinesB.emplace_back(l, lineNo, h.added);
                 lineNo++;
-            } else if (l.startsWith(QLatin1Char('-'))) {
+            } else if (l.startsWith(u'-')) {
                 l = l.mid(1);
                 LineHighlight h;
                 h.line = lineNo;
@@ -1165,7 +1165,7 @@ void DiffWidget::parseAndShowDiffUnified(const QByteArray &raw)
     }
 
     m_left->appendData(hlts);
-    m_left->appendPlainText(lines.join(QLatin1Char('\n')));
+    m_left->appendPlainText(lines.join(u'\n'));
     m_left->setLineNumberData(lineNumsA, lineNumsB, maxLineNoFound);
     m_lineToDiffHunkLine.insert(m_lineToDiffHunkLine.end(), linesWithHunkHeading.begin(), linesWithHunkHeading.end());
     m_lineToRawDiffLine.insert(m_lineToRawDiffLine.end(), lineToRawDiffLine.begin(), lineToRawDiffLine.end());

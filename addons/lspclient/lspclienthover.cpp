@@ -79,7 +79,7 @@ public:
                 for (auto &element : info.contents) {
                     kind = element.kind;
                     if (!finalTooltip.isEmpty()) {
-                        finalTooltip.append(QLatin1Char('\n'));
+                        finalTooltip.append(u'\n');
                     }
                     finalTooltip.append(element.value);
                 }

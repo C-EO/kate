@@ -185,7 +185,7 @@ void EditSnippet::validate()
     const QString &name = m_ui->snippetNameEdit->text();
     bool valid = !name.simplified().isEmpty() && !m_snippetView->document()->isEmpty();
     // make sure the snippetname includes no spaces
-    if (name.contains(QLatin1Char(' ')) || name.contains(QLatin1Char('\t'))) {
+    if (name.contains(u' ') || name.contains(u'\t')) {
         // allow with a warning
         m_ui->messageWidget->setText(i18n("Snippet names with spaces may not work well in completions"));
         m_ui->messageWidget->animatedShow();

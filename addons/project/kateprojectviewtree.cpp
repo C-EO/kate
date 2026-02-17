@@ -346,7 +346,7 @@ void KateProjectViewTree::addFile(const QModelIndex &idx, const QString &fileNam
     }
 
     const QString base = idx.isValid() ? idx.data(Qt::UserRole).toString() : m_project->baseDir();
-    const QString fullFileName = base + QLatin1Char('/') + fileName;
+    const QString fullFileName = base + u'/' + fileName;
     if (QFileInfo::exists(fullFileName)) {
         Utils::showMessage(i18n("The file already exists"), QIcon(), i18n("Project"), MessageType::Error);
         return;
@@ -387,7 +387,7 @@ void KateProjectViewTree::addDirectory(const QModelIndex &idx, const QString &na
     }
 
     const QString base = idx.isValid() ? idx.data(Qt::UserRole).toString() : m_project->baseDir();
-    const QString fullDirName = base + QLatin1Char('/') + name;
+    const QString fullDirName = base + u'/' + name;
     if (QFileInfo::exists(fullDirName)) {
         Utils::showMessage(i18n("The directory already exists"), QIcon(), i18n("Project"), MessageType::Error);
         return;

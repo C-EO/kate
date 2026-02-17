@@ -417,12 +417,10 @@ QString KateCTagsView::currentWord()
     int startPos = std::max(std::min(col, static_cast<int>(linestr.length()) - 1), 0);
     int endPos = startPos;
     while (startPos >= 0
-           && (linestr[startPos].isLetterOrNumber() || (linestr[startPos] == QLatin1Char(':') && includeColon) || linestr[startPos] == QLatin1Char('_')
-               || linestr[startPos] == QLatin1Char('~'))) {
+           && (linestr[startPos].isLetterOrNumber() || (linestr[startPos] == u':' && includeColon) || linestr[startPos] == u'_' || linestr[startPos] == u'~')) {
         startPos--;
     }
-    while (endPos < linestr.length()
-           && (linestr[endPos].isLetterOrNumber() || (linestr[endPos] == QLatin1Char(':') && includeColon) || linestr[endPos] == QLatin1Char('_'))) {
+    while (endPos < linestr.length() && (linestr[endPos].isLetterOrNumber() || (linestr[endPos] == u':' && includeColon) || linestr[endPos] == u'_')) {
         endPos++;
     }
     if (startPos == endPos) {
@@ -432,11 +430,11 @@ QString KateCTagsView::currentWord()
 
     linestr = linestr.mid(startPos + 1, endPos - startPos - 1);
 
-    while (linestr.endsWith(QLatin1Char(':'))) {
+    while (linestr.endsWith(u':')) {
         linestr.remove(linestr.size() - 1, 1);
     }
 
-    while (linestr.startsWith(QLatin1Char(':'))) {
+    while (linestr.startsWith(u':')) {
         linestr.remove(0, 1);
     }
 
@@ -532,7 +530,7 @@ void KateCTagsView::updateSessionDB()
     QStringList targets;
     for (int i = 0; i < m_ctagsUi.targetList->count(); i++) {
         auto target = m_ctagsUi.targetList->item(i)->text();
-        if (target.endsWith(QLatin1Char('/')) || target.endsWith(QLatin1Char('\\'))) {
+        if (target.endsWith(u'/') || target.endsWith(u'\\')) {
             target = target.left(target.size() - 1);
         }
         targets << target;

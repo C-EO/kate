@@ -460,14 +460,13 @@ public:
     // returns the column where cursor should be after completion and the text to insert
     std::pair<int, QString> stripSnippetMarkers(const QString &snip) const
     {
-#define C(c) QLatin1Char(c)
         QString ret;
         ret.reserve(snip.size());
         int bracket = 0;
         int lastSnippetMarkerPos = -1;
         for (auto i = snip.begin(), end = snip.end(); i != end; ++i) {
-            const bool prevSlash = i > snip.begin() && *(i - 1) == C('\\');
-            if (!prevSlash && *i == C('$') && i + 1 != end && *(i + 1) == C('{')) {
+            const bool prevSlash = i > snip.begin() && *(i - 1) == u'\\';
+            if (!prevSlash && *i == u'$' && i + 1 != end && *(i + 1) == u'{') {
                 if (i + 2 != end && (i + 2)->isDigit()) {
                     // its ${1:
                     auto j = i + 2;
@@ -475,7 +474,7 @@ public:
                     while (j->isDigit()) {
                         ++j;
                     }
-                    if (*j == C(':')) {
+                    if (*j == u':') {
                         bracket++;
                         // skip forward
                         i = j;
@@ -485,14 +484,14 @@ public:
                     ++i;
                     bracket++;
                 }
-            } else if (!prevSlash && *i == C('$') && i + 1 != end && (i + 1)->isDigit()) { // $0, $1 => we dont support multiple cursor pos
+            } else if (!prevSlash && *i == u'$' && i + 1 != end && (i + 1)->isDigit()) { // $0, $1 => we dont support multiple cursor pos
                 ++i;
                 // eat through the digits
                 while (i->isDigit()) {
                     ++i;
                 }
                 --i; // one step back to the last valid char
-            } else if (bracket > 0 && *i == C('}')) {
+            } else if (bracket > 0 && *i == u'}') {
                 bracket--;
                 if (bracket == 0 && lastSnippetMarkerPos == -1) {
                     lastSnippetMarkerPos = ret.size();
@@ -516,7 +515,7 @@ public:
         const auto item = m_matches.at(index.row());
         QString matching = m_matches.at(index.row()).insertText;
         // if there is already a '"' or >, remove it, this happens with #include "xx.h"
-        if ((next == QLatin1Char('"') && matching.endsWith(QLatin1Char('"'))) || (next == QLatin1Char('>') && matching.endsWith(QLatin1Char('>')))) {
+        if ((next == u'"' && matching.endsWith(u'"')) || (next == u'>' && matching.endsWith(u'>'))) {
             matching.chop(1);
         }
 
@@ -550,7 +549,7 @@ public:
                     if (count == col) {
                         break;
                     }
-                    if (c == QLatin1Char('\n')) {
+                    if (c == u'\n') {
                         p.setLine(p.line() + 1);
                         // line changed reset column
                         column = 0;

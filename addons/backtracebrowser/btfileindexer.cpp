@@ -71,7 +71,7 @@ void BtFileIndexer::indexFiles(const QString &url)
         if (cancelAsap) {
             break;
         }
-        indexFiles(url + QLatin1Char('/') + subdirs[i]);
+        indexFiles(url + u'/' + subdirs[i]);
     }
 }
 

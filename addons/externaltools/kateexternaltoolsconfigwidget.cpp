@@ -363,7 +363,7 @@ bool KateExternalToolsConfigWidget::editTool(KateExternalTool *tool)
         tool->trigger = static_cast<KateExternalTool::Trigger>(editor.ui.cmbTrigger->currentIndex());
 
         tool->executable = editor.ui.edtExecutable->text().trimmed();
-        tool->hasexec = tool->executable.contains(QLatin1Char('$')) ? std::nullopt : std::optional<bool>(tool->checkExec());
+        tool->hasexec = tool->executable.contains(u'$') ? std::nullopt : std::optional<bool>(tool->checkExec());
 
         // sticky action collection name, never changes again, so that shortcuts stay
         if (tool->actionName.isEmpty()) {

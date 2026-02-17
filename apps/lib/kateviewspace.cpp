@@ -799,7 +799,7 @@ void KateViewSpace::updateDocumentName(KTextEditor::Document *doc)
     if (buttonId >= 0) {
         // BUG: 441278 We need to escape the & because it is used for accelerators/shortcut mnemonic by default
         QString tabName = doc->documentName();
-        tabName.replace(QLatin1Char('&'), QLatin1String("&&"));
+        tabName.replace(u'&', QLatin1String("&&"));
         m_tabBar->setTabText(buttonId, tabName);
     }
 }

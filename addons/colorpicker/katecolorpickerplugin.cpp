@@ -114,7 +114,7 @@ void ColorPickerInlineNoteProvider::updateColorMatchingCriteria()
 
     if (m_matchNamedColors) {
         if (!colorRegex.isEmpty()) {
-            colorRegex += QLatin1Char('|');
+            colorRegex += u'|';
         }
         // shortest and longest colors have 3 (e.g. red) and 20 (lightgoldenrodyellow) characters respectively
         colorRegex += QLatin1String("((?<![\\w])[a-z]{3,20})");
@@ -169,7 +169,7 @@ QList<int> ColorPickerInlineNoteProvider::inlineNotes(int line) const
                 continue;
             }
 
-            if (lineText.at(match.capturedStart()) == QLatin1Char('#') && !m_matchHexLengths.contains(match.capturedLength() - 1)) {
+            if (lineText.at(match.capturedStart()) == u'#' && !m_matchHexLengths.contains(match.capturedLength() - 1)) {
                 // matching for this hex color format is disabled
                 continue;
             }

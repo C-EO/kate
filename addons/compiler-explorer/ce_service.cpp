@@ -20,7 +20,7 @@ void CompilerExplorerSvc::changeUrl(const QString &newUrl)
     bool initializing = url.isEmpty();
     url = newUrl;
 
-    if (url.endsWith(QLatin1Char('/'))) {
+    if (url.endsWith(u'/')) {
         url.chop(1);
     }
 
@@ -83,7 +83,7 @@ CompilerExplorerSvc::CompilerExplorerSvc(QObject *parent)
 
 void CompilerExplorerSvc::slotNetworkReply(QNetworkReply *reply)
 {
-    const QString path = reply->url().path().split(QLatin1Char('/')).at(2);
+    const QString path = reply->url().path().split(u'/').at(2);
     CompilerExplorer::Endpoints endpoint;
     if (path.startsWith(QLatin1String("compilers"))) {
         endpoint = CompilerExplorer::stringToEndpoint().value(QStringLiteral("compilers"));

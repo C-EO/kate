@@ -154,7 +154,7 @@ static void matchFilePaths(const QString &line, std::vector<OpenLinkRange> *outC
 #else
     int s = 0;
     while (true) {
-        s = line.indexOf(QLatin1Char('/'), s);
+        s = line.indexOf(u'/', s);
         if (s == -1) {
             break;
         }

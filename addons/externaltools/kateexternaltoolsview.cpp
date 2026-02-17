@@ -69,7 +69,7 @@ void KateExternalToolsMenuAction::reload()
     // first add categorized actions, such that the submenus appear at the top
     for (auto tool : m_plugin->tools()) {
         // we add all tools, even the non-executable ones, they will be disabled in updateActionState
-        auto a = new QAction(tool->translatedName().replace(QLatin1Char('&'), QLatin1String("&&")), this);
+        auto a = new QAction(tool->translatedName().replace(u'&', QLatin1String("&&")), this);
         a->setIcon(QIcon::fromTheme(tool->icon));
         a->setData(QVariant::fromValue(tool));
 

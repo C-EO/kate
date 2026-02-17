@@ -97,8 +97,8 @@ std::optional<QString> getRepoBasePath(const QString &repo)
             return std::nullopt;
         }
         QString dotGitPath = QString::fromUtf8(git.readAllStandardOutput().trimmed());
-        if (!dotGitPath.endsWith(QLatin1Char('/'))) {
-            dotGitPath.append(QLatin1Char('/'));
+        if (!dotGitPath.endsWith(u'/')) {
+            dotGitPath.append(u'/');
         }
         return dotGitPath;
     }

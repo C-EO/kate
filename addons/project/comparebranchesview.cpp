@@ -100,7 +100,7 @@ public:
 static void createFileTree(QStandardItem *parent, const QString &basePath, const QList<GitUtils::StatusItem> &files)
 {
     QDir dir(basePath);
-    const QString dirPath = dir.path() + QLatin1Char('/');
+    const QString dirPath = dir.path() + u'/';
     QHash<QString, QStandardItem *> dir2Item;
     dir2Item[QString()] = parent;
     for (const auto &file : std::as_const(files)) {
@@ -109,7 +109,7 @@ static void createFileTree(QStandardItem *parent, const QString &basePath, const
          * cheap file name computation
          * we do this A LOT, QFileInfo is very expensive just for this operation
          */
-        const int slashIndex = filePath.lastIndexOf(QLatin1Char('/'));
+        const int slashIndex = filePath.lastIndexOf(u'/');
         const QString fileName = (slashIndex < 0) ? filePath : filePath.mid(slashIndex + 1);
         const QString filePathName = (slashIndex < 0) ? QString() : filePath.left(slashIndex);
         const QString fullFilePath = dirPath + filePath;
@@ -160,7 +160,7 @@ CompareBranchesView::CompareBranchesView(QWidget *parent, const QString &gitPath
 
 void CompareBranchesView::showDiff(const QModelIndex &idx)
 {
-    auto file = idx.data(Qt::UserRole).toString().remove(m_gitDir + QLatin1Char('/'));
+    auto file = idx.data(Qt::UserRole).toString().remove(m_gitDir + u'/');
     QProcess git;
     const QStringList args{QStringLiteral("diff"), QStringLiteral("%1...%2").arg(m_fromBr, m_toBr), QStringLiteral("--"), file};
     if (!setupGitProcess(git, m_gitDir, args)) {

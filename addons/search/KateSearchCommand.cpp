@@ -35,10 +35,10 @@ bool KateSearchCommand::exec(KTextEditor::View * /*view*/, const QString &cmd, Q
         return false;
     }
     // create a list of args
-    QStringList args(cmd.split(QLatin1Char(' '), Qt::KeepEmptyParts));
+    QStringList args(cmd.split(u' ', Qt::KeepEmptyParts));
 
     QString command = args.takeFirst();
-    QString searchText = args.join(QLatin1Char(' '));
+    QString searchText = args.join(u' ');
 
     if (command == QLatin1String("grep") || command == QLatin1String("newGrep")) {
         Q_EMIT setSearchPlace(MatchModel::Folder);

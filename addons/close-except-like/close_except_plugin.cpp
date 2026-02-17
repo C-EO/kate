@@ -126,7 +126,7 @@ void CloseExceptPluginView::updateMenuSlotStub(KTextEditor::Document *)
 void CloseExceptPluginView::appendActionsFrom(const std::set<QUrl> &paths, actions_map_type &actions, KActionMenu *menu, CloseFunction closeFunction)
 {
     for (const QUrl &path : paths) {
-        QString action = path.path() + QLatin1Char('*');
+        QString action = path.path() + u'*';
         actions[action] = QPointer<QAction>(new QAction(action, menu));
         menu->addAction(actions[action]);
         connect(actions[action].data(), &QAction::triggered, this, [this, closeFunction, action]() {
@@ -138,7 +138,7 @@ void CloseExceptPluginView::appendActionsFrom(const std::set<QUrl> &paths, actio
 void CloseExceptPluginView::appendActionsFrom(const std::set<QString> &masks, actions_map_type &actions, KActionMenu *menu, CloseFunction closeFunction)
 {
     for (const QString &mask : masks) {
-        QString action = mask.startsWith(QLatin1Char('*')) ? mask : mask + QLatin1Char('*');
+        QString action = mask.startsWith(u'*') ? mask : mask + u'*';
         actions[action] = QPointer<QAction>(new QAction(action, menu));
         menu->addAction(actions[action]);
         connect(actions[action].data(), &QAction::triggered, this, [this, closeFunction, action]() {
@@ -224,7 +224,7 @@ void CloseExceptPluginView::updateMenu()
 
 void CloseExceptPluginView::close(const QString &item, const bool close_if_match)
 {
-    QChar asterisk = QLatin1Char('*');
+    QChar asterisk = u'*';
     assert("Parameter seems invalid! Is smth has changed in the code?" && !item.isEmpty() && (item[0] == asterisk || item[item.size() - 1] == asterisk));
 
     const bool is_path = item[0] != asterisk;
@@ -236,7 +236,7 @@ void CloseExceptPluginView::close(const QString &item, const bool close_if_match
     for (KTextEditor::Document *document : docs) {
         const QString &path = KIO::upUrl(document->url()).path();
         /// \note Take a dot in account, so \c *.c would not match for \c blah.kcfgc
-        const QString &ext = QLatin1Char('.') + QFileInfo(document->url().fileName()).completeSuffix();
+        const QString &ext = u'.' + QFileInfo(document->url().fileName()).completeSuffix();
         const bool match = (!is_path && mask.endsWith(ext)) || (is_path && path.startsWith(mask));
         if (match == close_if_match) {
             // qDebug() << "*** Will close: " << document->url();

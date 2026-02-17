@@ -128,7 +128,7 @@ public:
 
         } else {
             int i = firstNotSpace(text);
-            int nextSpace = text.indexOf(QLatin1Char(' '), i + 1);
+            int nextSpace = text.indexOf(u' ', i + 1);
 
             // If there is no space then this is the only word on the line
             // e.g "ret"
@@ -184,11 +184,11 @@ public:
     };
     static StringRange getStringPos(const QString &text, int from)
     {
-        int open = text.indexOf(QLatin1Char('"'), from);
+        int open = text.indexOf(u'"', from);
         if (open == -1) {
             return {-1, -1};
         }
-        int close = text.indexOf(QLatin1Char('"'), open + 1);
+        int close = text.indexOf(u'"', open + 1);
         if (close == -1) {
             return {-1, -1};
         }
@@ -197,7 +197,7 @@ public:
 
     static int findColon(const QString &text, int from = 0)
     {
-        int colon = text.indexOf(QLatin1Char(':'), from);
+        int colon = text.indexOf(u':', from);
         if (colon == -1) {
             return -1;
         }
@@ -206,19 +206,19 @@ public:
             return colon;
         }
 
-        if (text.at(colon + 1) != QLatin1Char(':')) {
+        if (text.at(colon + 1) != u':') {
             return colon;
         }
 
         colon += 2;
 
         auto isLabelEnd = [text](int &i) {
-            if (text.at(i) == QLatin1Char(':')) {
+            if (text.at(i) == u':') {
                 // reached end, good enough to be a label
                 if (i + 1 >= text.length()) {
                     return true;
                 }
-                if (text.at(i + 1) != QLatin1Char(':')) {
+                if (text.at(i + 1) != u':') {
                     return true;
                 }
                 i++;

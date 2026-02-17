@@ -163,7 +163,7 @@ QStandardItem *KateProjectWorker::directoryParent(const QDir &base, QHash<QStrin
     /**
      * else: construct recursively
      */
-    const int slashIndex = path.lastIndexOf(QLatin1Char('/'));
+    const int slashIndex = path.lastIndexOf(u'/');
 
     /**
      * no slash?
@@ -258,7 +258,7 @@ void KateProjectWorker::loadFilesEntry(QStandardItem *parent,
              * cheap file name computation
              * we do this A LOT, QFileInfo is very expensive just for this operation
              */
-            const int slashIndex = filePath.lastIndexOf(QLatin1Char('/'));
+            const int slashIndex = filePath.lastIndexOf(u'/');
             const QString fileName = (slashIndex < 0) ? filePath : filePath.mid(slashIndex + 1);
             const QString filePathName = (slashIndex < 0) ? QString() : filePath.left(slashIndex);
 
@@ -277,7 +277,7 @@ void KateProjectWorker::loadFilesEntry(QStandardItem *parent,
             // get the directory's relative path to the base directory
             QString dirRelPath = dir.relativeFilePath(filePathName);
             // if the relative path is ".", clean it up
-            if (dirRelPath == QLatin1Char('.')) {
+            if (dirRelPath == u'.') {
                 dirRelPath = QString();
             }
 
@@ -330,7 +330,7 @@ void KateProjectWorker::loadFilesEntry(QStandardItem *parent,
             }
         }
 
-        const int slashIndex = filePath.lastIndexOf(QLatin1Char('/'));
+        const int slashIndex = filePath.lastIndexOf(u'/');
         const QString fileName = (slashIndex < 0) ? filePath : filePath.mid(slashIndex + 1);
         filePath = (slashIndex < 0) ? QString() : filePath.left(slashIndex);
 
@@ -528,7 +528,7 @@ void KateProjectWorker::filesFromMercurial(const QDir &dir, bool recursive, std:
 
     outFiles.reserve(relFiles.size());
     for (const QString &relFile : relFiles) {
-        if (!recursive && (relFile.indexOf(QLatin1Char('/')) != -1)) {
+        if (!recursive && (relFile.indexOf(u'/') != -1)) {
             continue;
         }
 
@@ -579,7 +579,7 @@ void KateProjectWorker::filesFromSubversion(const QDir &dir, bool recursive, std
             /**
              * try to find ., else fail
              */
-            prefixLength = line.lastIndexOf(QLatin1Char('.'));
+            prefixLength = line.lastIndexOf(u'.');
             if (prefixLength < 0) {
                 break;
             }
@@ -595,7 +595,7 @@ void KateProjectWorker::filesFromSubversion(const QDir &dir, bool recursive, std
          * get file, if not unknown or ignored
          * prepend directory path
          */
-        if ((line.size() > prefixLength) && line[0] != QLatin1Char('?') && line[0] != QLatin1Char('I')) {
+        if ((line.size() > prefixLength) && line[0] != u'?' && line[0] != u'I') {
             outFiles.push_back(FileEntry{.filePath = line.right(line.size() - prefixLength)});
         }
     }
@@ -654,7 +654,7 @@ void KateProjectWorker::filesFromDarcs(const QDir &dir, bool recursive, std::vec
     for (const QString &relFile : std::as_const(relFiles)) {
         const QString path = dir.relativeFilePath(root + QLatin1String("/") + relFile);
 
-        if ((!recursive && (relFile.indexOf(QLatin1Char('/')) != -1)) || (recursive && (relFile.indexOf(QLatin1String("..")) == 0))) {
+        if ((!recursive && (relFile.indexOf(u'/') != -1)) || (recursive && (relFile.indexOf(QLatin1String("..")) == 0))) {
             continue;
         }
 
@@ -684,7 +684,7 @@ void KateProjectWorker::filesFromFossil(const QDir &dir, bool recursive, std::ve
 
     outFiles.reserve(relFiles.size());
     for (const QString &relFile : relFiles) {
-        if (!recursive && (relFile.indexOf(QLatin1Char('/')) != -1)) {
+        if (!recursive && (relFile.indexOf(u'/') != -1)) {
             continue;
         }
 
@@ -721,7 +721,7 @@ void KateProjectWorker::filesFromDirectory(QDir dir, bool recursive, const QVari
      * trigger potential recursive directory search
      */
     QDirIterator dirIterator(dir, flags);
-    const QString dirPath = dir.path() + QLatin1Char('/');
+    const QString dirPath = dir.path() + u'/';
     while (dirIterator.hasNext()) {
         dirIterator.next();
         // make it relative path

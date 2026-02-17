@@ -74,7 +74,7 @@ public:
     FileDiagnostics parseLine(const QString &line) const override
     {
         //"/path/kate/kate/kateapp.cpp:529:10: warning: Missing reference in range-for with non trivial type (QJsonValue) [-Wclazy-range-loop]"
-        int idxColon = line.indexOf(QLatin1Char(':'));
+        int idxColon = line.indexOf(u':');
         if (idxColon < 0) {
             return {};
         }
@@ -83,7 +83,7 @@ public:
         idxColon++;
 
         // Line
-        int nextColon = line.indexOf(QLatin1Char(':'), idxColon);
+        int nextColon = line.indexOf(u':', idxColon);
         if (nextColon < 0) {
             return {};
         }
@@ -96,16 +96,16 @@ public:
         idxColon = nextColon + 1;
 
         // Column
-        nextColon = line.indexOf(QLatin1Char(':'), idxColon);
+        nextColon = line.indexOf(u':', idxColon);
         const QString columnNo = line.mid(idxColon, nextColon - idxColon);
         idxColon = nextColon + 1;
 
-        int spaceIdx = line.indexOf(QLatin1Char(' '), nextColon);
+        int spaceIdx = line.indexOf(u' ', nextColon);
         if (spaceIdx < 0) {
             return {};
         }
 
-        idxColon = line.indexOf(QLatin1Char(':'), spaceIdx);
+        idxColon = line.indexOf(u':', spaceIdx);
         if (idxColon < 0) {
             return {};
         }
@@ -118,8 +118,8 @@ public:
         // Code e.g [-Wclazy-range-loop]
         QString code;
         {
-            int bracketOpen = msg.lastIndexOf(QLatin1Char('['));
-            int bracketClose = msg.lastIndexOf(QLatin1Char(']'));
+            int bracketOpen = msg.lastIndexOf(u'[');
+            int bracketClose = msg.lastIndexOf(u']');
             if (bracketOpen > 0 && bracketClose > 0) {
                 code = msg.mid(bracketOpen + 1, bracketClose - bracketOpen);
                 // remove code from msg
@@ -167,7 +167,7 @@ public:
             /** Absolute build path in .kateproject e.g from cmake */
             buildDir,
             /** Relative path in .kateproject e.g */
-            m_project->baseDir() + (buildDir.startsWith(QLatin1Char('/')) ? buildDir : QLatin1Char('/') + buildDir),
+            m_project->baseDir() + (buildDir.startsWith(u'/') ? buildDir : u'/' + buildDir),
             /** Check for the commonly existing "build/" directory */
             m_project->baseDir() + QStringLiteral("/build"),
             /** Project base, maybe it has a symlink to compile_commands.json file */

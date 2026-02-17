@@ -204,7 +204,7 @@ void KateCTagsConfigPage::updateGlobalDB()
     QStringList targets;
     for (int i = 0; i < m_confUi.targetList->count(); i++) {
         auto target = m_confUi.targetList->item(i)->text();
-        if (target.endsWith(QLatin1Char('/')) || target.endsWith(QLatin1Char('\\'))) {
+        if (target.endsWith(u'/') || target.endsWith(u'\\')) {
             target = target.left(target.size() - 1);
         }
         targets << target;

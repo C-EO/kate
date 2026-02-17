@@ -628,7 +628,7 @@ private:
                 }
             }
             auto action = retry ? i18n("Restarting") : i18n("NOT Restarting");
-            showMessage(i18n("Server terminated unexpectedly ... %1 [%2] [homepage: %3] ", action, server->cmdline().join(QLatin1Char(' ')), url),
+            showMessage(i18n("Server terminated unexpectedly ... %1 [%2] [homepage: %3] ", action, server->cmdline().join(u' '), url),
                         KTextEditor::Message::Warning);
             if (sserver) {
                 // sserver might still be in m_servers
@@ -830,7 +830,7 @@ private:
 
             auto scmdline = vcmdline.toString();
             if (!scmdline.isEmpty()) {
-                cmdline = scmdline.split(QLatin1Char(' '));
+                cmdline = scmdline.split(u' ');
             } else {
                 const auto cmdOpts = vcmdline.toArray();
                 for (const auto &c : cmdOpts) {
@@ -965,7 +965,7 @@ private:
             connect(server.get(), &LSPClientServer::stateChanged, this, &self_type::onStateChanged, Qt::UniqueConnection);
             connect(server.get(), &LSPClientServer::extraData, this, &self_type::onExtraData, Qt::UniqueConnection);
             if (!server->start(m_plugin->m_debugMode)) {
-                QString message = i18n("Failed to start server '%1' for language '%2'", cmdline.join(QLatin1Char(' ')), langId);
+                QString message = i18n("Failed to start server '%1' for language '%2'", cmdline.join(u' '), langId);
                 const auto url = serverConfig.value(QStringLiteral("url")).toString();
                 if (!url.isEmpty()) {
                     message += QStringLiteral("\n") + i18n("Please check your PATH for the binary");
@@ -973,7 +973,7 @@ private:
                 }
                 showMessage(message, KTextEditor::Message::Warning);
             } else {
-                showMessage(i18n("Started server %2: %1", cmdline.join(QLatin1Char(' ')), serverDescription(server.get())), KTextEditor::Message::Positive);
+                showMessage(i18n("Started server %2: %1", cmdline.join(u' '), serverDescription(server.get())), KTextEditor::Message::Positive);
                 using namespace std::placeholders;
                 connect(server.get(), &LSPClientServer::logMessage, this, std::bind(&self_type::onMessage, this, true, _1));
                 connect(server.get(), &LSPClientServer::showMessage, this, std::bind(&self_type::onMessage, this, false, _1));
@@ -1353,7 +1353,7 @@ private:
         for (const auto &item : params.items) {
             auto configValue = settings;
             if (item.section && !item.section->isEmpty()) {
-                const auto sectionParts = item.section->split(QLatin1Char('.'));
+                const auto sectionParts = item.section->split(u'.');
                 for (const auto &part : sectionParts) {
                     if (configValue.isObject()) {
                         configValue = configValue.toObject().value(part);

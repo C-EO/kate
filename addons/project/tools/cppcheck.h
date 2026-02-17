@@ -99,6 +99,6 @@ public:
 
         auto &&fileList = filter(m_project->files());
         setActualFilesCount(fileList.size());
-        return fileList.join(QLatin1Char('\n'));
+        return fileList.join(u'\n');
     }
 };

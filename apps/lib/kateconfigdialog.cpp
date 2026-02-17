@@ -314,8 +314,8 @@ void KateConfigDialog::addBehaviorPage()
     m_cycleThroughTabs = new QCheckBox(i18n("Allow cycling through tabs"), this);
     m_cycleThroughTabs->setAccessibleDescription(i18nc("If 'Allow cycling through tabs' is disabled.",
                                                        "If unchecked, the action '%1'/'%2' will not go to first/last tab after reaching the end.",
-                                                       nextTabAction->text().remove(QLatin1Char('&')),
-                                                       previousTabAction->text().remove(QLatin1Char('&'))));
+                                                       nextTabAction->text().remove(u'&'),
+                                                       previousTabAction->text().remove(u'&')));
     m_cycleThroughTabs->setChecked(cgGeneral.readEntry("Cycle To First Tab", true));
     connect(m_cycleThroughTabs, &QCheckBox::toggled, this, &KateConfigDialog::slotChanged);
     cycleTabsLayout->addWidget(m_cycleThroughTabs, 0, 0, 1, 2);

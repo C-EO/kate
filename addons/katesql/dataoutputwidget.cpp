@@ -230,8 +230,8 @@ void DataOutputWidget::slotExport()
     bool quoteStrings = wizard.field(QStringLiteral("checkQuoteStrings")).toBool();
     bool quoteNumbers = wizard.field(QStringLiteral("checkQuoteNumbers")).toBool();
 
-    QChar stringsQuoteChar = (quoteStrings) ? wizard.field(QStringLiteral("quoteStringsChar")).toString().at(0) : QLatin1Char('\0');
-    QChar numbersQuoteChar = (quoteNumbers) ? wizard.field(QStringLiteral("quoteNumbersChar")).toString().at(0) : QLatin1Char('\0');
+    QChar stringsQuoteChar = (quoteStrings) ? wizard.field(QStringLiteral("quoteStringsChar")).toString().at(0) : u'\0';
+    QChar numbersQuoteChar = (quoteNumbers) ? wizard.field(QStringLiteral("quoteNumbersChar")).toString().at(0) : u'\0';
 
     QString fieldDelimiter = wizard.field(QStringLiteral("fieldDelimiter")).toString();
 
@@ -313,13 +313,13 @@ void DataOutputWidget::exportData(QTextStream &stream,
 
         if (indexData.typeId() < 7) // is numeric or boolean
         {
-            if (numbersQuoteChar != QLatin1Char('\0')) {
+            if (numbersQuoteChar != u'\0') {
                 snapshot[qMakePair(row, col)] = numbersQuoteChar + indexData.toString() + numbersQuoteChar;
             } else {
                 snapshot[qMakePair(row, col)] = indexData.toString();
             }
         } else {
-            if (stringsQuoteChar != QLatin1Char('\0')) {
+            if (stringsQuoteChar != u'\0') {
                 snapshot[qMakePair(row, col)] = stringsQuoteChar + indexData.toString() + stringsQuoteChar;
             } else {
                 snapshot[qMakePair(row, col)] = indexData.toString();
@@ -341,7 +341,7 @@ void DataOutputWidget::exportData(QTextStream &stream,
         for (auto it = columns.begin(); it != columns.end(); ++it) {
             const QVariant headerData = m_model->headerData(*it, Qt::Horizontal);
 
-            if (stringsQuoteChar != QLatin1Char('\0')) {
+            if (stringsQuoteChar != u'\0') {
                 stream << stringsQuoteChar + headerData.toString() + stringsQuoteChar;
             } else {
                 stream << headerData.toString();

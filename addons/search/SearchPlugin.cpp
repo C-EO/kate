@@ -60,12 +60,12 @@ static QAction *menuEntry(QMenu *menu, const QString &before, const QString &aft
         menuAfter = after;
     }
 
-    QAction *const action = menu->addAction(menuBefore + menuAfter + QLatin1Char('\t') + desc);
+    QAction *const action = menu->addAction(menuBefore + menuAfter + u'\t' + desc);
     if (!action) {
         return nullptr;
     }
 
-    action->setData(QString(before + QLatin1Char(' ') + after));
+    action->setData(QString(before + u' ' + after));
     return action;
 }
 
@@ -148,7 +148,7 @@ void KatePluginSearchView::regexHelperActOnAction(QAction *resultAction, const Q
 {
     if (resultAction && actionList.contains(resultAction)) {
         const int cursorPos = lineEdit->cursorPosition();
-        QStringList beforeAfter = resultAction->data().toString().split(QLatin1Char(' '));
+        QStringList beforeAfter = resultAction->data().toString().split(u' ');
         if (beforeAfter.size() != 2) {
             return;
         }
@@ -706,7 +706,7 @@ void KatePluginSearchView::openSearchView()
         if (editView->selection()) {
             selection = editView->selectionText();
             // remove possible trailing '\n'
-            if (selection.endsWith(QLatin1Char('\n'))) {
+            if (selection.endsWith(u'\n')) {
                 selection = selection.left(selection.size() - 1);
             }
         }
@@ -714,7 +714,7 @@ void KatePluginSearchView::openSearchView()
             selection = editView->document()->wordAt(editView->cursorPosition());
         }
 
-        if (!selection.isEmpty() && !selection.contains(QLatin1Char('\n'))) {
+        if (!selection.isEmpty() && !selection.contains(u'\n')) {
             m_ui.searchCombo->blockSignals(true);
             m_ui.searchCombo->lineEdit()->setText(selection);
             m_ui.searchCombo->blockSignals(false);
@@ -791,13 +791,13 @@ QStringList KatePluginSearchView::filterFiles(const QStringList &files) const
         types = QStringLiteral("*");
     }
 
-    const QStringList tmpTypes = types.split(QLatin1Char(','), Qt::SkipEmptyParts);
+    const QStringList tmpTypes = types.split(u',', Qt::SkipEmptyParts);
     QList<QRegularExpression> typeList;
     for (const auto &type : tmpTypes) {
         typeList << QRegularExpression(QRegularExpression::wildcardToRegularExpression(type.trimmed()));
     }
 
-    const QStringList tmpExcludes = excludes.split(QLatin1Char(','), Qt::SkipEmptyParts);
+    const QStringList tmpExcludes = excludes.split(u',', Qt::SkipEmptyParts);
     QList<QRegularExpression> excludeList;
     for (const auto &exclude : tmpExcludes) {
         excludeList << QRegularExpression(QRegularExpression::wildcardToRegularExpression(exclude.trimmed()));
@@ -812,7 +812,7 @@ QStringList KatePluginSearchView::filterFiles(const QStringList &files) const
         }
 
         bool skip = false;
-        const QStringList pathSplit = nameToCheck.split(QLatin1Char('/'), Qt::SkipEmptyParts);
+        const QStringList pathSplit = nameToCheck.split(u'/', Qt::SkipEmptyParts);
         for (const auto &regex : std::as_const(excludeList)) {
             for (const auto &part : pathSplit) {
                 QRegularExpressionMatch match = regex.match(part);
@@ -1136,7 +1136,7 @@ void KatePluginSearchView::startSearch()
 
     // BUG: 441340 We need to escape the & because it is used for accelerators/shortcut mnemonic by default
     QString tabName = m_ui.searchCombo->currentText();
-    tabName.replace(QLatin1Char('&'), QLatin1String("&&"));
+    tabName.replace(u'&', QLatin1String("&&"));
     m_tabBar->setTabText(m_ui.resultWidget->currentIndex(), tabName);
 
     m_toolView->setCursor(Qt::WaitCursor);
@@ -1163,8 +1163,8 @@ void KatePluginSearchView::startSearch()
         m_searchOpenFiles.startSearch(documents, reg);
     } else if (m_ui.searchPlaceCombo->currentIndex() == MatchModel::Folder) {
         m_resultBaseDir = m_ui.folderRequester->url().toLocalFile();
-        if (!m_resultBaseDir.isEmpty() && !m_resultBaseDir.endsWith(QLatin1Char('/'))) {
-            m_resultBaseDir += QLatin1Char('/');
+        if (!m_resultBaseDir.isEmpty() && !m_resultBaseDir.endsWith(u'/')) {
+            m_resultBaseDir += u'/';
         }
         m_searchingTab->matchModel.setBaseSearchPath(m_resultBaseDir);
 
@@ -1204,8 +1204,8 @@ void KatePluginSearchView::startSearch()
                 m_searchingTab->matchModel.setProjectName(m_projectPluginView->property("projectName").toString());
             }
 
-            if (!m_resultBaseDir.endsWith(QLatin1Char('/'))) {
-                m_resultBaseDir += QLatin1Char('/');
+            if (!m_resultBaseDir.endsWith(u'/')) {
+                m_resultBaseDir += u'/';
             }
 
             QStringList projectFiles;
@@ -1355,7 +1355,7 @@ void KatePluginSearchView::startSearchWhileTyping()
 
     // We need to escape the & because it is used for accelerators/shortcut mnemonic by default
     QString tabName = m_ui.searchCombo->currentText();
-    tabName.replace(QLatin1Char('&'), QLatin1String("&&"));
+    tabName.replace(u'&', QLatin1String("&&"));
     m_tabBar->setTabText(m_ui.resultWidget->currentIndex(), tabName);
 }
 

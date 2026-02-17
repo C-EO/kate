@@ -62,7 +62,7 @@ void KatePluginSymbolViewerView::parseTclSymbols(void)
         if (currline.isEmpty()) {
             continue;
         }
-        if (currline.at(0) == QLatin1Char('#')) {
+        if (currline.at(0) == u'#') {
             comment = true;
         }
 
@@ -80,8 +80,8 @@ void KatePluginSymbolViewerView::parseTclSymbols(void)
                 {
                     stripped = currline.right(currline.length() - 3);
                     stripped = stripped.simplified();
-                    int fnd = stripped.indexOf(QLatin1Char(' '));
-                    // fnd = stripped.indexOf(QLatin1Char(';'));
+                    int fnd = stripped.indexOf(u' ');
+                    // fnd = stripped.indexOf(u';');
                     if (fnd > 0) {
                         stripped = stripped.left(fnd);
                     }
@@ -106,10 +106,10 @@ void KatePluginSymbolViewerView::parseTclSymbols(void)
             if (parse_func == 1) {
                 for (int j = 0; j < currline.length(); j++) {
                     if (block == 1) {
-                        if (currline.at(j) == QLatin1Char('{')) {
+                        if (currline.at(j) == u'{') {
                             graph++;
                         }
-                        if (currline.at(j) == QLatin1Char('}')) {
+                        if (currline.at(j) == u'}') {
                             graph--;
                             if (graph == 0) {
                                 block = 0;
@@ -120,10 +120,10 @@ void KatePluginSymbolViewerView::parseTclSymbols(void)
                     }
                     if (block == 0) {
                         stripped += currline.at(j);
-                        if (currline.at(j) == QLatin1Char('{')) {
+                        if (currline.at(j) == u'{') {
                             args_par++;
                         }
-                        if (currline.at(j) == QLatin1Char('}')) {
+                        if (currline.at(j) == u'}') {
                             args_par--;
                             if (args_par == 0) {
                                 // stripped = stripped.simplified();

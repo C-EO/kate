@@ -54,7 +54,7 @@ static QString filenameFromMode(KTextEditor::Document *doc)
     QString prefix;
     if (!path.isEmpty()) {
         prefix = fi.absolutePath();
-        if (!prefix.isEmpty() && !prefix.endsWith(QLatin1Char('/'))) {
+        if (!prefix.isEmpty() && !prefix.endsWith(u'/')) {
             prefix += QLatin1String("/");
         }
         if (!base.isEmpty()) {

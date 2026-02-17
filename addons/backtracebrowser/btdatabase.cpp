@@ -36,7 +36,7 @@ QString KateBtDatabase::value(const QString &key)
 {
     // key is either of the form "foo/bar.txt" or only "bar.txt"
     QString file = key;
-    const QStringList split_key = key.split(QLatin1Char('/'));
+    const QStringList split_key = key.split(u'/');
     if (split_key.size() > 1) {
         file = split_key[1];
     }
@@ -63,7 +63,7 @@ void KateBtDatabase::add(const QString &folder, const QStringList &files)
     QMutexLocker locker(&mutex);
     for (const QString &file : files) {
         QStringList &sl = db[file];
-        QString entry = QDir::fromNativeSeparators(folder + QLatin1Char('/') + file);
+        QString entry = QDir::fromNativeSeparators(folder + u'/' + file);
         if (!sl.contains(entry)) {
             sl << entry;
         }

@@ -82,7 +82,7 @@ void KatePluginSymbolViewerView::parsePythonSymbols(void)
             continue;
         }
         // concatenate continued lines and remove continuation marker
-        while (cl[cl.length() - 1] == QLatin1Char('\\')) {
+        while (cl[cl.length() - 1] == u'\\') {
             cl = cl.left(cl.length() - 1);
             i++;
             if (i < kv->lines()) {
@@ -147,7 +147,7 @@ void KatePluginSymbolViewerView::parsePythonSymbols(void)
             current_class_name = name;
 
             if (endcolon.isEmpty()) {
-                params += QLatin1Char(' ');
+                params += u' ';
                 params += contStr;
             }
 
@@ -158,12 +158,12 @@ void KatePluginSymbolViewerView::parsePythonSymbols(void)
             endcolon = match.captured(5);
 
             if (!returnAnnot.isEmpty()) {
-                params += QLatin1Char(' ');
+                params += u' ';
                 params += returnAnnot;
             }
 
             if (endcolon.isEmpty()) {
-                params += QLatin1Char(' ');
+                params += u' ';
                 params += contStr;
             }
         }

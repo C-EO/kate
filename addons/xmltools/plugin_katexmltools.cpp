@@ -228,7 +228,7 @@ void PluginKateXMLToolsCompletionModel::completionInvoked(KTextEditor::View *kv,
             m_mode = closingtag;
             m_allowed = QStringList(parentElement);
         }
-    } else if (leftCh == QLatin1Char(' ') || (isQuote(leftCh) && secondLeftCh == QLatin1String("="))) {
+    } else if (leftCh == u' ' || (isQuote(leftCh) && secondLeftCh == QLatin1String("="))) {
         // TODO: check secondLeftChar, too?! then you don't need to trigger
         // with space and we yet save CPU power
         QString currentElement = insideTag(*kv);
@@ -564,7 +564,7 @@ void PluginKateXMLToolsCompletionModel::slotInsertElement()
                 adjust++; // for the "/"
             }
         } else {
-            pre = QLatin1Char('<') + text + QLatin1Char('>');
+            pre = u'<' + text + u'>';
             post = QStringLiteral("</") + list[0] + u'>';
         }
 
@@ -677,7 +677,7 @@ void PluginKateXMLToolsCompletionModel::executeCompletionItem(KTextEditor::View 
         if (isEmptyTag) {
             str = text + QStringLiteral("/>");
         } else {
-            str = text + QStringLiteral("></") + text + QLatin1Char('>');
+            str = text + QStringLiteral("></") + text + u'>';
         }
 
         // Place the cursor where it is most likely wanted:

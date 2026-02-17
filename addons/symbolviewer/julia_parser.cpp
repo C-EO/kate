@@ -110,7 +110,7 @@ void KatePluginSymbolViewerView::parseJuliaSymbols(void)
         }
 
         // concatenate continued lines and remove continuation marker (from python_parser.cpp)
-        while (cl[cl.length() - 1] == QLatin1Char('\\')) {
+        while (cl[cl.length() - 1] == u'\\') {
             cl = cl.left(cl.length() - 1);
             i++;
             if (i < kv->lines()) {
@@ -126,7 +126,7 @@ void KatePluginSymbolViewerView::parseJuliaSymbols(void)
         QString cl_sp = cl.simplified();
 
         // strip away comments
-        indexOfHash = cl_sp.indexOf(QLatin1Char('#'));
+        indexOfHash = cl_sp.indexOf(u'#');
         if (indexOfHash > 0) {
             cl_sp = cl_sp.left(indexOfHash - 1);
         } else if (indexOfHash == 0) {
@@ -248,7 +248,7 @@ void KatePluginSymbolViewerView::parseJuliaSymbols(void)
                 if (!params.isEmpty() && !params.endsWith(QLatin1String(")"))) {
                     if (!terseFunctionExpresion) {
                         if (whereStmt.isEmpty() && !params.contains(QLatin1String("where"))) {
-                            params += QLatin1Char(' ');
+                            params += u' ';
                             params += contStr;
 
                         } else {

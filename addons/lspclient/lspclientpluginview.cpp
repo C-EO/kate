@@ -217,7 +217,7 @@ public:
 
         QList<QTextLayout::FormatRange> formats;
         if (!index.parent().isValid()) {
-            int lastSlash = text.lastIndexOf(QLatin1Char('/'));
+            int lastSlash = text.lastIndexOf(u'/');
             if (lastSlash != -1) {
                 QTextCharFormat fmt;
                 fmt.setFontWeight(QFont::Bold);
@@ -225,9 +225,9 @@ public:
             }
         } else {
             // mind translation; let's hope/assume the colon survived
-            int nextColon = text.indexOf(QLatin1Char(':'), 0);
+            int nextColon = text.indexOf(u':', 0);
             if (nextColon != 1 && nextColon < text.size()) {
-                nextColon = text.indexOf(QLatin1Char(':'), nextColon + 1);
+                nextColon = text.indexOf(u':', nextColon + 1);
             }
             if (nextColon != -1) {
                 QTextCharFormat fmt;
@@ -732,13 +732,13 @@ public:
             }
         };
 
-        int angleBracketPos = lineText.indexOf(QLatin1Char('<'), 7);
+        int angleBracketPos = lineText.indexOf(u'<', 7);
         if (angleBracketPos > -1) {
-            expandRangeTo(QLatin1Char('>'), angleBracketPos + 1);
+            expandRangeTo(u'>', angleBracketPos + 1);
         } else {
-            int startPos = lineText.indexOf(QLatin1Char('"'), 7);
+            int startPos = lineText.indexOf(u'"', 7);
             if (startPos > -1) {
-                expandRangeTo(QLatin1Char('"'), startPos + 1);
+                expandRangeTo(u'"', startPos + 1);
             }
         }
     }
@@ -1313,8 +1313,8 @@ public:
         QObject *project = m_mainWindow->pluginView(QStringLiteral("kateprojectplugin"));
         if (project) {
             auto baseDir = project->property("projectBaseDir").toString();
-            if (!baseDir.endsWith(QLatin1Char('/'))) {
-                return baseDir + QLatin1Char('/');
+            if (!baseDir.endsWith(u'/')) {
+                return baseDir + u'/';
             }
 
             return baseDir;
@@ -2464,7 +2464,7 @@ public:
         std::map<QAbstractButton *, std::function<void()>> onClick;
         for (auto &action : actions) {
             QString escaped = action.title;
-            escaped.replace(QLatin1Char('&'), QLatin1String("&&"));
+            escaped.replace(u'&', QLatin1String("&&"));
             QAbstractButton *button = box.addButton(escaped, QMessageBox::AcceptRole);
             onClick[button] = action.choose;
         }

@@ -99,7 +99,7 @@ EditRepository::EditRepository(SnippetRepository *repository, QWidget *parent)
 
 void EditRepository::validate()
 {
-    bool valid = !repoNameEdit->text().isEmpty() && !repoNameEdit->text().contains(QLatin1Char('/'));
+    bool valid = !repoNameEdit->text().isEmpty() && !repoNameEdit->text().contains(u'/');
     buttonBox->button(QDialogButtonBox::Ok)->setEnabled(valid);
 }
 

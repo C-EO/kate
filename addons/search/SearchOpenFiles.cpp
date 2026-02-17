@@ -151,10 +151,10 @@ int SearchOpenFiles::searchMultiLineRegExp(KTextEditor::Document *doc, const QRe
         m_lineStart.clear();
         m_lineStart << 0;
         for (int i = 0; i < doc->lines(); i++) {
-            m_fullDoc += doc->line(i) + QLatin1Char('\n');
+            m_fullDoc += doc->line(i) + u'\n';
             m_lineStart << m_fullDoc.size();
         }
-        if (!regExp.pattern().endsWith(QLatin1Char('$'))) {
+        if (!regExp.pattern().endsWith(u'$')) {
             // if regExp ends with '$' leave the extra newline at the end as
             // '$' will be replaced with (?=\\n), which needs the extra newline
             m_fullDoc.remove(m_fullDoc.size() - 1, 1);
@@ -168,7 +168,7 @@ int SearchOpenFiles::searchMultiLineRegExp(KTextEditor::Document *doc, const QRe
         }
     }
 
-    if (regExp.pattern().endsWith(QLatin1Char('$'))) {
+    if (regExp.pattern().endsWith(u'$')) {
         QString newPatern = tmpRegExp.pattern();
         newPatern.replace(QStringLiteral("$"), QStringLiteral("(?=\\n)"));
         tmpRegExp.setPattern(newPatern);
@@ -194,8 +194,8 @@ int SearchOpenFiles::searchMultiLineRegExp(KTextEditor::Document *doc, const QRe
         }
 
         int startColumn = (column - m_lineStart[startLine]);
-        int endLine = startLine + match.captured().count(QLatin1Char('\n'));
-        int lastNL = match.captured().lastIndexOf(QLatin1Char('\n'));
+        int endLine = startLine + match.captured().count(u'\n');
+        int lastNL = match.captured().lastIndexOf(u'\n');
         int endColumn = lastNL == -1 ? startColumn + match.captured().length() : match.captured().length() - lastNL - 1;
 
         int preContextStart = qMax(0, startColumn - MatchModel::PreContextLen);

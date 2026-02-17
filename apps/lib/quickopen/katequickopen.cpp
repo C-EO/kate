@@ -74,7 +74,7 @@ protected:
         // When matching path, we want to match the last section of the pattern
         // with filenames. /path/to/file => pattern: file
         if (matchPath) {
-            int lastSlash = pattern.lastIndexOf(QLatin1Char('/'));
+            int lastSlash = pattern.lastIndexOf(u'/');
             if (lastSlash != -1) {
                 fileNameMatchPattern = fileNameMatchPattern.mid(lastSlash + 1);
             }
@@ -127,7 +127,7 @@ public Q_SLOTS:
     bool setFilterText(const QString &text)
     {
         // we don't want to trigger filtering if the user is just entering line:col
-        QString const splitted = text.split(QLatin1Char(':')).at(0);
+        QString const splitted = text.split(u':').at(0);
         if (splitted == pattern) {
             return false;
         }
@@ -140,7 +140,7 @@ public Q_SLOTS:
 
         beginResetModel();
         pattern = splitted;
-        matchPath = pattern.contains(QLatin1Char('/'));
+        matchPath = pattern.contains(u'/');
         endResetModel();
 
         return true;
@@ -207,7 +207,7 @@ public:
 
         if (m_filterMode == Fuzzy) {
             // collect formats
-            int pos = m_filterString.lastIndexOf(QLatin1Char('/'));
+            int pos = m_filterString.lastIndexOf(u'/');
             if (pos > -1) {
                 ++pos;
                 QStringView pattern = QStringView(m_filterString).mid(pos);
@@ -435,7 +435,7 @@ void KateQuickOpen::slotReturnPressed()
         return nullptr;
     }();
 
-    const QStringList strs = m_inputLine->text().split(QLatin1Char(':'));
+    const QStringList strs = m_inputLine->text().split(u':');
     if (view && strs.count() > 1) {
         // convert strings to cursor
         const auto cursor = [](const QStringList &splitted) -> KTextEditor::Cursor {

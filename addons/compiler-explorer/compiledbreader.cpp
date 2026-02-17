@@ -23,7 +23,7 @@ QString CompileDBReader::locateCompileCommands(KTextEditor::MainWindow *mw, cons
     QObject *project = mw->pluginView(QStringLiteral("kateprojectplugin"));
     if (project) {
         QString baseDir = project->property("projectBaseDir").toString();
-        if (baseDir.endsWith(QLatin1Char('/'))) {
+        if (baseDir.endsWith(u'/')) {
             baseDir.chop(1);
         }
 
@@ -39,7 +39,7 @@ QString CompileDBReader::locateCompileCommands(KTextEditor::MainWindow *mw, cons
         auto basePathOptional = getRepoBasePath(fi.absolutePath());
         if (basePathOptional.has_value()) {
             auto basePath = basePathOptional.value();
-            if (basePath.endsWith(QLatin1Char('/'))) {
+            if (basePath.endsWith(u'/')) {
                 basePath.chop(1);
             }
             if (QFile::exists(basePath + QStringLiteral("/compile_commands.json"))) {
@@ -143,7 +143,7 @@ QString CompileDBReader::filteredArgsForFile(const QString &compile_commandsPath
     QFileInfo fi(file);
     QString fileBasePath = fi.canonicalPath();
 
-    QStringList argsList = args.split(QLatin1Char(' '));
+    QStringList argsList = args.split(u' ');
     QString currentCompiler = argsList.takeFirst(); // First is the compiler, drop it
     QStringList finalArgs;
     finalArgs.reserve(argsList.size() - 2);
@@ -169,5 +169,5 @@ QString CompileDBReader::filteredArgsForFile(const QString &compile_commandsPath
 
     addCurrentFilePathToCompileCommands(currentCompiler, finalArgs, fileBasePath);
 
-    return finalArgs.join(QLatin1Char(' '));
+    return finalArgs.join(u' ');
 }

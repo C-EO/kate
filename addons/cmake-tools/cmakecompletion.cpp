@@ -107,7 +107,7 @@ bool CMakeCompletion::shouldStartCompletion(KTextEditor::View *view, const QStri
         return false;
     }
     // Dont invoke for comments, wont handle everything of course
-    if (view->document()->line(position.line()).startsWith(QLatin1Char('#'))) {
+    if (view->document()->line(position.line()).startsWith(u'#')) {
         return false;
     }
 

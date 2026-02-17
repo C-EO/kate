@@ -338,8 +338,8 @@ bool MatchModel::replaceMatch(KTextEditor::Document *doc, const QModelIndex &mat
     doc->replaceText(matchItem->range, replaceText);
 
     // update the range
-    int newEndLine = matchItem->range.start().line() + replaceText.count(QLatin1Char('\n'));
-    int lastNL = replaceText.lastIndexOf(QLatin1Char('\n'));
+    int newEndLine = matchItem->range.start().line() + replaceText.count(u'\n');
+    int lastNL = replaceText.lastIndexOf(u'\n');
     int newEndColumn = lastNL == -1 ? matchItem->range.start().column() + replaceText.length() : replaceText.length() - lastNL - 1;
     matchItem->range.setEnd(KTextEditor::Cursor{newEndLine, newEndColumn});
 
@@ -624,8 +624,8 @@ QString MatchModel::matchPath(const MatchFile &matchFile) const
     // also, if the basedir is root /, then do not strip that, as that would be more confusing
 
     // Add the trailing '/' to the path, if needed
-    if (!path.isEmpty() && !path.endsWith(QLatin1Char('/'))) {
-        path += QLatin1Char('/');
+    if (!path.isEmpty() && !path.endsWith(u'/')) {
+        path += u'/';
     }
     if (m_resultBaseDir.length() > 1 && path.startsWith(m_resultBaseDir)) {
         path = path.mid(m_resultBaseDir.length());
@@ -683,11 +683,11 @@ QString MatchModel::matchToHtmlString(const Match &match) const
         matchStr += QStringLiteral("<span style=\"background-color:%1; color:%2;\">%3</span>").arg(m_replaceHighlightColor, m_foregroundColor, replaceStr);
     }
 
-    matchStr.replace(QLatin1Char('\n'), QStringLiteral("\\n"));
-    matchStr.replace(QLatin1Char('\t'), QStringLiteral("\\t"));
+    matchStr.replace(u'\n', QStringLiteral("\\n"));
+    matchStr.replace(u'\t', QStringLiteral("\\t"));
 
     QString post = match.postMatchStr;
-    int nlIndex = post.indexOf(QLatin1Char('\n'));
+    int nlIndex = post.indexOf(u'\n');
     if (nlIndex != -1) {
         post = post.mid(0, nlIndex);
     }
@@ -782,7 +782,7 @@ QString MatchModel::matchToPlainText(const Match &match)
     QString pre = match.preMatchStr;
 
     QString matchStr = match.matchStr;
-    matchStr.replace(QLatin1Char('\n'), QStringLiteral("\\n"));
+    matchStr.replace(u'\n', QStringLiteral("\\n"));
 
     QString replaceStr = match.replaceText;
     if (!replaceStr.isEmpty()) {
@@ -791,10 +791,10 @@ QString MatchModel::matchToPlainText(const Match &match)
     }
     QString post = match.postMatchStr;
 
-    matchStr.replace(QLatin1Char('\n'), QStringLiteral("\\n"));
-    matchStr.replace(QLatin1Char('\t'), QStringLiteral("\\t"));
-    replaceStr.replace(QLatin1Char('\n'), QStringLiteral("\\n"));
-    replaceStr.replace(QLatin1Char('\t'), QStringLiteral("\\t"));
+    matchStr.replace(u'\n', QStringLiteral("\\n"));
+    matchStr.replace(u'\t', QStringLiteral("\\t"));
+    replaceStr.replace(u'\n', QStringLiteral("\\n"));
+    replaceStr.replace(u'\t', QStringLiteral("\\t"));
 
     // (line:col)[space][space] ...Line text pre [highlighted match] Line text post....
     QString displayText = QStringLiteral("%1:%2: ").arg(match.range.start().line() + 1, 3).arg(match.range.start().column() + 1, 3) + pre + matchStr + post;

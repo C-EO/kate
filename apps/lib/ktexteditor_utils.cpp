@@ -423,7 +423,7 @@ void releaseMemoryToOperatingSystem()
 
 QString fileNameFromPath(const QString &path)
 {
-    int lastSlash = path.lastIndexOf(QLatin1Char('/'));
+    int lastSlash = path.lastIndexOf(u'/');
     return lastSlash == -1 ? path : path.mid(lastSlash + 1);
 }
 

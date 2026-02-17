@@ -802,7 +802,7 @@ void DapBackend::movePC(QUrl const &url, int line)
 
 void DapBackend::cmdEval(const QString &cmd)
 {
-    int start = cmd.indexOf(QLatin1Char(' '));
+    int start = cmd.indexOf(u' ');
 
     QString expression;
     if (start >= 0) {
@@ -1287,33 +1287,33 @@ void DapBackend::issueCommand(QString const &command)
 
     Q_EMIT outputText(QStringLiteral("\n(dap) %1").arg(command));
 
-    if (cmd.startsWith(QLatin1Char('h'))) {
+    if (cmd.startsWith(u'h')) {
         cmdHelp(cmd);
-    } else if (cmd.startsWith(QLatin1Char('c'))) {
+    } else if (cmd.startsWith(u'c')) {
         cmdContinue(cmd);
-    } else if (cmd.startsWith(QLatin1Char('n'))) {
+    } else if (cmd.startsWith(u'n')) {
         cmdNext(cmd);
-    } else if (cmd.startsWith(QLatin1Char('o'))) {
+    } else if (cmd.startsWith(u'o')) {
         cmdStepOut(cmd);
-    } else if (cmd.startsWith(QLatin1Char('i'))) {
+    } else if (cmd.startsWith(u'i')) {
         cmdStepIn(cmd);
-    } else if (cmd.startsWith(QLatin1Char('p'))) {
+    } else if (cmd.startsWith(u'p')) {
         cmdEval(cmd);
-    } else if (cmd.startsWith(QLatin1Char('j'))) {
+    } else if (cmd.startsWith(u'j')) {
         cmdJump(cmd);
-    } else if (cmd.startsWith(QLatin1Char('t'))) {
+    } else if (cmd.startsWith(u't')) {
         cmdRunToCursor(cmd);
-    } else if (cmd.startsWith(QLatin1Char('m'))) {
+    } else if (cmd.startsWith(u'm')) {
         cmdListModules(cmd);
     } else if (cmd.startsWith(QLatin1String("bl"))) {
         cmdListBreakpoints(cmd);
     } else if (cmd.startsWith(QLatin1String("bo"))) {
         cmdBreakpointOff(cmd);
-    } else if (cmd.startsWith(QLatin1Char('b'))) {
+    } else if (cmd.startsWith(u'b')) {
         cmdBreakpointOn(cmd);
-    } else if (cmd.startsWith(QLatin1Char('s'))) {
+    } else if (cmd.startsWith(u's')) {
         cmdPause(cmd);
-    } else if (cmd.startsWith(QLatin1Char('w'))) {
+    } else if (cmd.startsWith(u'w')) {
         cmdWhereami(cmd);
     } else {
         Q_EMIT outputError(newLine(i18n("command not found")));

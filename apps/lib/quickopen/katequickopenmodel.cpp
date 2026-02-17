@@ -105,8 +105,8 @@ void KateQuickOpenModel::refresh(KateMainWindow *mainWindow)
         // otherwise it will be confusing and the opened files of anther project
         // end up with an unstripped complete file path
         ret = projectView->property("allProjectsCommonBaseDir").toString();
-        if (!ret.endsWith(QLatin1Char('/'))) {
-            ret.append(QLatin1Char('/'));
+        if (!ret.endsWith(u'/')) {
+            ret.append(u'/');
         }
         // avoid strip of a single leading /
         if (ret == QLatin1String("/")) {
@@ -163,7 +163,7 @@ void KateQuickOpenModel::refresh(KateMainWindow *mainWindow)
         }
 
         // QFileInfo is too expensive just for fileName computation
-        const int slashIndex = filePath.lastIndexOf(QLatin1Char('/'));
+        const int slashIndex = filePath.lastIndexOf(u'/');
         QStringView fileName = QStringView(filePath).mid(slashIndex + 1);
         allDocuments.push_back({fileName, filePath, nullptr, -1});
     }

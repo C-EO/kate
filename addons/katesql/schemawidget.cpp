@@ -340,8 +340,7 @@ QString SchemaWidget::generateStatement(QSqlDriver::StatementType statementType)
         statement = drv->sqlStatement(statementType, tableName, rec, false);
 
         if (statementType == QSqlDriver::DeleteStatement) {
-            statement +=
-                QLatin1Char(' ') + drv->sqlStatement(QSqlDriver::WhereStatement, tableName, rec, false).replace(QLatin1String(" IS NULL"), QLatin1String("=?"));
+            statement += u' ' + drv->sqlStatement(QSqlDriver::WhereStatement, tableName, rec, false).replace(QLatin1String(" IS NULL"), QLatin1String("=?"));
         }
     } break;
     }
