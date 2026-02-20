@@ -84,7 +84,6 @@ public:
     bool closeOtherDocuments(KTextEditor::Document *);
 
     std::vector<KTextEditor::Document *> modifiedDocumentList();
-    bool queryCloseDocuments(KateMainWindow *w);
 
     void saveDocumentList(KConfig *config);
     void restoreDocumentList(KConfig *config);

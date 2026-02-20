@@ -22,7 +22,6 @@
 #include <KMessageBox>
 #include <KSharedConfig>
 
-#include <QFileDialog>
 #include <QProgressDialog>
 
 KateDocManager::KateDocManager(QObject *parent)
@@ -281,49 +280,6 @@ std::vector<KTextEditor::Document *> KateDocManager::modifiedDocumentList()
         return doc->isModified();
     });
     return modified;
-}
-
-bool KateDocManager::queryCloseDocuments(KateMainWindow *w)
-{
-    const auto docCount = m_docList.size();
-    for (KTextEditor::Document *doc : std::as_const(m_docList)) {
-        if (doc->url().isEmpty() && doc->isModified()) {
-            int msgres = KMessageBox::warningTwoActionsCancel(w,
-                                                              i18n("<p>The document '%1' has been modified, but not saved.</p>"
-                                                                   "<p>Do you want to save your changes or discard them?</p>",
-                                                                   doc->documentName()),
-                                                              i18n("Close Document"),
-                                                              KStandardGuiItem::save(),
-                                                              KStandardGuiItem::discard());
-
-            if (msgres == KMessageBox::Cancel) {
-                return false;
-            }
-
-            if (msgres == KMessageBox::PrimaryAction) {
-                const QUrl url = QFileDialog::getSaveFileUrl(w, i18n("Save As"));
-                if (!url.isEmpty()) {
-                    if (!doc->saveAs(url)) {
-                        return false;
-                    }
-                } else {
-                    return false;
-                }
-            }
-        } else {
-            if (!doc->queryClose()) {
-                return false;
-            }
-        }
-    }
-
-    // document count changed while queryClose, abort and notify user
-    if (m_docList.size() > docCount) {
-        KMessageBox::information(w, i18n("New file opened while trying to close Kate, closing aborted."), i18n("Closing Aborted"));
-        return false;
-    }
-
-    return true;
 }
 
 void KateDocManager::saveAll()
