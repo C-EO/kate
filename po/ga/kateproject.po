@@ -1155,28 +1155,3 @@ msgstr "Theip ar an taisce a thaispeáint. Earráid: "
 #, kde-format
 msgid "&Projects"
 msgstr "&Tionscadail"
-
-#~ msgid "Delete File"
-#~ msgstr "Scrios Comhad"
-
-#~ msgid "Do you want to delete the file '%1'?"
-#~ msgstr "An bhfuil fonn ort an comhad '%1' a scriosadh?"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Kevin Scannell"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "kscanne@gmail.com"
-
-#, fuzzy
-#~| msgid "Open With"
-#~ msgid "Type to filter..."
-#~ msgstr "Oscail Le"
-
-#~ msgid "Hello World"
-#~ msgstr "Dia Dhuit, A Dhomhain"
-
-#~ msgid "Example kate plugin"
-#~ msgstr "Breiseán samplach kate"

@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4;\n"
+"3 : 4\n"
 
 #: KateSearchCommand.cpp:88
 #, kde-format
@@ -794,58 +794,3 @@ msgstr "&Eagar"
 #, kde-format
 msgid "Find in Files Variants"
 msgstr "Aimsigh i gComhaid Malartacha"
-
-#~ msgid "Export Pattern"
-#~ msgstr "Patrún Easpórtála"
-
-#, fuzzy
-#~| msgid "Filter"
-#~ msgid "Filter..."
-#~ msgstr "Scagaire"
-
-#, fuzzy
-#~| msgid "Search & Replace"
-#~ msgid "Kate Search & Replace"
-#~ msgstr "Cuardach & Ionadú"
-
-#, fuzzy
-#~| msgid "Search"
-#~ msgid "Search More"
-#~ msgstr "Cuardaigh"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Kevin Scannell"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "kscanne@gmail.com"
-
-#, fuzzy
-#~| msgid "Search & Replace"
-#~ msgid "Replace:"
-#~ msgstr "Cuardach & Ionadú"
-
-#, fuzzy
-#~| msgid "Regular Expressions"
-#~ msgid "Use regular expressions"
-#~ msgstr "Sloinn Ionadaíochta"
-
-#, fuzzy
-#~| msgid "Folder"
-#~ msgid "Folder"
-#~ msgstr "Fillteán"
-
-#, fuzzy
-#~| msgid "Folder"
-#~ msgid "F&older"
-#~ msgstr "Fillteán"
-
-#~ msgid "stop"
-#~ msgstr "stad"
-
-#~ msgid "Select all"
-#~ msgstr "Roghnaigh uile"
-
-#~ msgid "Options"
-#~ msgstr "Roghanna"
