@@ -237,7 +237,7 @@
         },
         "purescript": {
             "command": ["purescript-language-server", "--stdio"],
-            "rootIndicationFileNames": ["spago.dhall"],
+            "rootIndicationFileNames": ["spago.dhall", "spago.yaml", "spago.lock"],
             "url": "https://github.com/nwolverson/purescript-language-server",
             "highlightingModeRegex": "^PureScript$"
         },
