@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-15 00:46+0000\n"
+"POT-Creation-Date: 2026-02-21 00:49+0000\n"
 "PO-Revision-Date: 2024-12-25 19:37+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -353,8 +353,8 @@ msgid "(Re-)generate the common CTags database."
 msgstr "(पुनः)सामान्यं CTags आँकडाधारं जनयन्तु ।"
 
 #: kate_ctags_plugin.cpp:99 kate_ctags_view.cpp:54 kate_ctags_view.cpp:61
-#: kate_ctags_view.cpp:104 kate_ctags_view.cpp:142 kate_ctags_view.cpp:552
-#: kate_ctags_view.cpp:565 kate_ctags_view.cpp:578 kate_ctags_view.cpp:582
+#: kate_ctags_view.cpp:104 kate_ctags_view.cpp:142 kate_ctags_view.cpp:550
+#: kate_ctags_view.cpp:563 kate_ctags_view.cpp:576 kate_ctags_view.cpp:580
 #, kde-format
 msgid "CTags"
 msgstr "CTags"
@@ -364,7 +364,7 @@ msgstr "CTags"
 msgid "CTags Settings"
 msgstr "CTags सेटिंग्स्"
 
-#: kate_ctags_plugin.cpp:228 kate_ctags_view.cpp:563
+#: kate_ctags_plugin.cpp:228 kate_ctags_view.cpp:561
 #, kde-format
 msgid "Failed to run. Error: %1, exit code: %2"
 msgstr "धावितुं असफलः अभवत्। त्रुटि: %1, निर्गमनसङ्केतः: %2"
@@ -450,17 +450,17 @@ msgstr "Global Symbol इत्यत्र गच्छन्तु"
 msgid "No hits found"
 msgstr "न हिट् प्राप्ताः"
 
-#: kate_ctags_view.cpp:552
+#: kate_ctags_view.cpp:550
 #, kde-format
 msgid "No folders or files to index"
 msgstr "अनुक्रमणिकां कर्तुं कोऽपि पुटः सञ्चिकाः वा नास्ति"
 
-#: kate_ctags_view.cpp:578
+#: kate_ctags_view.cpp:576
 #, kde-format
 msgid "The CTags executable crashed"
 msgstr "CTags कार्यान्वयनीयः दुर्घटना अभवत्"
 
-#: kate_ctags_view.cpp:580
+#: kate_ctags_view.cpp:578
 #, kde-format
 msgid "The CTags program exited with code %2: %1"
 msgstr "CTags कार्यक्रमः %2: %1 इति कोडेन निर्गतवान्"

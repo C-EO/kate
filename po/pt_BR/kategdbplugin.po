@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kategdbplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-17 00:47+0000\n"
+"POT-Creation-Date: 2026-02-21 00:49+0000\n"
 "PO-Revision-Date: 2025-12-23 06:12-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -731,19 +731,19 @@ msgstr "Alternar ponto de parada"
 msgid "Execution point"
 msgstr "Ponto de execução"
 
-#: plugin_kategdb.cpp:670
+#: plugin_kategdb.cpp:668
 #, kde-format
 msgctxt "Tab label"
 msgid "Debug Output"
 msgstr "Saída de depuração"
 
-#: plugin_kategdb.cpp:671
+#: plugin_kategdb.cpp:669
 #, kde-format
 msgctxt "Tab label"
 msgid "Settings"
 msgstr "Configurações"
 
-#: plugin_kategdb.cpp:706
+#: plugin_kategdb.cpp:704
 #, kde-format
 msgid "IO"
 msgstr "E/S"

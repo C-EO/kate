@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-17 00:47+0000\n"
+"POT-Creation-Date: 2026-02-21 00:49+0000\n"
 "PO-Revision-Date: 2025-07-26 19:33+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -740,19 +740,19 @@ msgstr "Usuń pułapkę"
 msgid "Execution point"
 msgstr "Punkt wykonania"
 
-#: plugin_kategdb.cpp:670
+#: plugin_kategdb.cpp:668
 #, kde-format
 msgctxt "Tab label"
 msgid "Debug Output"
 msgstr "Wyjście diagnostyczne"
 
-#: plugin_kategdb.cpp:671
+#: plugin_kategdb.cpp:669
 #, kde-format
 msgctxt "Tab label"
 msgid "Settings"
 msgstr "Ustawienia"
 
-#: plugin_kategdb.cpp:706
+#: plugin_kategdb.cpp:704
 #, kde-format
 msgid "IO"
 msgstr "WE/WY"

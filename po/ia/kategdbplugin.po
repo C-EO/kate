@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-17 00:47+0000\n"
+"POT-Creation-Date: 2026-02-21 00:49+0000\n"
 "PO-Revision-Date: 2026-02-05 10:51+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -726,19 +726,19 @@ msgstr "Commuta puncto de interruption"
 msgid "Execution point"
 msgstr "Puncto de execution"
 
-#: plugin_kategdb.cpp:670
+#: plugin_kategdb.cpp:668
 #, kde-format
 msgctxt "Tab label"
 msgid "Debug Output"
 msgstr "Exito de Debug (Cribrar)"
 
-#: plugin_kategdb.cpp:671
+#: plugin_kategdb.cpp:669
 #, kde-format
 msgctxt "Tab label"
 msgid "Settings"
 msgstr "Preferentias"
 
-#: plugin_kategdb.cpp:706
+#: plugin_kategdb.cpp:704
 #, kde-format
 msgid "IO"
 msgstr "IE (IO)"

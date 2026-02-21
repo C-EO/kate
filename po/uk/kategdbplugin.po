@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kategdbplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-17 00:47+0000\n"
+"POT-Creation-Date: 2026-02-21 00:49+0000\n"
 "PO-Revision-Date: 2025-12-23 11:36+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -727,19 +727,19 @@ msgstr "Встановити/зняти точку зупинки"
 msgid "Execution point"
 msgstr "Точка виконання"
 
-#: plugin_kategdb.cpp:670
+#: plugin_kategdb.cpp:668
 #, kde-format
 msgctxt "Tab label"
 msgid "Debug Output"
 msgstr "Діагностичні повідомлення"
 
-#: plugin_kategdb.cpp:671
+#: plugin_kategdb.cpp:669
 #, kde-format
 msgctxt "Tab label"
 msgid "Settings"
 msgstr "Параметри"
 
-#: plugin_kategdb.cpp:706
+#: plugin_kategdb.cpp:704
 #, kde-format
 msgid "IO"
 msgstr "Ввід-вивід"

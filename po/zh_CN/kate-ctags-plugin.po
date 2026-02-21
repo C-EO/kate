@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-15 00:46+0000\n"
+"POT-Creation-Date: 2026-02-21 00:49+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -350,8 +350,8 @@ msgid "(Re-)generate the common CTags database."
 msgstr "(重新)生成通用 CTags 数据库。"
 
 #: kate_ctags_plugin.cpp:99 kate_ctags_view.cpp:54 kate_ctags_view.cpp:61
-#: kate_ctags_view.cpp:104 kate_ctags_view.cpp:142 kate_ctags_view.cpp:552
-#: kate_ctags_view.cpp:565 kate_ctags_view.cpp:578 kate_ctags_view.cpp:582
+#: kate_ctags_view.cpp:104 kate_ctags_view.cpp:142 kate_ctags_view.cpp:550
+#: kate_ctags_view.cpp:563 kate_ctags_view.cpp:576 kate_ctags_view.cpp:580
 #, kde-format
 msgid "CTags"
 msgstr "CTags"
@@ -361,7 +361,7 @@ msgstr "CTags"
 msgid "CTags Settings"
 msgstr "CTags 设置"
 
-#: kate_ctags_plugin.cpp:228 kate_ctags_view.cpp:563
+#: kate_ctags_plugin.cpp:228 kate_ctags_view.cpp:561
 #, kde-format
 msgid "Failed to run. Error: %1, exit code: %2"
 msgstr "运行失败。错误：%1，退出代码：%2"
@@ -447,17 +447,17 @@ msgstr "转到全局符号"
 msgid "No hits found"
 msgstr "未发现记录"
 
-#: kate_ctags_view.cpp:552
+#: kate_ctags_view.cpp:550
 #, kde-format
 msgid "No folders or files to index"
 msgstr "没有要索引的文件或文件夹"
 
-#: kate_ctags_view.cpp:578
+#: kate_ctags_view.cpp:576
 #, kde-format
 msgid "The CTags executable crashed"
 msgstr "CTags 可执行程序已崩溃。"
 
-#: kate_ctags_view.cpp:580
+#: kate_ctags_view.cpp:578
 #, kde-format
 msgid "The CTags program exited with code %2: %1"
 msgstr "CTags 程序以代码 %2 退出：%1"

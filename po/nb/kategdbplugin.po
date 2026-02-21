@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-17 00:47+0000\n"
+"POT-Creation-Date: 2026-02-21 00:49+0000\n"
 "PO-Revision-Date: 2026-02-18 23:21+0100\n"
 "Last-Translator: Kjetil Sorlund <translate@sorlund.no>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -726,19 +726,19 @@ msgstr "Slå av/på bruddpunkt"
 msgid "Execution point"
 msgstr "Kjøringspunkt"
 
-#: plugin_kategdb.cpp:670
+#: plugin_kategdb.cpp:668
 #, kde-format
 msgctxt "Tab label"
 msgid "Debug Output"
 msgstr "Utdata fra feilsøking"
 
-#: plugin_kategdb.cpp:671
+#: plugin_kategdb.cpp:669
 #, kde-format
 msgctxt "Tab label"
 msgid "Settings"
 msgstr "Innstillinger"
 
-#: plugin_kategdb.cpp:706
+#: plugin_kategdb.cpp:704
 #, kde-format
 msgid "IO"
 msgstr "IO"

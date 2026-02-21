@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kategdbplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-17 00:47+0000\n"
+"POT-Creation-Date: 2026-02-21 00:49+0000\n"
 "PO-Revision-Date: 2012-06-08 10:04+0700\n"
 "Last-Translator: sutha <sutha@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros>\n"
@@ -754,7 +754,7 @@ msgstr "យក​​ចំណុច​ឈប់​ចេញ​"
 msgid "Execution point"
 msgstr "ចំណុច​ប្រតិបត្តិ​"
 
-#: plugin_kategdb.cpp:670
+#: plugin_kategdb.cpp:668
 #, fuzzy, kde-format
 #| msgctxt "Tab label"
 #| msgid "GDB Output"
@@ -762,13 +762,13 @@ msgctxt "Tab label"
 msgid "Debug Output"
 msgstr "ទិន្នផល​របស់​ GDB "
 
-#: plugin_kategdb.cpp:671
+#: plugin_kategdb.cpp:669
 #, kde-format
 msgctxt "Tab label"
 msgid "Settings"
 msgstr "ការ​កំណត់​"
 
-#: plugin_kategdb.cpp:706
+#: plugin_kategdb.cpp:704
 #, kde-format
 msgid "IO"
 msgstr "IO"

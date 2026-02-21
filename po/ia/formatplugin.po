@@ -52,12 +52,12 @@ msgstr "Preferentias predefinite"
 #: FormatConfig.h:18 FormatPlugin.cpp:113
 #, kde-format
 msgid "Formatting"
-msgstr "Formattation"
+msgstr "Fnormatation"
 
 #: FormatConfig.h:23
 #, kde-format
 msgid "Formatting Settings"
-msgstr "Preferentias de formattation"
+msgstr "Preferentias de fnormatation"
 
 #: FormatPlugin.cpp:83
 #, kde-format
@@ -67,12 +67,12 @@ msgstr "Falleva a leger settings.json. Error: %1"
 #: FormatPlugin.cpp:119
 #, kde-format
 msgid "Format Document"
-msgstr "Formatta Documento"
+msgstr "Fnormata Documento"
 
 #: FormatPlugin.cpp:129
 #, kde-format
 msgid "Format on Save"
-msgstr "Formatta sur salveguardar"
+msgstr "Fnormata sur salveguardar"
 
 #: FormatPlugin.cpp:132
 #, kde-format
@@ -90,7 +90,7 @@ msgstr "%1: Impreviste commando vacue!"
 msgid ""
 "%1 is not installed, please install it to be able to format this document!"
 msgstr ""
-"%1 non es installate, pro favor tu installa lo pro poter formattar iste "
+"%1 non es installate, pro favor tu installa lo pro poter fnormatar iste "
 "documento!"
 
 #: Formatters.cpp:187
@@ -111,12 +111,12 @@ msgstr "PrettierFormat: Falleva a crear 'nodo': %1"
 #: Formatters.cpp:317
 #, kde-format
 msgid "Unknown formatterForJson: %1"
-msgstr "FormattatorPerJso incognoscite: %1 "
+msgstr "FnormatatorPerJso incognoscite: %1 "
 
 #: Formatters.cpp:337
 #, kde-format
 msgid "Unknown formatterForPython: %1"
-msgstr "FormattatorPerPython incognoscite: %1"
+msgstr "FnormatatorPerPython incognoscite: %1"
 
 #: Formatters.cpp:360
 #, kde-format
@@ -126,4 +126,4 @@ msgstr "Incognoscite  formatterForYaml: %1, retorna a  yamlfmt"
 #: Formatters.cpp:390
 #, kde-format
 msgid "Failed to run formatter. Unsupported language %1"
-msgstr "Falleva a executar gormattator (formatter). Linguage non supportate %1"
+msgstr "Falleva a executar gnormatator (formatter). Linguage non supportate %1"
