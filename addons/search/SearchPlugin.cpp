@@ -2402,6 +2402,13 @@ void KatePluginSearchView::searchContextMenu(const QPoint &pos)
         return;
     }
 
+    QAction *clearHistory = contextMenu->addAction(i18n("Clear history"));
+    clearHistory->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear-history")));
+    clearHistory->setEnabled(m_ui.searchCombo->count() > 0);
+    connect(clearHistory, &QAction::triggered, this, [this]() {
+        m_ui.searchCombo->clear();
+    });
+
     if (m_ui.useRegExp->isChecked()) {
         QMenu *menu = contextMenu->addMenu(i18n("Add..."));
         if (!menu) {
@@ -2436,6 +2443,13 @@ void KatePluginSearchView::replaceContextMenu(const QPoint &pos)
     if (!contextMenu) {
         return;
     }
+
+    QAction *clearHistory = contextMenu->addAction(i18n("Clear history"));
+    clearHistory->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear-history")));
+    clearHistory->setEnabled(m_ui.replaceCombo->count() > 0);
+    connect(clearHistory, &QAction::triggered, this, [this]() {
+        m_ui.replaceCombo->clear();
+    });
 
     QMenu *menu = contextMenu->addMenu(i18n("Add..."));
     if (!menu) {
