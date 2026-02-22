@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2026-01-04 04:05+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -1391,52 +1391,22 @@ msgstr "Denumire"
 msgid "Description"
 msgstr "Descriere"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-"<p>Documentul „%1” a fost modificat, dar nu și salvat.</p><p>Doriți să "
-"salvați sau să eliminați modificările?</p>"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "Închide documentul"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "Salvează ca"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr ""
-"A fost deschis un fișier nou în tip ce Kate se termina. Închidere anulată."
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "Terminare anulată"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "Pornire"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "Se redeschid fișierele din ultima sesiune..."
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, kde-format
 msgid "Cannot pin untitled documents."
 msgstr "Documentele neîntitulate nu se pot fixa."
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, kde-format
 msgid "Cannot pin non local documents."
 msgstr "Documentele nelocale nu se pot fixa."
@@ -1872,6 +1842,17 @@ msgstr "Închideți toate documentele în afară de cel actual?"
 msgid "Close Others"
 msgstr "Închide celelalte"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr ""
+"A fost deschis un fișier nou în tip ce Kate se termina. Închidere anulată."
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "Terminare anulată"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2204,6 +2185,11 @@ msgstr "Salvează ca (%1)"
 #, kde-format
 msgid "Save Documents"
 msgstr "Salvează documentele"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "Închide documentul"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, kde-format
@@ -3149,6 +3135,16 @@ msgstr "Gestionează sesiunile…"
 #, kde-format
 msgid "Show welcome page for new window"
 msgstr "Arată pagina de întâmpinare pentru ferestre noi"
+
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr ""
+#~ "<p>Documentul „%1” a fost modificat, dar nu și salvat.</p><p>Doriți să "
+#~ "salvați sau să eliminați modificările?</p>"
+
+#~ msgid "Save As"
+#~ msgstr "Salvează ca"
 
 #~ msgid "&Close Document"
 #~ msgstr "În&chide documentul"

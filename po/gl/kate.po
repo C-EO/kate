@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2025-05-16 11:22+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -1421,54 +1421,23 @@ msgstr "Nome"
 msgid "Description"
 msgstr "Descrición"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-"<p>O documento «%1» modificouse, pero non se gardou.</p><p>Quere gardar os "
-"cambios ou descartalos?</p>"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "Pechar o documento"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "Gardar como"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr ""
-"Abriuse un novo ficheiro mentres se intentaba pechar Kate polo que se "
-"interrompeu o peche."
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "Interrompeuse o peche"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "Iniciando"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "Estanse a abrir de novo os ficheiros da última sesión…"
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Cannot pin untitled documents."
 msgstr "Crear un novo documento"
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Cannot pin non local documents."
@@ -1902,6 +1871,18 @@ msgstr "Quere pechar todos os documentos salvo o actual?"
 msgid "Close Others"
 msgstr "Pechar o resto"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr ""
+"Abriuse un novo ficheiro mentres se intentaba pechar Kate polo que se "
+"interrompeu o peche."
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "Interrompeuse o peche"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2232,6 +2213,11 @@ msgstr "Gardar como (%1)"
 #, kde-format
 msgid "Save Documents"
 msgstr "Gardar os documentos"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "Pechar o documento"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, kde-format
@@ -3170,6 +3156,16 @@ msgstr "Xestionar as sesións…"
 #, kde-format
 msgid "Show welcome page for new window"
 msgstr "Amosar a páxina de benvida na xanela nova."
+
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr ""
+#~ "<p>O documento «%1» modificouse, pero non se gardou.</p><p>Quere gardar "
+#~ "os cambios ou descartalos?</p>"
+
+#~ msgid "Save As"
+#~ msgstr "Gardar como"
 
 #~ msgid "&Close Document"
 #~ msgstr "&Pechar o documento"

@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2026-01-10 20:08+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
@@ -1469,53 +1469,22 @@ msgstr "Nom"
 msgid "Description"
 msgstr "Description"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-"<p>Le document « %1 » a été modifié, mais non enregistré.</p><p>Voulez-vous "
-"enregistrer vos changements ou les abandonner ?</p>"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "Fermer le document"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "Enregistrer sous"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr ""
-"Nouveau fichier ouvert pendant une tentative de fermeture de Kate, "
-"interruption de la fermeture."
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "Fermeture abandonnée"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "Démarrage"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "Réouverture des fichiers de la session précédente..."
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, kde-format
 msgid "Cannot pin untitled documents."
 msgstr "Impossible de d'épingler des documents non nommés."
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, kde-format
 msgid "Cannot pin non local documents."
 msgstr "Impossible de d'épingler des documents non locaux."
@@ -1954,6 +1923,18 @@ msgstr "Voulez-vous fermer tous les documents sauf le document courant ?"
 msgid "Close Others"
 msgstr "Fermer les autres"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr ""
+"Nouveau fichier ouvert pendant une tentative de fermeture de Kate, "
+"interruption de la fermeture."
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "Fermeture abandonnée"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2287,6 +2268,11 @@ msgstr "Enregistrer sous (%1)"
 #, kde-format
 msgid "Save Documents"
 msgstr "Enregistrer les documents"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "Fermer le document"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, kde-format
@@ -3241,6 +3227,16 @@ msgstr "Gérer les sessions..."
 #, kde-format
 msgid "Show welcome page for new window"
 msgstr "Afficher la page d'accueil pour une nouvelle fenêtre."
+
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr ""
+#~ "<p>Le document « %1 » a été modifié, mais non enregistré.</p><p>Voulez-"
+#~ "vous enregistrer vos changements ou les abandonner ?</p>"
+
+#~ msgid "Save As"
+#~ msgstr "Enregistrer sous"
 
 #~ msgid "&Close Document"
 #~ msgstr "&Fermer le document"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2025-12-21 00:22+0100\n"
 "Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -1439,53 +1439,22 @@ msgstr "Name"
 msgid "Description"
 msgstr "Beschreibung"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-"<p>Das Dokument „%1“ wurde geändert, aber bisher nicht gespeichert.</"
-"p><p>Möchten Sie die Änderungen speichern oder verwerfen?</p>"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "Dokument schließen"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "Speichern unter"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr ""
-"Es wurde eine neue Datei geöffnet, während Kate beendet wird. Das Beenden "
-"wird abgebrochen."
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "Beenden abgebrochen"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "Programmstart läuft"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "Dateien der letzten Sitzung werden geöffnet …"
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, kde-format
 msgid "Cannot pin untitled documents."
 msgstr "Unbenannte Dokumente können nicht angeheftet werden."
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, kde-format
 msgid "Cannot pin non local documents."
 msgstr "Nicht lokale Dokumente können nicht angeheftet werden."
@@ -1925,6 +1894,18 @@ msgstr "Alle Dokumente außer dem aktuellen schließen?"
 msgid "Close Others"
 msgstr "Andere schließen"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr ""
+"Es wurde eine neue Datei geöffnet, während Kate beendet wird. Das Beenden "
+"wird abgebrochen."
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "Beenden abgebrochen"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2257,6 +2238,11 @@ msgstr "Speichern unter (%1)"
 #, kde-format
 msgid "Save Documents"
 msgstr "Dokumente speichern"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "Dokument schließen"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, kde-format
@@ -3198,6 +3184,16 @@ msgstr "Sitzungen verwalten …"
 #, kde-format
 msgid "Show welcome page for new window"
 msgstr "Willkommen-Seite in neuem Fenster anzeigen"
+
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr ""
+#~ "<p>Das Dokument „%1“ wurde geändert, aber bisher nicht gespeichert.</"
+#~ "p><p>Möchten Sie die Änderungen speichern oder verwerfen?</p>"
+
+#~ msgid "Save As"
+#~ msgstr "Speichern unter"
 
 #~ msgid "&Close Document"
 #~ msgstr "Dokument s&chließen"

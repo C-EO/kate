@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2010-03-01 22:47+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -1401,52 +1401,23 @@ msgstr "ชื่อ"
 msgid "Description"
 msgstr "ตำแหน่ง"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-"<p>เอกสาร '%1' มีการเปลี่ยนแปลง แต่ยังไม่มีการบันทึก</"
-"p><p>คุณต้องการจะบันทึกการเปลี่ยนแปลงหรือจะละทิ้งมัน ?</p>"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "ปิดเอกสาร"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "บันทึกเป็น"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr "มีการเปิดแฟ้มใหม่ขึ้นมาในระหว่างกำลังทำการปิด Kate การปิดโปรแกรมจึงถูกยกเลิก"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "ยกเลิกการปิดแล้ว"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "กำลังเริ่มการทำงาน"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "กำลังทำการเปิดแฟ้มที่ถูกเปิดใช้กับกลุ่มงานที่ใช้ครั้งล่าสุด..."
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Cannot pin untitled documents."
 msgstr "สร้างเอกสารใหม่"
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Cannot pin non local documents."
@@ -1908,6 +1879,16 @@ msgstr "ปิดเอกสารที่เปิดอยู่ทั้ง
 msgid "Close Others"
 msgstr "ปิดเอกสารอื่น ๆ"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr "มีการเปิดแฟ้มใหม่ขึ้นมาในระหว่างกำลังทำการปิด Kate การปิดโปรแกรมจึงถูกยกเลิก"
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "ยกเลิกการปิดแล้ว"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2237,6 +2218,11 @@ msgstr "บันทึกเป็น (%1)"
 #, kde-format
 msgid "Save Documents"
 msgstr "บันทึกเอกสาร"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "ปิดเอกสาร"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, fuzzy, kde-format
@@ -3208,6 +3194,16 @@ msgstr "&จัดการกลุ่มงาน..."
 #| msgid "Create a new document"
 msgid "Show welcome page for new window"
 msgstr "สร้างเอกสารใหม่"
+
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr ""
+#~ "<p>เอกสาร '%1' มีการเปลี่ยนแปลง แต่ยังไม่มีการบันทึก</"
+#~ "p><p>คุณต้องการจะบันทึกการเปลี่ยนแปลงหรือจะละทิ้งมัน ?</p>"
+
+#~ msgid "Save As"
+#~ msgstr "บันทึกเป็น"
 
 #, fuzzy
 #~| msgid "Close Document"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2009-12-19 02:07+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -1425,53 +1425,23 @@ msgstr "Miono"
 msgid "Description"
 msgstr "Lokalizacëjô"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-"<p>Dokùment '%1' òstôł zmieniony, równak nié zapisóny.</p><p>Chcesz zapisac "
-"zmianë, czë téż je pòcësnąc?</p>"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "Zamkni dokùment"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "Zapiszë jakno"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr ""
-"Nowi lopk òstôł òtemkłi przë zamëkanim Kate, zamëkanié òstało òprzestóné."
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "Niechano zamëkanié"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "Zrëszanié"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "Òtmëkanié lopków ze slédny sesëji..."
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Cannot pin untitled documents."
 msgstr "Ùsôdzë nowi dokùment"
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Cannot pin non local documents."
@@ -1934,6 +1904,17 @@ msgstr "Zamkni wszëtczé dokùmentë"
 msgid "Close Others"
 msgstr "Zamkni jinszé"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr ""
+"Nowi lopk òstôł òtemkłi przë zamëkanim Kate, zamëkanié òstało òprzestóné."
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "Niechano zamëkanié"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2285,6 +2266,11 @@ msgstr "Zapiszë jakno (%1)"
 #, kde-format
 msgid "Save Documents"
 msgstr "Zapiszë dokùmentë"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "Zamkni dokùment"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, fuzzy, kde-format
@@ -3259,6 +3245,16 @@ msgstr "Sprôwianié sesëjama"
 #| msgid "Create a new document"
 msgid "Show welcome page for new window"
 msgstr "Ùsôdzë nowi dokùment"
+
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr ""
+#~ "<p>Dokùment '%1' òstôł zmieniony, równak nié zapisóny.</p><p>Chcesz "
+#~ "zapisac zmianë, czë téż je pòcësnąc?</p>"
+
+#~ msgid "Save As"
+#~ msgstr "Zapiszë jakno"
 
 #, fuzzy
 #~| msgid "Close Document"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2006-12-17 12:02+0000\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -1396,53 +1396,23 @@ msgstr "Номи"
 msgid "Description"
 msgstr "&Скрипт:"
 
-#: lib/katedocmanager.cpp:292
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>The document '%1' has been modified, but not saved.<p>Do you want to "
-#| "save your changes or discard them?"
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr "<p>'%1' ҳужжатига ўзариш киритилди.<p>Уни сақлашни истайсизми?"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "Ҳужжатни ёпиш"
-
-#: lib/katedocmanager.cpp:304
-#, fuzzy, kde-format
-msgid "Save As"
-msgstr "...сифатида с&ақлаш"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr ""
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "Ёпиш тўхтатилди"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "Ишга тушмоқда"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "Охирги сеанснинг файллари қайтадан очилмоқда..."
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Cannot pin untitled documents."
 msgstr "Янги ҳужжатни яратиш"
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Cannot pin non local documents."
@@ -1904,6 +1874,16 @@ msgstr "Ҳамма очиқ ҳужжатларни ёпиш."
 msgid "Close Others"
 msgstr "Жорий табни ёпиш"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr ""
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "Ёпиш тўхтатилди"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2233,6 +2213,11 @@ msgstr "Сақлаш (%1)"
 #, kde-format
 msgid "Save Documents"
 msgstr "Ҳужжатларни сақлаш"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "Ҳужжатни ёпиш"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, fuzzy, kde-format
@@ -3177,6 +3162,19 @@ msgstr "Сеансларни бошқариш"
 #| msgid "Create a new document"
 msgid "Show welcome page for new window"
 msgstr "Янги ҳужжатни яратиш"
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>The document '%1' has been modified, but not saved.<p>Do you want to "
+#~| "save your changes or discard them?"
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr "<p>'%1' ҳужжатига ўзариш киритилди.<p>Уни сақлашни истайсизми?"
+
+#, fuzzy
+#~ msgid "Save As"
+#~ msgstr "...сифатида с&ақлаш"
 
 #, fuzzy
 #~| msgid "Close Document"

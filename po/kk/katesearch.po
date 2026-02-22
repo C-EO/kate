@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-12 00:46+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2013-06-03 03:51+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -716,24 +716,29 @@ msgstr ""
 msgid "Clear"
 msgstr ""
 
-#: SearchPlugin.cpp:2406 SearchPlugin.cpp:2440
+#: SearchPlugin.cpp:2405 SearchPlugin.cpp:2447
+#, kde-format
+msgid "Clear history"
+msgstr ""
+
+#: SearchPlugin.cpp:2413 SearchPlugin.cpp:2454
 #, kde-format
 msgid "Add..."
 msgstr "Қосу..."
 
-#: SearchPlugin.cpp:2418
+#: SearchPlugin.cpp:2425
 #, fuzzy, kde-format
 #| msgid "Search"
 msgid "Search As You Type"
 msgstr "Іздеу"
 
-#: SearchPlugin.cpp:2489
+#: SearchPlugin.cpp:2503
 #, fuzzy, kde-format
 #| msgid "in Project"
 msgid "In Current Project"
 msgstr "қай жобада:"
 
-#: SearchPlugin.cpp:2491
+#: SearchPlugin.cpp:2505
 #, fuzzy, kde-format
 #| msgid "in Project"
 msgid "In All Open Projects"

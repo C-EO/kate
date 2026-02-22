@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2025-12-18 11:44+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -1416,51 +1416,22 @@ msgstr "שם"
 msgid "Description"
 msgstr "תיאור"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-"<p>המסמך ‚%1’ נערך, אך לא נשמר.</p><p>לשמור את השינויים שלך או להתעלם מהם?</"
-"p>"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "סגירת המסמך"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "שמירה בשם"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr "נפתח קובץ חדש בעת סגירת Kate, הסגירה בוטלה."
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "הסגירה בוטלה"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "מפעיל"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "פותח מחדש קבצים מההפעלה הקודמת..."
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, kde-format
 msgid "Cannot pin untitled documents."
 msgstr "לא ניתן לנעוץ מסמכים ללא שם."
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, kde-format
 msgid "Cannot pin non local documents."
 msgstr "לא ניתן לנעוץ מסמכים שאינם מקומיים."
@@ -1882,6 +1853,16 @@ msgstr "לסגור את כל המסמכים חוץ מהנוכחי?"
 msgid "Close Others"
 msgstr "לסגור את השאר"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr "נפתח קובץ חדש בעת סגירת Kate, הסגירה בוטלה."
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "הסגירה בוטלה"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2202,6 +2183,11 @@ msgstr "שמירה בשם (%1)"
 #, kde-format
 msgid "Save Documents"
 msgstr "שמירת מסמכים"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "סגירת המסמך"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, kde-format
@@ -3119,6 +3105,16 @@ msgstr "ניהול הפעלות…"
 #, kde-format
 msgid "Show welcome page for new window"
 msgstr "הצגת מסך קבלת פנים בחלונות חדשים"
+
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr ""
+#~ "<p>המסמך ‚%1’ נערך, אך לא נשמר.</p><p>לשמור את השינויים שלך או להתעלם מהם?"
+#~ "</p>"
+
+#~ msgid "Save As"
+#~ msgstr "שמירה בשם"
 
 #~ msgid "&Close Document"
 #~ msgstr "&סגירת המסמך"

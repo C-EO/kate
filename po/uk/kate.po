@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2025-12-18 07:52+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -1434,51 +1434,22 @@ msgstr "Назва"
 msgid "Description"
 msgstr "Опис"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-"<p>Документ «%1» було змінено, але не було збережено.</p><p>Чи бажаєте "
-"зберегти зміни чи відкинути їх?</p>"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "Закрити документ"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "Зберегти як"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr "При спробі закриття Kate, був відкритий новий файл. Вихід перервано."
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "Вихід перервано"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "Запуск"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "Відкриття файлів останнього сеансу…"
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, kde-format
 msgid "Cannot pin untitled documents."
 msgstr "Не можна пришпилювати документи без назви."
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, kde-format
 msgid "Cannot pin non local documents."
 msgstr "Не можна пришпилювати нелокальні документи."
@@ -1910,6 +1881,16 @@ msgstr "Закрити всі документи, окрім поточного?
 msgid "Close Others"
 msgstr "Закрити інші"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr "При спробі закриття Kate, був відкритий новий файл. Вихід перервано."
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "Вихід перервано"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2243,6 +2224,11 @@ msgstr "Зберегти як (%1)"
 #, kde-format
 msgid "Save Documents"
 msgstr "Зберегти документи"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "Закрити документ"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, kde-format
@@ -3191,6 +3177,16 @@ msgstr "Керування сеансами…"
 #, kde-format
 msgid "Show welcome page for new window"
 msgstr "Показувати вітальну сторінку для нових вікон"
+
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr ""
+#~ "<p>Документ «%1» було змінено, але не було збережено.</p><p>Чи бажаєте "
+#~ "зберегти зміни чи відкинути їх?</p>"
+
+#~ msgid "Save As"
+#~ msgstr "Зберегти як"
 
 #~ msgid "&Close Document"
 #~ msgstr "&Закрити документ"

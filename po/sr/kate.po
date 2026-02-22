@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2017-09-28 17:56+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -1418,52 +1418,23 @@ msgstr "име"
 msgid "Description"
 msgstr "опис"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-"<p>Документ „%1“ је измењен, али није сачуван.</p><p>Желите ли да сачувате "
-"или одбаците измене?</p>"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "Затвори документ"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "Сачувај као"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr "Отворен је нови фајл током затварања Кејт, па је оно обустављено."
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "Затварање обустављено"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "Покретање"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "Отварам фајлове из прошле сесије..."
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Cannot pin untitled documents."
 msgstr "Направи нови документ"
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, fuzzy, kde-format
 #| msgid "Open a form to quick open documents."
 msgid "Cannot pin non local documents."
@@ -1925,6 +1896,16 @@ msgstr "Затвори све документе осим текућег"
 msgid "Close Others"
 msgstr "Затвори друге"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr "Отворен је нови фајл током затварања Кејт, па је оно обустављено."
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "Затварање обустављено"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2278,6 +2259,11 @@ msgstr "Сачувај као (%1)"
 #, kde-format
 msgid "Save Documents"
 msgstr "Сачувај документе"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "Затвори документ"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, fuzzy, kde-format
@@ -3270,6 +3256,16 @@ msgstr "&Управљај сесијама..."
 #, kde-format
 msgid "Show welcome page for new window"
 msgstr ""
+
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr ""
+#~ "<p>Документ „%1“ је измењен, али није сачуван.</p><p>Желите ли да "
+#~ "сачувате или одбаците измене?</p>"
+
+#~ msgid "Save As"
+#~ msgstr "Сачувај као"
 
 #~ msgid "&Close Document"
 #~ msgstr "&Затвори документ"

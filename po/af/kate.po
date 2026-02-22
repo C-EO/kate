@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2005-11-24 11:27+0200\n"
 "Last-Translator: Frikkie Thirion <frikkie.thirion@deneloptronics.co.za>\n"
 "Language-Team: AFRIKAANS <AF@lia.org.za>\n"
@@ -1414,57 +1414,23 @@ msgstr "Naam"
 msgid "Description"
 msgstr "Skript:"
 
-#: lib/katedocmanager.cpp:292
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>The document '%1' has been modified, but not saved.<p>Do you want to "
-#| "save your changes or discard them?"
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-"<p>Die dokument '%1' was verander, maar nog nie gestoor nie.<p>Wil jy jou "
-"veranderinge stoor of weggooi?"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "Maak Dokument Toe"
-
-#: lib/katedocmanager.cpp:304
-#, fuzzy, kde-format
-msgid "Save As"
-msgstr "Stoor As..."
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr ""
-"Nuwe lêer was oopgemaak terwyl Kate besig was om toe te maak. Toemaak "
-"gestaak."
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "Toemaak gestaak"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "Besig om op te start"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "Maak die lêers van die vorige sessie oop..."
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Cannot pin untitled documents."
 msgstr "Skep 'n nuwe dokument"
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Cannot pin non local documents."
@@ -1925,6 +1891,18 @@ msgstr "Maak toe alle open dokumente."
 msgid "Close Others"
 msgstr "Maak die huidige oortjie toe"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr ""
+"Nuwe lêer was oopgemaak terwyl Kate besig was om toe te maak. Toemaak "
+"gestaak."
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "Toemaak gestaak"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2280,6 +2258,11 @@ msgstr "Stoor as (%1)"
 #, kde-format
 msgid "Save Documents"
 msgstr "Stoor Dokumente"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "Maak Dokument Toe"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, fuzzy, kde-format
@@ -3242,6 +3225,21 @@ msgstr "Bestuur sessies"
 #| msgid "Create a new document"
 msgid "Show welcome page for new window"
 msgstr "Skep 'n nuwe dokument"
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>The document '%1' has been modified, but not saved.<p>Do you want to "
+#~| "save your changes or discard them?"
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr ""
+#~ "<p>Die dokument '%1' was verander, maar nog nie gestoor nie.<p>Wil jy jou "
+#~ "veranderinge stoor of weggooi?"
+
+#, fuzzy
+#~ msgid "Save As"
+#~ msgstr "Stoor As..."
 
 #, fuzzy
 #~| msgid "Close Document"

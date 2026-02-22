@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2024-02-23 02:55+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -1387,52 +1387,23 @@ msgstr "名前"
 msgid "Description"
 msgstr "説明"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-"<qt><p>文書 “%1” は変更されていますが、保存されていません。</p><p>変更を保存"
-"しますか？それとも破棄しますか？</p></qt>"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "文書を閉じる"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "名前を付けて保存"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr "Kate を終了中に新しいファイルが開かれました。終了を中止しました。"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "終了中止"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "起動時"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "最後のセッションのファイルを再読み込み中..."
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Cannot pin untitled documents."
 msgstr "新しい文書を作成します"
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, fuzzy, kde-format
 #| msgid "Close other open documents."
 msgid "Cannot pin non local documents."
@@ -1882,6 +1853,16 @@ msgstr "現在の文書以外の文書を閉じる"
 msgid "Close Others"
 msgstr "他を閉じる"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr "Kate を終了中に新しいファイルが開かれました。終了を中止しました。"
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "終了中止"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2225,6 +2206,11 @@ msgstr "名前を付けて保存 (%1)"
 #, kde-format
 msgid "Save Documents"
 msgstr "文書を保存"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "文書を閉じる"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, kde-format
@@ -3152,6 +3138,16 @@ msgstr "セッションを管理..."
 #, kde-format
 msgid "Show welcome page for new window"
 msgstr "新しいウィンドウでようこそページを表示"
+
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr ""
+#~ "<qt><p>文書 “%1” は変更されていますが、保存されていません。</p><p>変更を保"
+#~ "存しますか？それとも破棄しますか？</p></qt>"
+
+#~ msgid "Save As"
+#~ msgstr "名前を付けて保存"
 
 #~ msgid "&Close Document"
 #~ msgstr "文書を閉じる(&C)"

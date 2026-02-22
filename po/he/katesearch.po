@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: katesearch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-12 00:46+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2026-01-10 13:12+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -723,22 +723,27 @@ msgstr "פתיחה כלשונית עורך"
 msgid "Clear"
 msgstr "פינוי"
 
-#: SearchPlugin.cpp:2406 SearchPlugin.cpp:2440
+#: SearchPlugin.cpp:2405 SearchPlugin.cpp:2447
+#, kde-format
+msgid "Clear history"
+msgstr ""
+
+#: SearchPlugin.cpp:2413 SearchPlugin.cpp:2454
 #, kde-format
 msgid "Add..."
 msgstr "הוספה…"
 
-#: SearchPlugin.cpp:2418
+#: SearchPlugin.cpp:2425
 #, kde-format
 msgid "Search As You Type"
 msgstr "חיפוש תוך כדי הקלדה"
 
-#: SearchPlugin.cpp:2489
+#: SearchPlugin.cpp:2503
 #, kde-format
 msgid "In Current Project"
 msgstr "במיזם הנוכחי"
 
-#: SearchPlugin.cpp:2491
+#: SearchPlugin.cpp:2505
 #, kde-format
 msgid "In All Open Projects"
 msgstr "בכל המיזמים הפתוחים"

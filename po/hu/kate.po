@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2024-02-18 21:00+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -1401,53 +1401,23 @@ msgstr "Név"
 msgid "Description"
 msgstr "Leírás"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-"<p>A(z) „%1” dokumentum megváltozott, de még nincs elmentve.</p><p>El "
-"szeretné menteni a módosításokat vagy inkább eldobja azokat?</p>"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "Dokumentum bezárása"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "Mentés másként"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr ""
-"Új fájl megnyitása történt a Kate bezárása közben, a bezárás félbeszakadt."
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "A bezárás félbe lett szakítva"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "Indulás"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "A legutóbb nyitva hagyott fájlok megnyitása…"
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, fuzzy, kde-format
 #| msgid "Cannot go to the document"
 msgid "Cannot pin untitled documents."
 msgstr "Nem lehet a dokumentumra ugorni"
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, fuzzy, kde-format
 #| msgid "Cannot go to the document"
 msgid "Cannot pin non local documents."
@@ -1898,6 +1868,17 @@ msgstr "Összes dokumentum bezárása a jelenlegi mellett"
 msgid "Close Others"
 msgstr "Többi bezárása"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr ""
+"Új fájl megnyitása történt a Kate bezárása közben, a bezárás félbeszakadt."
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "A bezárás félbe lett szakítva"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2240,6 +2221,11 @@ msgstr "Mentés másként (%1)"
 #, kde-format
 msgid "Save Documents"
 msgstr "Dokumentumok mentése"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "Dokumentum bezárása"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, fuzzy, kde-format
@@ -3193,6 +3179,16 @@ msgstr "Munkamenetkezelő…"
 #| msgid "Show welcome view for new windows"
 msgid "Show welcome page for new window"
 msgstr "Kezdőlap megjelenítése új ablakokban"
+
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr ""
+#~ "<p>A(z) „%1” dokumentum megváltozott, de még nincs elmentve.</p><p>El "
+#~ "szeretné menteni a módosításokat vagy inkább eldobja azokat?</p>"
+
+#~ msgid "Save As"
+#~ msgstr "Mentés másként"
 
 #~ msgid "&Close Document"
 #~ msgstr "&Dokumentum bezárása"

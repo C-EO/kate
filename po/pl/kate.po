@@ -1,6 +1,6 @@
 # translation of kate.po to Polish
 # translation of kate.po to
-# Version: $Revision: 1729830 $
+# Version: $Revision: 1730483 $
 # Kate polish translation file.
 # Main translation work:
 # SPDX-FileCopyrightText: 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2025-09-06 05:51+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -1442,51 +1442,22 @@ msgstr "Nazwa"
 msgid "Description"
 msgstr "Opis"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-"<p>Dokument \"%1\" został zmieniony, ale nie zapisany.</p><p>Zapisać, czy "
-"porzucić te zmiany?</p>"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "Zamykanie dokumentu"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "Zapisz jako"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr "Otwarto nowy plik w trakcie zamykania Kate, więc je przerwano."
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "Porzucono zamykanie"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "Uruchamianie"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "Otwieranie plików z poprzedniej posiedzenia..."
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, kde-format
 msgid "Cannot pin untitled documents."
 msgstr "Nie można przypiąć nienazwanych dokumentów."
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, kde-format
 msgid "Cannot pin non local documents."
 msgstr "Nie można przypiąć nielokalnych dokumentów."
@@ -1915,6 +1886,16 @@ msgstr "Czy zamknąć wszystkie dokumenty poza bieżącym?"
 msgid "Close Others"
 msgstr "Zamknij pozostałe"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr "Otwarto nowy plik w trakcie zamykania Kate, więc je przerwano."
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "Porzucono zamykanie"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2243,6 +2224,11 @@ msgstr "Zapisz jako (%1)"
 #, kde-format
 msgid "Save Documents"
 msgstr "Zapisywanie dokumentów"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "Zamykanie dokumentu"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, kde-format
@@ -3181,6 +3167,16 @@ msgstr "Zarządzanie posiedzeniami..."
 #, kde-format
 msgid "Show welcome page for new window"
 msgstr "Pokaż ekran powitalny dla nowo otwartych okien"
+
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr ""
+#~ "<p>Dokument \"%1\" został zmieniony, ale nie zapisany.</p><p>Zapisać, czy "
+#~ "porzucić te zmiany?</p>"
+
+#~ msgid "Save As"
+#~ msgstr "Zapisz jako"
 
 #~ msgid "&Close Document"
 #~ msgstr "&Zamknij dokument"

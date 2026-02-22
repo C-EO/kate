@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2025-09-16 15:43+0630\n"
 "Last-Translator: ဇေယျာလွင် <lw1nzayar@yandex.com>\n"
 "Language-Team: Burmese <kde-i18n-doc@kde.org>\n"
@@ -1352,49 +1352,22 @@ msgstr "အမည်"
 msgid "Description"
 msgstr "ဖော်ပြချက်"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "ပိတ်မည်"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "အဖြစ်သိမ်းမည်"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr ""
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "ပိတ်ခြင်းပယ်ဖျက်လိုက်သည်"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "စတင်နေသည်"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "နောက်ဆုံးဆက်ရှင်မှဖိုင်များပြန်ဖွင့်နေသည်…"
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, kde-format
 msgid "Cannot pin untitled documents."
 msgstr "ခေါင်းစဉ်မဲ့မှတ်တမ်းစာအုပ်များကို မတွဲနိုင်ပါ"
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, kde-format
 msgid "Cannot pin non local documents."
 msgstr "စက်တွင်းမဟုတ်သောဖိုင်များကိုမတွဲနိုင်ပါ"
@@ -1813,6 +1786,16 @@ msgstr "လက်ရှိတစ်ခုမှလွဲ၍ ကျန်မှ�
 msgid "Close Others"
 msgstr "အခြားဟာများပိတ်မည်"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr ""
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "ပိတ်ခြင်းပယ်ဖျက်လိုက်သည်"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2131,6 +2114,11 @@ msgstr "(%1)အဖြစ်သိမ်းမည်"
 #, kde-format
 msgid "Save Documents"
 msgstr "မှတ်တမ်းစာအုပ်များသိမ်းဆည်းမည်"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "ပိတ်မည်"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, kde-format
@@ -3022,6 +3010,9 @@ msgstr "ဆက်ရှင်များ စီမံမည်…"
 #, kde-format
 msgid "Show welcome page for new window"
 msgstr "ဝင်းဒိုးအသစ်တွင် ကြိုဆိုစာမျက်နှာပြမည်"
+
+#~ msgid "Save As"
+#~ msgstr "အဖြစ်သိမ်းမည်"
 
 #~ msgid "&Close Document"
 #~ msgstr "မှတ်တမ်းစာအုပ်&ပိတ်"

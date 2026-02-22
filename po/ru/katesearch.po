@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-12 00:46+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2026-02-13 22:14+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -748,22 +748,27 @@ msgstr "Открыть как вкладку в редакторе"
 msgid "Clear"
 msgstr "Очистить"
 
-#: SearchPlugin.cpp:2406 SearchPlugin.cpp:2440
+#: SearchPlugin.cpp:2405 SearchPlugin.cpp:2447
+#, kde-format
+msgid "Clear history"
+msgstr ""
+
+#: SearchPlugin.cpp:2413 SearchPlugin.cpp:2454
 #, kde-format
 msgid "Add..."
 msgstr "Добавить..."
 
-#: SearchPlugin.cpp:2418
+#: SearchPlugin.cpp:2425
 #, kde-format
 msgid "Search As You Type"
 msgstr "Поиск по мере набора"
 
-#: SearchPlugin.cpp:2489
+#: SearchPlugin.cpp:2503
 #, kde-format
 msgid "In Current Project"
 msgstr "В текущем проекте"
 
-#: SearchPlugin.cpp:2491
+#: SearchPlugin.cpp:2505
 #, kde-format
 msgid "In All Open Projects"
 msgstr "Во всех открытых проектах"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2025-12-20 11:15+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -1420,49 +1420,22 @@ msgstr "الاسم"
 msgid "Description"
 msgstr "الوصف"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr "<p>عُدّل المستند '%1' ولم يُحفظ.</p><p>أتريد حفظ التّعديلات أو رفضها؟</p>"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "أغلق المستند"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "احفظ ك‍"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr "فُتح ملفّ جديد أثناء إغلاق «كيت»، فأُجهض الإغلاق."
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "أُجهض الإغلاق"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "يبدأ"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "يعيد فتح الملفّات من الجلسة الأخيرة..."
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, kde-format
 msgid "Cannot pin untitled documents."
 msgstr "لا يمكن تثبيت المستندات غير المسماة."
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, kde-format
 msgid "Cannot pin non local documents."
 msgstr "لا يمكن تثبيت المستندات غير المحلية."
@@ -1883,6 +1856,16 @@ msgstr "أغلق كلّ المستندات مع الحاليّ؟"
 msgid "Close Others"
 msgstr "أغلق البقيّة"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr "فُتح ملفّ جديد أثناء إغلاق «كيت»، فأُجهض الإغلاق."
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "أُجهض الإغلاق"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2203,6 +2186,11 @@ msgstr "احفظ ك‍ (%1)"
 #, kde-format
 msgid "Save Documents"
 msgstr "احفظ المستندات"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "أغلق المستند"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, kde-format
@@ -3128,6 +3116,15 @@ msgstr "أدر الجلسات..."
 #, kde-format
 msgid "Show welcome page for new window"
 msgstr "أظهر شاشة الترحيب للنوافذ الجديدة"
+
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr ""
+#~ "<p>عُدّل المستند '%1' ولم يُحفظ.</p><p>أتريد حفظ التّعديلات أو رفضها؟</p>"
+
+#~ msgid "Save As"
+#~ msgstr "احفظ ك‍"
 
 #~ msgid "&Close Document"
 #~ msgstr "أ&غلق المستند"

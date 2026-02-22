@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-12 00:46+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2024-12-27 10:42+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -698,22 +698,27 @@ msgstr "Malfermi kiel Redaktil-Langeto"
 msgid "Clear"
 msgstr "Forviŝi"
 
-#: SearchPlugin.cpp:2406 SearchPlugin.cpp:2440
+#: SearchPlugin.cpp:2405 SearchPlugin.cpp:2447
+#, kde-format
+msgid "Clear history"
+msgstr ""
+
+#: SearchPlugin.cpp:2413 SearchPlugin.cpp:2454
 #, kde-format
 msgid "Add..."
 msgstr "Aldoni..."
 
-#: SearchPlugin.cpp:2418
+#: SearchPlugin.cpp:2425
 #, kde-format
 msgid "Search As You Type"
 msgstr "Serĉi Dum Tajpado"
 
-#: SearchPlugin.cpp:2489
+#: SearchPlugin.cpp:2503
 #, kde-format
 msgid "In Current Project"
 msgstr "En Nuna Projekto"
 
-#: SearchPlugin.cpp:2491
+#: SearchPlugin.cpp:2505
 #, kde-format
 msgid "In All Open Projects"
 msgstr "En Ĉiuj Malfermaj Projektoj"

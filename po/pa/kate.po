@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2024-01-03 14:01-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -1379,52 +1379,23 @@ msgstr "ਨਾਂ"
 msgid "Description"
 msgstr "ਵੇਰਵਾ"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-"<p>ਡੌਕੂਮੈਂਟ '%1' ਸੋਧਿਆ ਤਾਂ ਗਿਆ ਹੈ, ਪਰ ਇਸ ਨੂੰ ਸੰਭਾਲਿਆ ਨਹੀਂ ਗਿਆ ਹੈ।</p><p>ਕੀ ਤੁਸੀਂ ਇਹਨਾਂ "
-"ਸੰਭਾਲਣਾ ਚਾਹੁੰਦੇ ਹੋ ਜਾਂ ਰੱਦ ਕਰਨਾ?</p>"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "ਡੌਕੂਮੈਂਟ ਬੰਦ ਕਰੋ"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "ਇੰਝ ਸੰਭਾਲੋ"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr "ਕੇਟ ਨੂੰ ਬੰਦ ਕਰਨ ਦੌਰਾਨ ਇੱਕ ਨਵੀਂ ਫਾਇਲ ਖੁੱਲ ਗਈ ਹੈ, ਬੰਦ ਕਰਨ ਨੂੰ ਛੱਡ ਦਿੱਤਾ ਗਿਆ ਹੈ।"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "ਬੰਦ ਕਰਨਾ ਛੱਡਿਆ ਗਿਆ।"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "ਸ਼ੁਰੂਆਤ ਸਮੇਂ"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "ਆਖਰੀ ਸ਼ੈਸ਼ਨ ਦੀਆਂ ਫਾਇਲਾਂ ਮੁੜ ਖੋਲ੍ਹੀਆਂ ਜਾ ਰਹੀਆਂ ਹਨ..."
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, fuzzy, kde-format
 #| msgid "Cannot go to the document"
 msgid "Cannot pin untitled documents."
 msgstr "ਡੌਕੂਮੈਂਟ ਉੱਤੇ ਨਹੀਂ ਜਾਇਆ ਜਾ ਸਕਦਾ"
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, fuzzy, kde-format
 #| msgid "Cannot go to the document"
 msgid "Cannot pin non local documents."
@@ -1867,6 +1838,16 @@ msgstr "ਮੌਜੂਦਾ ਨੂੰ ਛੱਡ ਕੇ ਸਾਰੇ ਡੌਕੂ�
 msgid "Close Others"
 msgstr "ਹੋਰ ਬੰਦ ਕਰੋ"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr "ਕੇਟ ਨੂੰ ਬੰਦ ਕਰਨ ਦੌਰਾਨ ਇੱਕ ਨਵੀਂ ਫਾਇਲ ਖੁੱਲ ਗਈ ਹੈ, ਬੰਦ ਕਰਨ ਨੂੰ ਛੱਡ ਦਿੱਤਾ ਗਿਆ ਹੈ।"
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "ਬੰਦ ਕਰਨਾ ਛੱਡਿਆ ਗਿਆ।"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2189,6 +2170,11 @@ msgstr "(%1) ਵਾਂਗ ਸੰਭਾਲੋ"
 #, kde-format
 msgid "Save Documents"
 msgstr "ਡੌਕੂਮੈਂਟ ਸੰਭਾਲੋ"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "ਡੌਕੂਮੈਂਟ ਬੰਦ ਕਰੋ"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, kde-format
@@ -3128,6 +3114,16 @@ msgstr "ਸ਼ੈਸ਼ਨਾਂ ਦਾ ਇੰਤਜ਼ਾਮ..."
 #| msgid "Create a new document"
 msgid "Show welcome page for new window"
 msgstr "ਨਵਾਂ ਡੌਕੂਮੈਂਟ ਬਣਾਓ"
+
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr ""
+#~ "<p>ਡੌਕੂਮੈਂਟ '%1' ਸੋਧਿਆ ਤਾਂ ਗਿਆ ਹੈ, ਪਰ ਇਸ ਨੂੰ ਸੰਭਾਲਿਆ ਨਹੀਂ ਗਿਆ ਹੈ।</p><p>ਕੀ ਤੁਸੀਂ ਇਹਨਾਂ "
+#~ "ਸੰਭਾਲਣਾ ਚਾਹੁੰਦੇ ਹੋ ਜਾਂ ਰੱਦ ਕਰਨਾ?</p>"
+
+#~ msgid "Save As"
+#~ msgstr "ਇੰਝ ਸੰਭਾਲੋ"
 
 #~ msgid "&Close Document"
 #~ msgstr "ਡੌਕੂਮੈਂਟ ਨੂੰ ਬੰਦ ਕਰੋ(&C)"

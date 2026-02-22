@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2023-02-07 18:18+0100\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -1432,52 +1432,23 @@ msgstr "Meno"
 msgid "Description"
 msgstr "Popis"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-"<p>Dokument '%1' je zmenený, ale neuložený.</p><p>Chcete vaše zmeny uložiť "
-"alebo ich zahodiť?</p>"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "Zavrieť dokument"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "Uložiť &ako"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr "Nový súbor bol otvorený počas zatvárania Kate, zatvorenie zrušené."
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "Zatvorenie zrušené"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "Štartuje sa"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "Znovu otváram súbory z posledného sedenia..."
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Cannot pin untitled documents."
 msgstr "Vytvoriť nový dokument"
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, fuzzy, kde-format
 #| msgid "Shows a hint how to compare documents."
 msgid "Cannot pin non local documents."
@@ -1924,6 +1895,16 @@ msgstr "Zatvoriť všetky dokumenty vedľa aktuálneho"
 msgid "Close Others"
 msgstr "Zatvoriť ostatné"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr "Nový súbor bol otvorený počas zatvárania Kate, zatvorenie zrušené."
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "Zatvorenie zrušené"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2256,6 +2237,11 @@ msgstr "Uložiť ako (%1)"
 #, kde-format
 msgid "Save Documents"
 msgstr "Uložiť dokumenty"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "Zavrieť dokument"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, kde-format
@@ -3195,6 +3181,16 @@ msgstr "Spravovať sedenia..."
 #| msgid "Show welcome view for new windows"
 msgid "Show welcome page for new window"
 msgstr "Ukazovať zobrazenie uvítania pre nové okná"
+
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr ""
+#~ "<p>Dokument '%1' je zmenený, ale neuložený.</p><p>Chcete vaše zmeny "
+#~ "uložiť alebo ich zahodiť?</p>"
+
+#~ msgid "Save As"
+#~ msgstr "Uložiť &ako"
 
 #~ msgid "&Close Document"
 #~ msgstr "&Zavrieť dokument"

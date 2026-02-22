@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-12 00:46+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2026-01-10 08:36+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -740,22 +740,27 @@ msgstr "Odpri kot zavihek urejevalnika"
 msgid "Clear"
 msgstr "Počisti"
 
-#: SearchPlugin.cpp:2406 SearchPlugin.cpp:2440
+#: SearchPlugin.cpp:2405 SearchPlugin.cpp:2447
+#, kde-format
+msgid "Clear history"
+msgstr ""
+
+#: SearchPlugin.cpp:2413 SearchPlugin.cpp:2454
 #, kde-format
 msgid "Add..."
 msgstr "Dodaj …"
 
-#: SearchPlugin.cpp:2418
+#: SearchPlugin.cpp:2425
 #, kde-format
 msgid "Search As You Type"
 msgstr "Išči že med tipkanjem"
 
-#: SearchPlugin.cpp:2489
+#: SearchPlugin.cpp:2503
 #, kde-format
 msgid "In Current Project"
 msgstr "V trenutnem projektu"
 
-#: SearchPlugin.cpp:2491
+#: SearchPlugin.cpp:2505
 #, kde-format
 msgid "In All Open Projects"
 msgstr "V vseh odprtih projektih"

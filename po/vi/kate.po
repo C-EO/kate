@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2023-03-21 18:37+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -1408,52 +1408,23 @@ msgstr "Tên"
 msgid "Description"
 msgstr "Mô tả"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-"<p>Tài liệu '%1' đã bị chỉnh sửa nhưng chưa được lưu.</p><p>Bạn muốn lưu các "
-"thay đổi hay loại bỏ chúng?</p>"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "Đóng tài liệu"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "Lưu thành"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr "Một tệp mới được mở khi đang đóng Kate, đã huỷ việc đóng."
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "Đã huỷ việc đóng"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "Đang khởi động"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "Đang mở lại tệp từ phiên trước..."
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Cannot pin untitled documents."
 msgstr "Tạo một tài liệu mới"
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, fuzzy, kde-format
 #| msgid "Shows a hint how to compare documents."
 msgid "Cannot pin non local documents."
@@ -1901,6 +1872,16 @@ msgstr "Đóng tất cả các tài liệu trừ cái này"
 msgid "Close Others"
 msgstr "Đóng các thẻ khác"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr "Một tệp mới được mở khi đang đóng Kate, đã huỷ việc đóng."
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "Đã huỷ việc đóng"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2238,6 +2219,11 @@ msgstr "Lưu thành (%1)"
 #, kde-format
 msgid "Save Documents"
 msgstr "Lưu các tài liệu"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "Đóng tài liệu"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, kde-format
@@ -3170,6 +3156,16 @@ msgstr "Quản lí phiên..."
 #| msgid "Show welcome view for new windows"
 msgid "Show welcome page for new window"
 msgstr "Hiện khung xem chào mừng cho cửa sổ mới"
+
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr ""
+#~ "<p>Tài liệu '%1' đã bị chỉnh sửa nhưng chưa được lưu.</p><p>Bạn muốn lưu "
+#~ "các thay đổi hay loại bỏ chúng?</p>"
+
+#~ msgid "Save As"
+#~ msgstr "Lưu thành"
 
 #~ msgid "&Close Document"
 #~ msgstr "Đón&g tài liệu"

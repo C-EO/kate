@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2022-10-28 19:12+0700\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
 "Language-Team: Interlingue <kde-i18n-doc@kde.org>\n"
@@ -1365,49 +1365,22 @@ msgstr "Nómine"
 msgid "Description"
 msgstr "Descrition"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "Cluder li document"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "Gardar quam"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr ""
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, fuzzy, kde-format
-msgid "Closing Aborted"
-msgstr "Interruptet."
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, fuzzy, kde-format
 msgid "Starting Up"
 msgstr "Startante"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, fuzzy, kde-format
 msgid "Reopening files from the last session..."
 msgstr "Cargar files del ultim session"
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, fuzzy, kde-format
 msgid "Cannot pin untitled documents."
 msgstr "Crear un nov document"
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, fuzzy, kde-format
 #| msgid "Close all open documents."
 msgid "Cannot pin non local documents."
@@ -1844,6 +1817,16 @@ msgstr "Cluder omni documentes"
 msgid "Close Others"
 msgstr "Cluder li altris"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr ""
+
+#: lib/katemainwindow.cpp:826
+#, fuzzy, kde-format
+msgid "Closing Aborted"
+msgstr "Interruptet."
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2157,6 +2140,11 @@ msgstr "Gardar quam (%1)"
 #, kde-format
 msgid "Save Documents"
 msgstr "Gardar li documentes"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "Cluder li document"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, kde-format
@@ -3059,6 +3047,9 @@ msgid "Show welcome page for new window"
 msgstr ""
 "Monstrar un miniatura del labor-spacie con rectangules por li visibil "
 "fenestres"
+
+#~ msgid "Save As"
+#~ msgstr "Gardar quam"
 
 #~ msgid "&Close Document"
 #~ msgstr "&Cluder li document"

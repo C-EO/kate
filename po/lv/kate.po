@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2025-11-07 18:21+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -1420,51 +1420,22 @@ msgstr "Nosaukums"
 msgid "Description"
 msgstr "Apraksts"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-"<p>Dokuments „%1“ ir mainīts, bet nav saglabāts.</p><p>Vai vēlaties saglabāt "
-"izmaiņas vai tās atmest?</p>"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "Aizvērt dokumentu"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "Saglabāt kā"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr "Aizverot „Kate“, ir atvērta jauna datne — aizvēršana pārtraukta."
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "Aizvēršana pārtraukta"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "Sagatavojas darbam"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "Atver pēdējās sesijas datnes..."
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, kde-format
 msgid "Cannot pin untitled documents."
 msgstr "Nevar piespraust nenosauktus dokumentus."
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, kde-format
 msgid "Cannot pin non local documents."
 msgstr "Nevar piespraust attālus dokumentus."
@@ -1890,6 +1861,16 @@ msgstr "Vai aizvērt visus dokumentus, izņemot pašreizējo?"
 msgid "Close Others"
 msgstr "Aizvērt pārējos"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr "Aizverot „Kate“, ir atvērta jauna datne — aizvēršana pārtraukta."
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "Aizvēršana pārtraukta"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2218,6 +2199,11 @@ msgstr "Saglabāt kā („%1“)"
 #, kde-format
 msgid "Save Documents"
 msgstr "Saglabāt dokumentus"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "Aizvērt dokumentu"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, kde-format
@@ -3146,6 +3132,16 @@ msgstr "Pārvaldīt sesijas..."
 #, kde-format
 msgid "Show welcome page for new window"
 msgstr "Jaunajiem logiem rādīt sākuma lapu"
+
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr ""
+#~ "<p>Dokuments „%1“ ir mainīts, bet nav saglabāts.</p><p>Vai vēlaties "
+#~ "saglabāt izmaiņas vai tās atmest?</p>"
+
+#~ msgid "Save As"
+#~ msgstr "Saglabāt kā"
 
 #~ msgid "&Close Document"
 #~ msgstr "&Aizvērt dokumentu"

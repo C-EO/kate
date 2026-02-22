@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2026-01-04 15:30+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -1416,51 +1416,22 @@ msgstr "பெயர்"
 msgid "Description"
 msgstr "விவரணம்"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-"<p>'%1' என்ற ஆவணம் மாற்றப்பட்டது, ஆனால் சேமிக்கப்படவில்லை.</p><p>மாற்றங்களை சேமிக்க "
-"வேண்டுமா அல்லது கைவிட வேண்டுமா?</p>"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "ஆவணத்தை மூடு"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "வேறு பெயரில் சேமி"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr "கேட்டை மூட முயற்சிக்கும்போது புது கோப்பு திறக்கப்பட்டதால் மூடுதல் கைவிடப்பட்டது."
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "மூடுதல் கைவிடப்பட்டது"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "துவங்குகிறது"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "சென்ற அமர்விலிருந்த கோப்புகள் திறக்கப்படுகின்றன..."
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, kde-format
 msgid "Cannot pin untitled documents."
 msgstr "தலைப்பற்ற ஆவணத்தை தக்கவைக்க முடியாது"
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, kde-format
 msgid "Cannot pin non local documents."
 msgstr "தொலை ஆவணத்தை தக்கவைக்க முடியாது"
@@ -1884,6 +1855,16 @@ msgstr "நடப்பு ஆவணத்தை தவிர மற்ற எ�
 msgid "Close Others"
 msgstr "மற்றவற்றை மூடு"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr "கேட்டை மூட முயற்சிக்கும்போது புது கோப்பு திறக்கப்பட்டதால் மூடுதல் கைவிடப்பட்டது."
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "மூடுதல் கைவிடப்பட்டது"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2213,6 +2194,11 @@ msgstr "இவ்வாறு சேமி (%1)"
 #, kde-format
 msgid "Save Documents"
 msgstr "ஆவணங்களை சேமி"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "ஆவணத்தை மூடு"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, kde-format
@@ -3136,6 +3122,16 @@ msgstr "அமர்வுகளை நிர்வகி..."
 #, kde-format
 msgid "Show welcome page for new window"
 msgstr "புதிய சாளரத்தில் வரவேற்புப்பக்கத்தை காட்டு"
+
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr ""
+#~ "<p>'%1' என்ற ஆவணம் மாற்றப்பட்டது, ஆனால் சேமிக்கப்படவில்லை.</p><p>மாற்றங்களை சேமிக்க "
+#~ "வேண்டுமா அல்லது கைவிட வேண்டுமா?</p>"
+
+#~ msgid "Save As"
+#~ msgstr "வேறு பெயரில் சேமி"
 
 #~ msgid "&Close Document"
 #~ msgstr "&ஆவணத்தை மூடு"

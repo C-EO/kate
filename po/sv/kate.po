@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2026-01-22 17:14+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -1413,51 +1413,22 @@ msgstr "Namn"
 msgid "Description"
 msgstr "Beskrivning"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-"<p>Dokumentet '%1' har ändrats, men inte sparats.</p><p>Vill du spara dina "
-"ändringar eller kasta dem?</p>"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "Stäng dokument"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "Spara som"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr "Ny fil öppnad medan Kate försöker avslutas. Avbryter avslutning."
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "Avbryter avslutning"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "Startar"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "Öppnar filer från senaste sessionen igen..."
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, kde-format
 msgid "Cannot pin untitled documents."
 msgstr "Kan inte fästa namnlösa dokument."
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, kde-format
 msgid "Cannot pin non local documents."
 msgstr "Kan inte fästa icke-lokala dokument."
@@ -1886,6 +1857,16 @@ msgstr "Stäng alla dokument utom nuvarande?"
 msgid "Close Others"
 msgstr "Stäng övriga"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr "Ny fil öppnad medan Kate försöker avslutas. Avbryter avslutning."
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "Avbryter avslutning"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2212,6 +2193,11 @@ msgstr "Spara som (%1)"
 #, kde-format
 msgid "Save Documents"
 msgstr "Spara dokument"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "Stäng dokument"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, kde-format
@@ -3143,6 +3129,16 @@ msgstr "Hantera sessioner..."
 #, kde-format
 msgid "Show welcome page for new window"
 msgstr "Visa välkomstsida för nya fönster"
+
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr ""
+#~ "<p>Dokumentet '%1' har ändrats, men inte sparats.</p><p>Vill du spara "
+#~ "dina ändringar eller kasta dem?</p>"
+
+#~ msgid "Save As"
+#~ msgstr "Spara som"
 
 #~ msgid "&Close Document"
 #~ msgstr "Stän&g dokument"

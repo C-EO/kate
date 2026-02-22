@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2005-04-18 18:18+0200\n"
 "Last-Translator:  <hertn@gmx.de>\n"
 "Language-Team: Hornjoserbšćina <hsb@li.org>\n"
@@ -1369,50 +1369,23 @@ msgstr "Mjeno"
 msgid "Description"
 msgstr "Program"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr ""
-
-#: lib/katedocmanager.cpp:304
-#, fuzzy, kde-format
-msgid "Save As"
-msgstr "&Wšitko zawěsćić"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr ""
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr ""
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr ""
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr ""
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Cannot pin untitled documents."
 msgstr "Nowy dokument zhotowić"
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Cannot pin non local documents."
@@ -1853,6 +1826,16 @@ msgstr "Wšitke wočinjene dokumenty začinić"
 msgid "Close Others"
 msgstr "Wšitke wočinjene dokumenty začinić"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr ""
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr ""
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2166,6 +2149,11 @@ msgstr ""
 #: lib/katesavemodifieddialog.cpp:133
 #, kde-format
 msgid "Save Documents"
+msgstr ""
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
 msgstr ""
 
 #: lib/katesavemodifieddialog.cpp:157
@@ -3076,6 +3064,10 @@ msgstr "&Pósłać..."
 #| msgid "Create a new document"
 msgid "Show welcome page for new window"
 msgstr "Nowy dokument zhotowić"
+
+#, fuzzy
+#~ msgid "Save As"
+#~ msgstr "&Wšitko zawěsćić"
 
 #, fuzzy
 #~| msgid "Close all open documents."

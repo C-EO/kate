@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:47+0000\n"
+"POT-Creation-Date: 2026-02-22 00:49+0000\n"
 "PO-Revision-Date: 2024-12-15 19:32+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -1415,52 +1415,23 @@ msgstr "नाम"
 msgid "Description"
 msgstr "वर्णन"
 
-#: lib/katedocmanager.cpp:292
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-"<p>दस्तावेज़ '%1' परिवर्धित किया गया है, पर सहेजा नहीं गया है.</p><p>क्या आप इसे रखना "
-"चाहते हैं या अपने परिवर्तनों को फेंकना चाहते हैं?</p>"
-
-#: lib/katedocmanager.cpp:295 lib/katesavemodifieddialog.cpp:133
-#, kde-format
-msgid "Close Document"
-msgstr "दस्तावेज़ बन्द करें"
-
-#: lib/katedocmanager.cpp:304
-#, kde-format
-msgid "Save As"
-msgstr "ऐसे सहेजें"
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr "केएटीई को बन्द करने के दौरान नया फ़ाइल खोला गया, बन्द करना छोड़ा."
-
-#: lib/katedocmanager.cpp:322 lib/katemainwindow.cpp:826
-#, kde-format
-msgid "Closing Aborted"
-msgstr "बन्द करना छोड़ा"
-
-#: lib/katedocmanager.cpp:396
+#: lib/katedocmanager.cpp:352
 #, kde-format
 msgid "Starting Up"
 msgstr "प्रारंभ किया जा रहा है"
 
-#: lib/katedocmanager.cpp:397
+#: lib/katedocmanager.cpp:353
 #, kde-format
 msgid "Reopening files from the last session..."
 msgstr "अंतिम सत्र की फ़ाइलों को फिर से खोला जा रहा है..."
 
-#: lib/katedocmanager.cpp:572
+#: lib/katedocmanager.cpp:528
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Cannot pin untitled documents."
 msgstr "नया दस्तावेज़ बनाएँ"
 
-#: lib/katedocmanager.cpp:577
+#: lib/katedocmanager.cpp:533
 #, fuzzy, kde-format
 #| msgid "Create a new document"
 msgid "Cannot pin non local documents."
@@ -1919,6 +1890,16 @@ msgstr "सभी खुले दस्तावेज़ बन्द कर�
 msgid "Close Others"
 msgstr "अन्य बंद करें"
 
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr "केएटीई को बन्द करने के दौरान नया फ़ाइल खोला गया, बन्द करना छोड़ा."
+
+#: lib/katemainwindow.cpp:826
+#, kde-format
+msgid "Closing Aborted"
+msgstr "बन्द करना छोड़ा"
+
 #: lib/katemainwindow.cpp:981
 #, kde-format
 msgid ""
@@ -2243,6 +2224,11 @@ msgstr "ऐसे सहेजें (%1)"
 #, kde-format
 msgid "Save Documents"
 msgstr "दस्तावेज़ों को सहेजें"
+
+#: lib/katesavemodifieddialog.cpp:133
+#, kde-format
+msgid "Close Document"
+msgstr "दस्तावेज़ बन्द करें"
 
 #: lib/katesavemodifieddialog.cpp:157
 #, fuzzy, kde-format
@@ -3203,6 +3189,16 @@ msgstr "सत्रों का प्रबंधन करें"
 #| msgid "Create a new document"
 msgid "Show welcome page for new window"
 msgstr "नया दस्तावेज़ बनाएँ"
+
+#~ msgid ""
+#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
+#~ "to save your changes or discard them?</p>"
+#~ msgstr ""
+#~ "<p>दस्तावेज़ '%1' परिवर्धित किया गया है, पर सहेजा नहीं गया है.</p><p>क्या आप इसे "
+#~ "रखना चाहते हैं या अपने परिवर्तनों को फेंकना चाहते हैं?</p>"
+
+#~ msgid "Save As"
+#~ msgstr "ऐसे सहेजें"
 
 #, fuzzy
 #~| msgid "Close Document"
