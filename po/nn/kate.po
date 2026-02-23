@@ -3124,13 +3124,3 @@ msgstr "Handsam økter …"
 #, kde-format
 msgid "Show welcome page for new window"
 msgstr "Vis velkomstsida for nye vindauge"
-
-#~ msgid ""
-#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
-#~ "to save your changes or discard them?</p>"
-#~ msgstr ""
-#~ "<p>Dokumentet «%1» er endra, men ikkje lagra.</p><p>Vil du ta vare på "
-#~ "endringane eller forkasta dei?</p>"
-
-#~ msgid "Save As"
-#~ msgstr "Lagra som"
