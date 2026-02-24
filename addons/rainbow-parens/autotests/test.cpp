@@ -47,6 +47,7 @@ void Test::test()
 
     view->resize(800, 600);
     view->show();
+    QTest::qWait(50); // resize() debounces resizes for 16ms, wait 50ms to be extra safe
 
     std::vector<std::unique_ptr<KTextEditor::MovingRange>> ranges;
 
