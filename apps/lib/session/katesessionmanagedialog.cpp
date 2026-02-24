@@ -32,6 +32,7 @@ KateSessionManageDialog::KateSessionManageDialog(QWidget *parent)
     connect(m_sessionList, &QTreeWidget::currentItemChanged, this, &KateSessionManageDialog::selectionChanged);
     connect(m_sessionList, &QTreeWidget::itemDoubleClicked, this, &KateSessionManageDialog::openSession);
     m_sessionList->header()->moveSection(0, 1); // Re-order columns to "Files, Sessions"
+    m_sessionList->setTreePosition(-1);
 
     m_filterBox->installEventFilter(this);
     connect(m_filterBox, &QLineEdit::textChanged, this, &KateSessionManageDialog::filterChanged);
