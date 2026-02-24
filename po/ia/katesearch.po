@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-22 00:49+0000\n"
-"PO-Revision-Date: 2026-01-16 11:29+0100\n"
+"PO-Revision-Date: 2026-02-23 15:16+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -708,7 +708,7 @@ msgstr "Netta"
 #: SearchPlugin.cpp:2405 SearchPlugin.cpp:2447
 #, kde-format
 msgid "Clear history"
-msgstr ""
+msgstr "Netta historia"
 
 #: SearchPlugin.cpp:2413 SearchPlugin.cpp:2454
 #, kde-format

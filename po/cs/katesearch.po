@@ -704,7 +704,7 @@ msgstr "Vyprázdnit"
 #: SearchPlugin.cpp:2405 SearchPlugin.cpp:2447
 #, kde-format
 msgid "Clear history"
-msgstr ""
+msgstr "Vyprázdnit historii"
 
 #: SearchPlugin.cpp:2413 SearchPlugin.cpp:2454
 #, kde-format
