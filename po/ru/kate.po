@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-22 00:49+0000\n"
+"POT-Creation-Date: 2026-02-25 00:50+0000\n"
 "PO-Revision-Date: 2026-02-13 22:13+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -2744,17 +2744,17 @@ msgstr "Проект: %1"
 msgid "Manage Sessions"
 msgstr "Управление сеансами"
 
-#: lib/session/katesessionmanagedialog.cpp:67
+#: lib/session/katesessionmanagedialog.cpp:68
 #, kde-format
 msgid "Session Chooser"
 msgstr "Выбор сеанса"
 
-#: lib/session/katesessionmanagedialog.cpp:151
+#: lib/session/katesessionmanagedialog.cpp:152
 #, kde-format
 msgid "Restore"
 msgstr "Восстановить"
 
-#: lib/session/katesessionmanagedialog.cpp:315
+#: lib/session/katesessionmanagedialog.cpp:316
 #, kde-format
 msgid "Session will be deleted on dialog close"
 msgstr "При закрытии диалога сеансы будут удалены"

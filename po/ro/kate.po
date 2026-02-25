@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-22 00:49+0000\n"
+"POT-Creation-Date: 2026-02-25 00:50+0000\n"
 "PO-Revision-Date: 2026-01-04 04:05+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -2712,17 +2712,17 @@ msgstr "Proiect: %1"
 msgid "Manage Sessions"
 msgstr "Gestionează sesiunile"
 
-#: lib/session/katesessionmanagedialog.cpp:67
+#: lib/session/katesessionmanagedialog.cpp:68
 #, kde-format
 msgid "Session Chooser"
 msgstr "Selector de sesiuni"
 
-#: lib/session/katesessionmanagedialog.cpp:151
+#: lib/session/katesessionmanagedialog.cpp:152
 #, kde-format
 msgid "Restore"
 msgstr "Restabilește"
 
-#: lib/session/katesessionmanagedialog.cpp:315
+#: lib/session/katesessionmanagedialog.cpp:316
 #, kde-format
 msgid "Session will be deleted on dialog close"
 msgstr "Sesiunea va fi ștearsă la închiderea dialogului"
