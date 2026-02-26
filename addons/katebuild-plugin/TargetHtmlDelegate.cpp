@@ -34,6 +34,7 @@ TargetHtmlDelegate::~TargetHtmlDelegate() = default;
 void TargetHtmlDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
     QStyleOptionViewItem options = option;
+    options.viewItemPosition = QStyleOptionViewItem::ViewItemPosition::OnlyOne;
     initStyleOption(&options, index);
 
     QTextDocument doc;
@@ -60,20 +61,14 @@ void TargetHtmlDelegate::paint(QPainter *painter, const QStyleOptionViewItem &op
 
     painter->save();
 
-    // paint background
-    if (option.state & QStyle::State_Selected) {
-        painter->fillRect(option.rect, option.palette.highlight());
-    } else {
-        painter->fillRect(option.rect, option.palette.base());
-    }
-
-    painter->setClipRect(option.rect);
-
     options.text = QString(); // clear old text
     options.widget->style()->drawControl(QStyle::CE_ItemViewItem, &options, painter, options.widget);
-
+    auto textRect = options.widget->style()->subElementRect(QStyle::SE_ItemViewItemText, &options, options.widget);
+    auto pm = options.widget->style()->pixelMetric(QStyle::PM_LayoutHorizontalSpacing, &options, options.widget);
+    textRect.setWidth(textRect.width() - pm);
     // draw text
-    painter->translate(option.rect.x(), option.rect.y());
+    painter->setClipRect(textRect);
+    painter->translate(textRect.x(), textRect.y());
     doc.drawContents(painter);
 
     painter->restore();
