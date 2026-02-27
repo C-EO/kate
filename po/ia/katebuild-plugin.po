@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:44+0000\n"
+"POT-Creation-Date: 2026-02-27 00:48+0000\n"
 "PO-Revision-Date: 2026-01-16 11:11+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -417,19 +417,19 @@ msgstr "referentia non definite"
 msgid "Cannot save build targets in: %1"
 msgstr "Non pote salveguardar objectivos construite in: %1"
 
-#: TargetHtmlDelegate.cpp:47
+#: TargetHtmlDelegate.cpp:48
 #, kde-format
 msgctxt "T as in Target set"
 msgid "<B>T:</B> %1"
 msgstr "<B>T:</B> %1"
 
-#: TargetHtmlDelegate.cpp:49
+#: TargetHtmlDelegate.cpp:50
 #, kde-format
 msgctxt "Dir as in working Directory"
 msgid "<B>Dir:</B> %1"
 msgstr "<B>Dir:</B> %1"
 
-#: TargetHtmlDelegate.cpp:100
+#: TargetHtmlDelegate.cpp:95
 #, kde-format
 msgid ""
 "Leave empty to use the directory of the current document.\n"
@@ -438,7 +438,7 @@ msgstr ""
 "Lassa vacue pro usar le directorio del documento currente. \n"
 "Adder directorios de cerca per adder percursos separate per ';'"
 
-#: TargetHtmlDelegate.cpp:107
+#: TargetHtmlDelegate.cpp:102
 #, kde-format
 msgid ""
 "Use:\n"
@@ -449,7 +449,7 @@ msgstr ""
 "\"%B\" perdirectoriobase de projecto\n"
 "\"%b\" per nomine de directorio base de projecto"
 
-#: TargetHtmlDelegate.cpp:111
+#: TargetHtmlDelegate.cpp:106
 #, kde-format
 msgid ""
 "Use:\n"

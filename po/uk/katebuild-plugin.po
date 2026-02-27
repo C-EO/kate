@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: katebuild-plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:44+0000\n"
+"POT-Creation-Date: 2026-02-27 00:48+0000\n"
 "PO-Revision-Date: 2025-08-26 09:50+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -422,19 +422,19 @@ msgstr "невизначене посилання"
 msgid "Cannot save build targets in: %1"
 msgstr "Не вдалося зберегти цілі збирання у %1"
 
-#: TargetHtmlDelegate.cpp:47
+#: TargetHtmlDelegate.cpp:48
 #, kde-format
 msgctxt "T as in Target set"
 msgid "<B>T:</B> %1"
 msgstr "<B>НЦ:</B> %1"
 
-#: TargetHtmlDelegate.cpp:49
+#: TargetHtmlDelegate.cpp:50
 #, kde-format
 msgctxt "Dir as in working Directory"
 msgid "<B>Dir:</B> %1"
 msgstr "<B>Каталог:</B> %1"
 
-#: TargetHtmlDelegate.cpp:100
+#: TargetHtmlDelegate.cpp:95
 #, kde-format
 msgid ""
 "Leave empty to use the directory of the current document.\n"
@@ -444,7 +444,7 @@ msgstr ""
 "документ.\n"
 "Додайте каталоги для пошуку, відокремивши їхні записи символом «;»"
 
-#: TargetHtmlDelegate.cpp:107
+#: TargetHtmlDelegate.cpp:102
 #, kde-format
 msgid ""
 "Use:\n"
@@ -455,7 +455,7 @@ msgstr ""
 "«%B» — базовий каталог проєкту\n"
 "«%b» — назва базового каталогу проєкту"
 
-#: TargetHtmlDelegate.cpp:111
+#: TargetHtmlDelegate.cpp:106
 #, kde-format
 msgid ""
 "Use:\n"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:44+0000\n"
+"POT-Creation-Date: 2026-02-27 00:48+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -390,19 +390,19 @@ msgstr "未定义的引用"
 msgid "Cannot save build targets in: %1"
 msgstr "无法保存构建目标：%1"
 
-#: TargetHtmlDelegate.cpp:47
+#: TargetHtmlDelegate.cpp:48
 #, kde-format
 msgctxt "T as in Target set"
 msgid "<B>T:</B> %1"
 msgstr "<B>目标:</B> %1"
 
-#: TargetHtmlDelegate.cpp:49
+#: TargetHtmlDelegate.cpp:50
 #, kde-format
 msgctxt "Dir as in working Directory"
 msgid "<B>Dir:</B> %1"
 msgstr "<B>目录:</B> %1"
 
-#: TargetHtmlDelegate.cpp:100
+#: TargetHtmlDelegate.cpp:95
 #, kde-format
 msgid ""
 "Leave empty to use the directory of the current document.\n"
@@ -411,7 +411,7 @@ msgstr ""
 "留空使用当前文档的目录。\n"
 "可添加搜索目录，以 ';' 分隔。"
 
-#: TargetHtmlDelegate.cpp:107
+#: TargetHtmlDelegate.cpp:102
 #, kde-format
 msgid ""
 "Use:\n"
@@ -422,7 +422,7 @@ msgstr ""
 "“%B”指定项目的根目录\n"
 "“%b”指定项目的根目录的名称"
 
-#: TargetHtmlDelegate.cpp:111
+#: TargetHtmlDelegate.cpp:106
 #, kde-format
 msgid ""
 "Use:\n"

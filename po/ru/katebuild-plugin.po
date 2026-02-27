@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:44+0000\n"
+"POT-Creation-Date: 2026-02-27 00:48+0000\n"
 "PO-Revision-Date: 2026-02-05 10:16+0300\n"
 "Last-Translator: Olesya Gerasimenko <goa@altlinux.org>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -432,19 +432,19 @@ msgstr "неопределённая ссылка"
 msgid "Cannot save build targets in: %1"
 msgstr "Не удалось сохранить цели сборки в %1"
 
-#: TargetHtmlDelegate.cpp:47
+#: TargetHtmlDelegate.cpp:48
 #, kde-format
 msgctxt "T as in Target set"
 msgid "<B>T:</B> %1"
 msgstr "<B>НЦ:</B> %1"
 
-#: TargetHtmlDelegate.cpp:49
+#: TargetHtmlDelegate.cpp:50
 #, kde-format
 msgctxt "Dir as in working Directory"
 msgid "<B>Dir:</B> %1"
 msgstr "<B>Кат.:</B> %1"
 
-#: TargetHtmlDelegate.cpp:100
+#: TargetHtmlDelegate.cpp:95
 #, kde-format
 msgid ""
 "Leave empty to use the directory of the current document.\n"
@@ -454,7 +454,7 @@ msgstr ""
 "Для добавления каталогов поиска добавьте пути, разделяя их точкой с запятой "
 "(;)"
 
-#: TargetHtmlDelegate.cpp:107
+#: TargetHtmlDelegate.cpp:102
 #, kde-format
 msgid ""
 "Use:\n"
@@ -465,7 +465,7 @@ msgstr ""
 "«%B» для базового каталога проекта\n"
 "«%b» для имени базового каталога проекта"
 
-#: TargetHtmlDelegate.cpp:111
+#: TargetHtmlDelegate.cpp:106
 #, kde-format
 msgid ""
 "Use:\n"

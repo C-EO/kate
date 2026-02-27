@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: katebuild-plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:44+0000\n"
+"POT-Creation-Date: 2026-02-27 00:48+0000\n"
 "PO-Revision-Date: 2025-08-27 00:16+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -429,19 +429,19 @@ msgstr "referencia no definida"
 msgid "Cannot save build targets in: %1"
 msgstr "No se han podido guardar los objetivos de compilación en: %1"
 
-#: TargetHtmlDelegate.cpp:47
+#: TargetHtmlDelegate.cpp:48
 #, kde-format
 msgctxt "T as in Target set"
 msgid "<B>T:</B> %1"
 msgstr "<B>T:</B> %1"
 
-#: TargetHtmlDelegate.cpp:49
+#: TargetHtmlDelegate.cpp:50
 #, kde-format
 msgctxt "Dir as in working Directory"
 msgid "<B>Dir:</B> %1"
 msgstr "<B>Dir:</B> %1"
 
-#: TargetHtmlDelegate.cpp:100
+#: TargetHtmlDelegate.cpp:95
 #, kde-format
 msgid ""
 "Leave empty to use the directory of the current document.\n"
@@ -450,7 +450,7 @@ msgstr ""
 "Déjelo en blanco para usar el directorio del documento actual.\n"
 "Añada directorios de búsqueda separando las rutas con «;»"
 
-#: TargetHtmlDelegate.cpp:107
+#: TargetHtmlDelegate.cpp:102
 #, kde-format
 msgid ""
 "Use:\n"
@@ -461,7 +461,7 @@ msgstr ""
 "«%B» para el directorio base del proyecto\n"
 "«%b» para el nombre del directorio base del proyecto"
 
-#: TargetHtmlDelegate.cpp:111
+#: TargetHtmlDelegate.cpp:106
 #, kde-format
 msgid ""
 "Use:\n"

@@ -3057,13 +3057,3 @@ msgstr "管理会话..."
 #, kde-format
 msgid "Show welcome page for new window"
 msgstr "新窗口显示欢迎页面"
-
-#~ msgid ""
-#~ "<p>The document '%1' has been modified, but not saved.</p><p>Do you want "
-#~ "to save your changes or discard them?</p>"
-#~ msgstr ""
-#~ "<p>文档“%1”已经被修改，但尚未保存。</p><p>您是否想要保存更改还是丢弃更改？"
-#~ "</p>"
-
-#~ msgid "Save As"
-#~ msgstr "另存为"

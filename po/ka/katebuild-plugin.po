@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:44+0000\n"
+"POT-Creation-Date: 2026-02-27 00:48+0000\n"
 "PO-Revision-Date: 2025-08-26 06:19+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -413,19 +413,19 @@ msgstr "აღუწერელი ბმა"
 msgid "Cannot save build targets in: %1"
 msgstr "შეუძლებელია აგების სამიზნეების შენახვა მისამართზე: %1"
 
-#: TargetHtmlDelegate.cpp:47
+#: TargetHtmlDelegate.cpp:48
 #, kde-format
 msgctxt "T as in Target set"
 msgid "<B>T:</B> %1"
 msgstr "<B>ს:</B> %1"
 
-#: TargetHtmlDelegate.cpp:49
+#: TargetHtmlDelegate.cpp:50
 #, kde-format
 msgctxt "Dir as in working Directory"
 msgid "<B>Dir:</B> %1"
 msgstr "<B>საქ:</B> %1"
 
-#: TargetHtmlDelegate.cpp:100
+#: TargetHtmlDelegate.cpp:95
 #, kde-format
 msgid ""
 "Leave empty to use the directory of the current document.\n"
@@ -434,7 +434,7 @@ msgstr ""
 "მიმდინარე დოკუმენტის საქაღალდის გამოსაყენებლად ცარიელი დატოვეთ.\n"
 "მოსაძებნი საქაღალდეების დამატება \";\"-ით გამოტოვებით შეგიძლიათ"
 
-#: TargetHtmlDelegate.cpp:107
+#: TargetHtmlDelegate.cpp:102
 #, kde-format
 msgid ""
 "Use:\n"
@@ -445,7 +445,7 @@ msgstr ""
 "\"%B\" პროექტის საბაზისო საქაღალდისთვის\n"
 "\"%b\" პროექტის საბაზისო საქაღალდის სახელისთვის"
 
-#: TargetHtmlDelegate.cpp:111
+#: TargetHtmlDelegate.cpp:106
 #, kde-format
 msgid ""
 "Use:\n"
