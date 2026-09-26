@@ -36,9 +36,9 @@ public:
     Q_SIGNAL void done();
 };
 
-std::stop_source runAsyncJob(QThreadPool &tp, JobFunction func, const QObject *context, JobResult cb)
+stop_source runAsyncJob(QThreadPool &tp, JobFunction func, const QObject *context, JobResult cb)
 {
-    std::stop_source ss;
+    stop_source ss;
 
     auto run = [ss, func = std::move(func)]() {
         func(ss.get_token());

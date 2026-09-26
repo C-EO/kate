@@ -193,7 +193,7 @@ void KateProjectIndex::openCtags()
 }
 
 static void
-findMatches(tagFile *tags, QStandardItemModel &model, const QString &searchWord, KateProjectIndex::MatchType type, int options, std::stop_token stop)
+findMatches(tagFile *tags, QStandardItemModel &model, const QString &searchWord, KateProjectIndex::MatchType type, int options, Utils::stop_token stop)
 {
     /**
      * abort if no ctags index
@@ -290,20 +290,20 @@ void KateProjectIndex::findMatches(QStandardItemModel &model, const QString &sea
     d->putHandle(th);
 }
 
-std::stop_source KateProjectIndex::findMatchesAsync(QThreadPool &tp,
-                                                    const QObject *context,
-                                                    std::function<void(QStandardItemModel &&)> cb,
-                                                    const QString &searchWord,
-                                                    MatchType type,
-                                                    bool automatic,
-                                                    int options)
+Utils::stop_source KateProjectIndex::findMatchesAsync(QThreadPool &tp,
+                                                      const QObject *context,
+                                                      std::function<void(QStandardItemModel &&)> cb,
+                                                      const QString &searchWord,
+                                                      MatchType type,
+                                                      bool automatic,
+                                                      int options)
 {
     // this will probably take a long time, so let's forego this if not explicitly requested
     bool skipFind = m_size > 50 * 1024 * 1024 && type == CompletionMatches && automatic;
 
     auto model = std::make_shared<QStandardItemModel>();
     auto th = d->takeHandle();
-    auto match = [tags = th, model, searchWord, type, options, skipFind](const std::stop_token &token) {
+    auto match = [tags = th, model, searchWord, type, options, skipFind](const Utils::stop_token &token) {
         if (!skipFind)
             ::findMatches(tags.get(), *model, searchWord, type, options, token);
     };

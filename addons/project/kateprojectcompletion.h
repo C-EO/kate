@@ -14,7 +14,8 @@
 
 #include <QStandardItemModel>
 
-#include <stop_token>
+#include "asyncjob.h"
+
 #include <vector>
 
 /**
@@ -84,5 +85,5 @@ private:
     /*
      * completion lookup in progress
      */
-    std::vector<std::stop_source> m_handles;
+    std::vector<Utils::stop_source> m_handles;
 };

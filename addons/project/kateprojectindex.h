@@ -15,7 +15,7 @@
 #include <QTemporaryFile>
 #include <QThreadPool>
 
-#include <stop_token>
+#include "asyncjob.h"
 
 /**
  * ctags reading
@@ -70,13 +70,13 @@ public:
      */
     void findMatches(QStandardItemModel &model, const QString &searchWord, MatchType type, int options = -1);
 
-    std::stop_source findMatchesAsync(QThreadPool &tp,
-                                      const QObject *context,
-                                      std::function<void(QStandardItemModel &&)> cb,
-                                      const QString &searchWord,
-                                      MatchType type,
-                                      bool automatic,
-                                      int options = -1);
+    Utils::stop_source findMatchesAsync(QThreadPool &tp,
+                                        const QObject *context,
+                                        std::function<void(QStandardItemModel &&)> cb,
+                                        const QString &searchWord,
+                                        MatchType type,
+                                        bool automatic,
+                                        int options = -1);
 
     /**
      * Check if running ctags was successful. This can be used
